@@ -1,4 +1,5 @@
 import { Globe, GraduationCap, Euro, Briefcase, Map, BookOpen, MessageSquare, ArrowRight, Check, ChevronRight } from 'lucide-react';
+import Navbar from '@/components/Navbar';
 
 const StudyInGermany = () => {
   const stats = [
@@ -32,6 +33,8 @@ const StudyInGermany = () => {
   ];
 
   return (
+    <>
+          <Navbar />
     <div className="bg-gray-50">
       {/* Hero Section */}
       <div className="relative bg-gradient-to-b from-german-dark to-german text-white overflow-hidden">
@@ -262,6 +265,7 @@ const StudyInGermany = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

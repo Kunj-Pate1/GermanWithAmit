@@ -9,6 +9,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Check, Star, Clock, Users, Home, HeartPulse, Plane, GraduationCap, Briefcase,  ShieldCheck, Calendar, Banknote, FileText } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 
+
 const NursingGermanyProgram = () => {
   useEffect(() => {
     window.scrollTo(0, 0);

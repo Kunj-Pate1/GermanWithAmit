@@ -187,8 +187,8 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-[38px] left-0 right-0 w-full z-40 transition-all duration-300 ${
         scrolled 
-          ? 'bg-gradient-to-r from-german-dark to-german backdrop-blur-md shadow-md py-2' 
-          : 'bg-gradient-to-r from-german-dark/90 to-german/90 backdrop-blur-sm py-3'
+          ? 'bg-gradient-to-r backdrop-blur-md shadow-md py-2' 
+          : 'bg-gradient-to-r backdrop-blur-sm py-3'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -301,8 +301,8 @@ const DesktopNavLinks = ({ activeSection }: NavLinksProps) => {
                 <button 
                   className={`px-3 py-2 font-medium relative group transition-all duration-300 flex items-center ${
                     isActive 
-                      ? 'text-white font-semibold' 
-                      : 'text-white/90 hover:text-white'
+                      ? 'text-german-dark font-semibold' 
+                : 'text-german-dark hover:text-german'
                   }`}
                 >
                   {item.name}
@@ -360,8 +360,8 @@ const DesktopNavLinks = ({ activeSection }: NavLinksProps) => {
             href={item.href}
             className={`px-3 py-2 font-medium relative group transition-all duration-300 ${
               isActive 
-                ? 'text-white font-semibold' 
-                : 'text-white/90 hover:text-white'
+                ? 'text-german-dark font-semibold' 
+                : 'text-german-dark hover:text-german'
             }`}
           >
             {item.name}
@@ -422,8 +422,8 @@ const MobileNavLinks = ({ className = "", activeSection,setIsMenuOpen,isMenuOpen
                 onClick={() => toggleCategory('courses')}
                 className={`flex justify-between items-center w-full px-4 py-3 font-medium rounded-lg transition-all duration-300 ${
                   isActive 
-                    ? 'bg-white/20 text-white font-semibold' 
-                    : 'text-white/90 hover:bg-white/10 hover:text-white'
+                    ? 'text-german-dark font-semibold' 
+                    : 'text-german-dark hover:text-german'
                 }`}
               >
                 <span>{item.name}</span>
@@ -519,8 +519,8 @@ const MobileNavLinks = ({ className = "", activeSection,setIsMenuOpen,isMenuOpen
               onClick={()=>setIsMenuOpen(false)}
               className={`block px-4 py-3 font-medium relative rounded-lg transition-all duration-300 ${
                 isActive 
-                  ? 'bg-white/20 text-white font-semibold' 
-                  : 'text-white/90 hover:bg-white/10 hover:text-white'
+                  ? 'text-german-dark font-semibold' 
+                : 'text-german-dark hover:text-german'
               }`}
             >
               {item.name}

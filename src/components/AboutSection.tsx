@@ -136,7 +136,7 @@ const ImageCarousel = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   
   const images = [
-    "/images/Amit/flag.png",
+    "/images/Amit/lib3.jpg",
     "/images/Amit/lib.jpg",
     "/images/Amit/outside.jpg",
     "/images/Amit/teaching.jpg",
@@ -149,7 +149,7 @@ const ImageCarousel = () => {
         setIsAnimating(true);
         setCurrentImage((prev) => (prev + 1) % images.length);
       }
-    }, 5000); // Change image every 5 seconds
+    }, 2000); // Change image every 2 seconds
     
     return () => clearInterval(interval);
   }, [isAnimating]);
@@ -218,54 +218,6 @@ const MilestoneItem = ({ icon, title, description }: { icon: React.ReactNode, ti
     </div>
   </motion.div>
 );
-
-// const TestimonialSlider = () => {
-//   const testimonials = [
-//     {
-//       name: "Rahul Sharma",
-//       level: "A2 to C1 in 6 months",
-//       quote: "Amit's teaching methods helped me achieve fluency faster than I imagined possible. The practical approach made all the difference!"
-//     },
-//     {
-//       name: "Priya Patel",
-//       level: "Got German scholarship",
-//       quote: "Thanks to the guidance I received, I secured a full scholarship to study in Germany. The career counseling was invaluable."
-//     },
-//     {
-//       name: "Arjun Mehta",
-//       level: "B2 in 4 months",
-//       quote: "The immersive learning environment and cultural insights made learning German enjoyable and effective."
-//     },
-//     {
-//       name: "Neha Gupta",
-//       level: "Job in Berlin",
-//       quote: "The professional German course prepared me perfectly for my job interviews. I'm now working at a tech firm in Berlin!"
-//     }
-//   ];
-
-//   return (
-//     <div className="relative overflow-hidden py-8">
-//       <div className="flex animate-[scroll_20s_linear_infinite] hover:[animation-play-state:paused]">
-//         {[...testimonials, ...testimonials].map((testimonial, index) => (
-//           <div key={index} className="flex-shrink-0 w-80 mx-4">
-//             <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 h-full">
-//               <div className="flex items-center mb-4">
-//                 <div className="w-12 h-12 rounded-full bg-gradient-to-r from-german-light to-german mr-4"></div>
-//                 <div>
-//                   <h4 className="font-medium text-gray-900">{testimonial.name}</h4>
-//                   <p className="text-sm text-german">{testimonial.level}</p>
-//                 </div>
-//               </div>
-//               <p className="text-gray-700 italic">"{testimonial.quote}"</p>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//       <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
-//       <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
-//     </div>
-//   );
-// };
 
 const AboutSection = () => {
   const teachers = [
@@ -337,6 +289,7 @@ const AboutSection = () => {
   ];
 
   const [showTeachers, setShowTeachers] = useState(false);
+  const [showFullStory, setShowFullStory] = useState(false);
 
   return (
     <section id="about" className="py-20 bg-gray-50">
@@ -435,73 +388,85 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Testimonials */}
-        {/* <motion.div 
-          className="mb-24"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-gray-900">Student Success Stories</h3>
-          <TestimonialSlider />
-        </motion.div> */}
-
-        {/* Our Story */}
-        <motion.div 
-          className="bg-gradient-to-r from-german to-german-dark p-8 md:p-12 rounded-2xl text-white mb-24"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <div className="max-w-4xl mx-auto">
-            <motion.h2 
-              className="text-3xl font-bold mb-8 text-center"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              Our Story
-            </motion.h2>
+        {/* Our Story Section */}
+        <div className="mb-24">
+          {!showFullStory ? (
+            <div className="text-center">
+              <motion.button
+                onClick={() => setShowFullStory(true)}
+                className="mx-auto flex items-center gap-2 px-6 py-3 bg-german hover:bg-german-dark text-white font-medium rounded-full transition-colors duration-300 shadow-md hover:shadow-lg mb-8"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span>Read Our Full Story</span>
+                <ChevronDown size={20} />
+              </motion.button>
+            </div>
+          ) : (
             <motion.div 
-              className="space-y-6 text-lg text-justify"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
+              className="bg-gradient-to-r from-german to-german-dark p-8 md:p-12 rounded-2xl text-white"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
             >
-              <p>
-              GermanWithAmit is more than just an online German learning platform.
-              It’s not just about grammar rules, sentence structures, or exam prep strategies.
-              It’s about transformation.
-              Whether you're a student dreaming of studying in Germany, a professional aiming to build your career there, or simply someone in love with the language—this is your space. </p>
-              <br />
-<p>GermanWithAmit was born from a dream:
-To show people how learning German can open doors, change lives, and build bridges to new opportunities.
-When our founder began learning German, he didn’t have YouTube tutorials, Instagram trainers, or viral reels to guide him.
-He learned it the hard way—through trial and error, long nights, and relentless effort.
-That’s exactly why he created GermanWithAmit—
-To make learning German easier, more enjoyable, and deeply human.
-It all started with one video.
-Then came the reels. Then live sessions.
-Now, we are a platform and a community—offering structured courses, real interaction, and constant motivation.
-</p>
-<br />
-<p>
-At GermanWithAmit, you're not just a student.
-You're part of a growing family of over 130,000 learners from around the world—united by a shared passion for language, culture, and personal growth.
-We’re not just a platform.
-We’re people who’ve been where you are.
-We understand your fears.
-We’ve faced the same rejections.
-And we also know how sweet success feels—once German opens new doors for you
-Welcome to GermanWithAmit—where language learning becomes a journey worth taking.
-              </p>
+              <div className="max-w-4xl mx-auto">
+                <motion.h2 
+                  className="text-3xl font-bold mb-8 text-center"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  Our Story
+                </motion.h2>
+                <motion.div 
+                  className="space-y-6 text-lg text-justify"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                >
+                  <p>
+                    GermanWithAmit is more than just an online German learning platform.
+                    It's not just about grammar rules, sentence structures, or exam prep strategies.
+                    It's about transformation.
+                    Whether you're a student dreaming of studying in Germany, a professional aiming to build your career there, or simply someone in love with the language—this is your space.
+                  </p>
+                  <br />
+                  <p>
+                    GermanWithAmit was born from a dream:
+                    To show people how learning German can open doors, change lives, and build bridges to new opportunities.
+                    When our founder began learning German, he didn't have YouTube tutorials, Instagram trainers, or viral reels to guide him.
+                    He learned it the hard way—through trial and error, long nights, and relentless effort.
+                    That's exactly why he created GermanWithAmit—
+                    To make learning German easier, more enjoyable, and deeply human.
+                    It all started with one video.
+                    Then came the reels. Then live sessions.
+                    Now, we are a platform and a community—offering structured courses, real interaction, and constant motivation.
+                  </p>
+                  <br />
+                  <p>
+                    At GermanWithAmit, you're not just a student.
+                    You're part of a growing family of over 130,000 learners from around the world—united by a shared passion for language, culture, and personal growth.
+                    We're not just a platform.
+                    We're people who've been where you are.
+                    We understand your fears.
+                    We've faced the same rejections.
+                    And we also know how sweet success feels—once German opens new doors for you
+                    Welcome to GermanWithAmit—where language learning becomes a journey worth taking.
+                  </p>
+                </motion.div>
+                <div className="text-center mt-8">
+                  <button
+                    onClick={() => setShowFullStory(false)}
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-full transition-colors duration-300"
+                  >
+                    <span>Show Less</span>
+                    <ChevronUp size={18} />
+                  </button>
+                </div>
+              </div>
             </motion.div>
-          </div>
-        </motion.div>
+          )}
+        </div>
 
         {/* Teachers section */}
         <motion.div 
@@ -515,7 +480,6 @@ Welcome to GermanWithAmit—where language learning becomes a journey worth taki
               onClick={() => setShowTeachers(!showTeachers)}
               className="mx-auto flex items-center gap-2 px-6 py-3 bg-german hover:bg-german-dark text-white font-medium rounded-full transition-colors duration-300 shadow-md hover:shadow-lg"
               whileHover={{ scale: 1.005 }}
-              // whileTap={{ scale: 0.95 }}
             >
               {showTeachers ? (
                 <>
