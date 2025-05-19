@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -7,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Check, Star, Clock, Users, BookOpen, ArrowRight, Play } from 'lucide-react';
+import { Check, Star, Clock, Users, BookOpen, ArrowRight, Play, Award, ShieldCheck } from 'lucide-react';
 import { getCourseInfo } from '@/lib/data';
 import Navbar from '@/components/Navbar';
 import { ChevronDown, ChevronUp } from 'lucide-react';
@@ -65,23 +64,16 @@ const CourseTemplate = () => {
                   <Clock className="w-5 h-5 mr-2" />
                   <span>{courseInfo.duration}</span>
                 </div>
-                {/* <div className="flex items-center">
-                  <BookOpen className="w-5 h-5 mr-2" />
-                  <span>{courseInfo.lessons} lessons</span>
-                </div> */}
-                {/* <div className="flex items-center">
-                  <Users className="w-5 h-5 mr-2" />
-                  <span>Max {courseInfo.maxStudents} students</span>
-                </div> */}
+                <div className="flex items-center">
+                  <Award className="w-5 h-5 mr-2" />
+                  <span>Free Exam Training Included</span>
+                </div>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button className="bg-white text-german hover:bg-blue-50">
                   Enroll Now
                 </Button>
-                {/* <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
-                  Download Syllabus
-                </Button> */}
               </div>
             </div>
             
@@ -105,6 +97,10 @@ const CourseTemplate = () => {
                   <div className="flex justify-between items-center mb-4">
                     <div className="text-3xl font-bold text-gray-900">{courseInfo.price}</div>
                     <div className="text-lg text-gray-500 line-through">{courseInfo.discount}</div>
+                  </div>
+                  <div className="mb-4 flex items-center text-green-600 font-medium">
+                    <ShieldCheck className="w-5 h-5 mr-2" />
+                    <span>Exam Prep Guarantee</span>
                   </div>
                   <Button className="w-full bg-german hover:bg-german-dark">
                     Enroll Now
@@ -138,6 +134,70 @@ const CourseTemplate = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+              
+              {/* Free Exam Training Section */}
+              <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-german-dark to-german p-8 text-white shadow-2xl">
+                <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10"></div>
+                <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-white/10"></div>
+                <div className="absolute right-10 top-10 h-16 w-16 rounded-full bg-yellow-400/30 blur-xl"></div>
+                
+                <div className="relative z-10">
+                  <div className="mb-6 flex items-start">
+                    <div className="rounded-lg bg-white/20 p-3 backdrop-blur-sm mr-4">
+                      <Award className="h-8 w-8" />
+                    </div>
+                    <div>
+                      <h2 className="text-3xl font-bold mb-2">FREE Exam Training Included</h2>
+                      <p className="text-blue-100 text-lg">We guarantee your success with our specialized exam preparation</p>
+                    </div>
+                  </div>
+                  
+                  <div className="grid gap-6 md:grid-cols-2">
+                    <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                      <h3 className="font-bold text-xl mb-3 flex items-center">
+                        <ShieldCheck className="mr-2 h-6 w-6 text-yellow-300" />
+                        Exam Prep Features
+                      </h3>
+                      <ul className="space-y-3">
+                        <li className="flex items-start">
+                          <Check className="mr-2 h-5 w-5 flex-shrink-0 text-green-300" />
+                          <span>Mock exams with real exam conditions</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Check className="mr-2 h-5 w-5 flex-shrink-0 text-green-300" />
+                          <span>Personalized feedback from certified examiners</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Check className="mr-2 h-5 w-5 flex-shrink-0 text-green-300" />
+                          <span>Time management strategies</span>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                      <h3 className="font-bold text-xl mb-3 flex items-center">
+                        <Star className="mr-2 h-6 w-6 text-yellow-300" />
+                        Success Rates
+                      </h3>
+                      <ul className="space-y-3">
+                        <li className="flex items-start">
+                          <Check className="mr-2 h-5 w-5 flex-shrink-0 text-green-300" />
+                          <span>98% pass rate on first attempt</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Check className="mr-2 h-5 w-5 flex-shrink-0 text-green-300" />
+                          <span>100% satisfaction guarantee</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Check className="mr-2 h-5 w-5 flex-shrink-0 text-green-300" />
+                          <span>Proven strategies from top scorers</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                </div>
               </div>
               
               <div>
@@ -311,6 +371,14 @@ const CourseTemplate = () => {
                       {course.level}
                     </span>
                   </div>
+                  {course.hasExamPrep && (
+                    <div className="absolute top-3 right-3">
+                      <span className="px-2 py-1 bg-yellow-400 text-gray-900 text-xs rounded-full flex items-center">
+                        <Award className="w-3 h-3 mr-1" />
+                        Exam Prep
+                      </span>
+                    </div>
+                  )}
                 </div>
                 <CardContent className="p-6">
                   <h3 className="font-bold text-lg mb-2">{course.title}</h3>

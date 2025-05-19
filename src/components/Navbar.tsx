@@ -188,7 +188,7 @@ const Navbar = () => {
       className={`fixed top-[38px] left-0 right-0 w-full z-40 transition-all duration-300 ${
         scrolled 
           ? 'bg-gradient-to-r backdrop-blur-md shadow-md py-2' 
-          : 'bg-gradient-to-r backdrop-blur-sm py-3'
+          : 'bg-gradient-to-r bg-white backdrop-blur-sm py-3'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
