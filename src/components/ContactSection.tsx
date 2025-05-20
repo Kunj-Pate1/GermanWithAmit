@@ -39,20 +39,6 @@ const ContactSection = () => {
                   <p className="text-german-light">Monday-Friday, 9am-6pm CET</p>
                 </div>
               </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="bg-german-dark/50 p-3 rounded-lg">
-                  <MapPin className="h-6 w-6 text-german-light" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-1">Visit Us</h3>
-                  <p className="text-german-light">
-                    German With Amit Language Center<br />
-                    Hauptstraße 123<br />
-                    10115 Berlin, Germany
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
           

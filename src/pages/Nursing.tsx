@@ -23,7 +23,7 @@ const NursingGermanyProgram = () => {
     duration: "6-12 months process",
     price: "₹1,50,000",
     discount: "₹2,00,000",
-    image: "/nursing-germany.jpg",
+    image: "/images/course/nurse.jpg",
     
     highlights: [
       "Starting salary up to ₹3.5 Lakhs/month",

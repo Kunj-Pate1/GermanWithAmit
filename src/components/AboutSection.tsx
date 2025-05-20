@@ -311,85 +311,133 @@ const AboutSection = () => {
             </p>
           </motion.div>
 
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            {/* Founder Image */}
-            <motion.div 
-              className="w-full lg:w-1/2"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="relative w-full max-w-md mx-auto">
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
-                  <ImageCarousel />
-                </div>
-                <div className="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-white text-german flex flex-col items-center justify-center shadow-lg border-2 border-german">
-                  <span className="text-3xl font-bold">8+</span>
-                  <span className="text-xs uppercase">Years</span>
-                </div>
-              </div>
-            </motion.div>
-            
-            {/* Mission & Values */}
-            <div className="w-full lg:w-1/2 space-y-8">
-              <motion.div 
-                className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold text-german-dark mb-6 text-center">Our Mission</h2>
-                <ul className="space-y-4">
-                  {[
-                    "Empower students with real-world German language skills",
-                    "Transform learning into career opportunities through scholarships",
-                    "Share 8+ years of teaching experience to accelerate learning",
-                    "Make German accessible through interactive methods",
-                    "Create a supportive international learning community",
-                    "Bridge cultural gaps through language education"
-                  ].map((item, index) => (
-                    <motion.li 
-                      key={index} 
-                      className="flex items-start"
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      transition={{ duration: 0.3, delay: 0.1 * index }}
-                      viewport={{ once: true }}
-                    >
-                      <span className="bg-german text-white rounded-full w-6 h-6 flex items-center justify-center mr-4 mt-1 flex-shrink-0 text-xs">
-                        {index + 1}
-                      </span>
-                      <p className="text-gray-700">{item}</p>
-                    </motion.li>
-                  ))}
-                </ul>
-              </motion.div>
-              
-              {/* Milestones Grid */}
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-              >
-                {milestones.map((milestone, index) => (
-                  <MilestoneItem 
-                    key={index}
-                    icon={milestone.icon}
-                    title={milestone.title}
-                    description={milestone.description}
-                  />
-                ))}
-              </motion.div>
-            </div>
-          </div>
+          <div className="flex flex-col">
+  {/* Founder Image and Story Section */}
+  <div className="flex flex-col lg:flex-row items-center gap-12 mb-12">
+    {/* Founder Image */}
+    <motion.div 
+      className="w-full lg:w-1/2"
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+      viewport={{ once: true }}
+    >
+      <div className="relative w-full max-w-md mx-auto">
+        <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+          <ImageCarousel />
+        </div>
+        <div className="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-white text-german flex flex-col items-center justify-center shadow-lg border-2 border-german">
+          <span className="text-3xl font-bold">8+</span>
+          <span className="text-xs uppercase">Years</span>
+        </div>
+      </div>
+    </motion.div>
+    
+    {/* Our Story */}
+    <motion.div 
+      className="w-full lg:w-1/2"
+      initial={{ opacity: 0, x: 20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5, delay: 0.3 }}
+      viewport={{ once: true }}
+    >
+      <div  className="bg-gradient-to-r from-german-dark to-german p-8 md:p-12 rounded-2xl text-white">
+        <h2 className="text-3xl font-bold text-white mb-6 text-center">Our Story</h2>
+        <div className="text-white space-y-4 text-justify">
+          {/* Add your story content here */}
+          <p>
+                    GermanWithAmit is more than just an online German learning platform.
+                    It's not just about grammar rules, sentence structures, or exam prep strategies.
+                    It's about transformation.
+                    Whether you're a student dreaming of studying in Germany, a professional aiming to build your career there, or simply someone in love with the language—this is your space.
+                  </p>
+               
+                  <p>
+                    GermanWithAmit was born from a dream:
+                    To show people how learning German can open doors, change lives, and build bridges to new opportunities.
+                    When our founder began learning German, he didn't have YouTube tutorials, Instagram trainers, or viral reels to guide him.
+                    He learned it the hard way—through trial and error, long nights, and relentless effort.
+                    That's exactly why he created GermanWithAmit—
+                    To make learning German easier, more enjoyable, and deeply human.
+                    It all started with one video.
+                    Then came the reels. Then live sessions.
+                    Now, we are a platform and a community—offering structured courses, real interaction, and constant motivation.
+                  </p>
+                  
+                  <p>
+                    At GermanWithAmit, you're not just a student.
+                    You're part of a growing family of over 130,000 learners from around the world—united by a shared passion for language, culture, and personal growth.
+                    We're not just a platform.
+                    We're people who've been where you are.
+                    We understand your fears.
+                    We've faced the same rejections.
+                    And we also know how sweet success feels—once German opens new doors for you
+                    Welcome to GermanWithAmit—where language learning becomes a journey worth taking.
+                  </p>
+        </div>
+      </div>
+    </motion.div>
+  </div>
+  
+  {/* Our Mission Section (now horizontal below) */}
+  <motion.div 
+    className="w-full"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: 0.4 }}
+    viewport={{ once: true }}
+  >
+    <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+      <h2 className="text-3xl font-bold text-german-dark mb-6 text-center">Our Mission</h2>
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          "Empower students with real-world German language skills",
+          "Transform learning into career opportunities through scholarships",
+          "Share 8+ years of teaching experience to accelerate learning",
+          "Make German accessible through interactive methods",
+          "Create a supportive international learning community",
+          "Bridge cultural gaps through language education"
+        ].map((item, index) => (
+          <motion.li 
+            key={index} 
+            className="flex items-start"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.1 * index }}
+            viewport={{ once: true }}
+          >
+            <span className="bg-german text-white rounded-full w-6 h-6 flex items-center justify-center mr-4 mt-1 flex-shrink-0 text-xs">
+              {index + 1}
+            </span>
+            <p className="text-gray-700">{item}</p>
+          </motion.li>
+        ))}
+      </ul>
+    </div>
+  </motion.div>
+  
+  {/* Milestones Grid (now below mission) */}
+  <motion.div 
+    className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12"
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ duration: 0.5, delay: 0.5 }}
+    viewport={{ once: true }}
+  >
+    {milestones.map((milestone, index) => (
+      <MilestoneItem 
+        key={index}
+        icon={milestone.icon}
+        title={milestone.title}
+        description={milestone.description}
+      />
+    ))}
+  </motion.div>
+</div>
         </div>
 
         {/* Our Story Section */}
-        <div className="mb-24">
+        {/* <div className="mb-24">
           {!showFullStory ? (
             <div className="text-center">
               <motion.button
@@ -466,7 +514,7 @@ const AboutSection = () => {
               </div>
             </motion.div>
           )}
-        </div>
+        </div> */}
 
         {/* Teachers section */}
         <motion.div 

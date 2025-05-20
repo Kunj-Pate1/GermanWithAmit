@@ -1,5 +1,5 @@
 
-import { Facebook, Instagram, Linkedin, Twitter, ArrowRight } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Twitter, ArrowRight, Youtube } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 
@@ -14,17 +14,14 @@ const Footer = () => {
               Your journey to German fluency starts here. Professional language instruction for all levels.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-german-medium transition-colors">
+              <a href="https://www.facebook.com/people/germanwithamit/100083756738989/" target="_blank" className="text-gray-400 hover:text-german-medium transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-german-medium transition-colors">
+              <a href="https://www.instagram.com/german_with_amit/" target="_blank" className="text-gray-400 hover:text-german-medium transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-german-medium transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-german-medium transition-colors">
-                <Twitter size={20} />
+              <a href="https://www.youtube.com/@GermanwithAmit" target="_blank" className="text-gray-400 hover:text-german-medium transition-colors">
+                <Youtube size={20} />
               </a>
             </div>
           </div>
@@ -57,16 +54,13 @@ const Footer = () => {
                 <a href="#" className="text-gray-400 hover:text-german-medium transition-colors">Free German Resources</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-german-medium transition-colors">Learning Tips</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-german-medium transition-colors">German Culture Blog</a>
-              </li>
-              <li>
                 <a href="#" className="text-gray-400 hover:text-german-medium transition-colors">FAQ</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-german-medium transition-colors">Privacy Policy</a>
+                <a href="/privacypolicy" className="text-gray-400 hover:text-german-medium transition-colors">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="/refund-policy" className="text-gray-400 hover:text-german-medium transition-colors">Refund Policy</a>
               </li>
             </ul>
           </div>

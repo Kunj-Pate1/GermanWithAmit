@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Search, ChevronDown } from 'lucide-react';
+import { Menu, X, Search, ChevronDown, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   DropdownMenu,
@@ -13,6 +13,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuGroup,
+  DropdownMenuPortal,
 } from "@/components/ui/dropdown-menu";
 import { Instagram, Facebook, Youtube } from 'lucide-react';
 
@@ -25,21 +26,21 @@ const SocialTopBar = () => {
         {/* Social Media Icons - Top on mobile, left on desktop */}
         <div className="flex space-x-4 mb-1 md:mb-0">
           <a 
-            href="#" 
+            href="https://www.instagram.com/german_with_amit/" target="_blank"
             className="hover:text-pink-500 transition-colors duration-300 transform hover:scale-110"
             aria-label="Instagram"
           >
             <Instagram className="h-5 w-5" />
           </a>
           <a 
-            href="#" 
+            href="https://www.facebook.com/people/germanwithamit/100083756738989/" target="_blank"
             className="hover:text-blue-400 transition-colors duration-300 transform hover:scale-110"
             aria-label="Facebook"
           >
             <Facebook className="h-5 w-5" />
           </a>
           <a 
-            href="#" 
+            href= "https://www.youtube.com/@GermanwithAmit" target="_blank" 
             className="hover:text-red-500 transition-colors duration-300 transform hover:scale-110"
             aria-label="YouTube"
           >
@@ -304,11 +305,11 @@ const DesktopNavLinks = ({ activeSection }: NavLinksProps) => {
                   className={`px-3 py-2 font-medium relative group transition-all duration-300 flex items-center ${
                     isActive 
                       ? 'text-german-dark font-semibold' 
-                : 'text-german-dark hover:text-german'
+                      : 'text-german-dark hover:text-german'
                   }`}
                 >
                   {item.name}
-                  <ChevronDown className="ml-1 h-4 w-4" />
+                  <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
                   <div 
                     className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full transform origin-left transition-all duration-300 ${
                       isActive ? 'bg-white scale-x-100' : 'bg-white/50 scale-x-0 group-hover:scale-x-100'
@@ -316,36 +317,47 @@ const DesktopNavLinks = ({ activeSection }: NavLinksProps) => {
                   />
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-white/95 backdrop-blur-md border-none shadow-xl p-2 w-56">
+              <DropdownMenuContent 
+                className="bg-white/95 backdrop-blur-md border border-gray-100 shadow-xl p-2 min-w-[280px] rounded-lg"
+                sideOffset={8}
+                align="start"
+              >
                 <DropdownMenuGroup>
                   {courseCategories.map((category) => (
-                    <div key={category.name}>
+                    <div key={category.name} className="relative">
                       {category.path ? (
                         <DropdownMenuItem asChild>
                           <a 
                             href={category.path} 
-                            className="cursor-pointer hover:bg-german-light/20 w-full px-2 py-1.5 text-sm"
+                            className="cursor-pointer hover:bg-german-light/20 w-full px-3 py-2 text-sm rounded-md transition-colors duration-150 flex items-center"
                           >
                             {category.name}
                           </a>
                         </DropdownMenuItem>
                       ) : (
                         <DropdownMenuSub>
-                          <DropdownMenuSubTrigger className="font-medium hover:bg-german-light/20 px-2 py-1.5 text-sm">
+                          <DropdownMenuSubTrigger 
+                            className="font-medium hover:bg-german-light/20 px-3 py-2 text-sm rounded-md transition-colors duration-150 w-full text-left flex items-center justify-between"
+                          >
                             {category.name}
                           </DropdownMenuSubTrigger>
-                          <DropdownMenuSubContent className="bg-white/95 backdrop-blur-md border-none shadow-xl">
-                            {category.subcategories?.map((subcat) => (
-                              <DropdownMenuItem key={subcat.name} asChild>
-                                <a 
-                                  href={subcat.path} 
-                                  className="cursor-pointer hover:bg-german-light/20 w-full px-2 py-1.5 text-sm"
-                                >
-                                  {subcat.name}
-                                </a>
-                              </DropdownMenuItem>
-                            ))}
-                          </DropdownMenuSubContent>
+                          <DropdownMenuPortal>
+                            <DropdownMenuSubContent 
+                              className="bg-white/95 backdrop-blur-md border border-gray-100 shadow-xl p-2 min-w-[240px] rounded-lg ml-1"
+                              alignOffset={-8}
+                            >
+                              {category.subcategories?.map((subcat) => (
+                                <DropdownMenuItem key={subcat.name} asChild>
+                                  <a 
+                                    href={subcat.path} 
+                                    className="cursor-pointer hover:bg-german-light/20 w-full px-3 py-2 text-sm rounded-md transition-colors duration-150"
+                                  >
+                                    {subcat.name}
+                                  </a>
+                                </DropdownMenuItem>
+                              ))}
+                            </DropdownMenuSubContent>
+                          </DropdownMenuPortal>
                         </DropdownMenuSub>
                       )}
                     </div>
