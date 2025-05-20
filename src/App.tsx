@@ -10,6 +10,7 @@ import CourseTemplate from "./pages/CourseTemplate";
 import Nursing from "@/pages/Nursing.tsx";
 import StudyInGermany from "@/pages/StudyGermany.tsx";
 import ExamPreparationPage from "./pages/ExamPrep";
+import SelfPacedCourse from "./pages/SelfPaced"
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/study" element={<StudyInGermany/>}/>
           <Route path="/nursing" element={<Nursing/>}/>
           <Route path="course/exam" element={<ExamPreparationPage/>}/>
+          <Route path="courses/selfpaced" element={<SelfPacedCourse />}/>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

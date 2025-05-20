@@ -225,8 +225,8 @@ const AboutSection = () => {
       name: "Amit Bansal",
       title: "Founder & C2 Certified",
       bio: "Masters in German Studies with 8+ years teaching experience. Specializes in exam preparation and cultural immersion.",
-      image: "/images/teachers/amit.jpg",
-      years: 13,
+      image: "/images/Amit/flag.png",
+      years: 8,
       socials: {
         linkedin: "#",
         twitter: "#"

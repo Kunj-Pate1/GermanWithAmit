@@ -100,7 +100,7 @@ const CourseTemplate = () => {
                   </div>
                   <div className="mb-4 flex items-center text-green-600 font-medium">
                     <ShieldCheck className="w-5 h-5 mr-2" />
-                    <span>Exam Prep Guarantee</span>
+                    <span>FREE Exam Prep</span>
                   </div>
                   <Button className="w-full bg-german hover:bg-german-dark">
                     Enroll Now

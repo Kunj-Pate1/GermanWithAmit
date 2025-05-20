@@ -152,7 +152,7 @@ const CourseSection = () => {
             >
               <Card className={`h-full flex flex-col border-2 ${hoveredCard === course.id ? 'border-german/50' : 'border-gray-200'} transition-all overflow-hidden`}>
                 {course.featured && (
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-german to-yellow-500"></div>
+                  <div className="absolute top-0 left-0 w-full h-1 "></div>
                 )}
                 
                 <CardHeader className="pb-3">

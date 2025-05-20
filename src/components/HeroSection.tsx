@@ -55,13 +55,13 @@ const HeroSection = () => {
 useEffect(() => {
   const interval1 = setInterval(() => {
     setCount1((prev) => {
-      if (prev >= 13) {
+      if (prev >= 8) {
         clearInterval(interval1);
-        return 13;
+        return 8;
       }
       return prev + 1;
     });
-  }, 200);
+  }, 100);
 
   const interval2 = setInterval(() => {
     setCount2((prev) => {
@@ -69,7 +69,7 @@ useEffect(() => {
         clearInterval(interval2);
         return 5000;
       }
-      return prev + Math.floor(Math.random() * 200) + 100;
+      return prev + Math.floor(Math.random() * 1000) + 100;
     });
   }, 100);
 
@@ -90,24 +90,6 @@ useEffect(() => {
   };
 }, []);
 
-  
-  
-  // === Text Typing + Deleting Animation ===
-  // TEXT TYPING/DELETING EFFECT
-
-
-  
-
-  const toggleVideo = () => {
-  //   if (videoRef.current) {
-  //     if (isPlaying) {
-  //       videoRef.current.pause();
-  //     } else {
-  //       videoRef.current.play();
-  //     }
-  //     setIsPlaying(!isPlaying);
-  //   }
-  };
 
   const scrollToNextSection = () => {
     document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' });
@@ -143,8 +125,8 @@ useEffect(() => {
           className="absolute w-full h-full object-cover"
           loop
           muted
-          poster="images/munich.jpg"
-          src='https://youtu.be/FyB2bPPtpkU'
+          poster="images/munich1.png"
+          // src='https://youtu.be/FyB2bPPtpkU'
         >
           {/* <source src="https://youtu.be/FyB2bPPtpkU" type="video/mp4" /> */}
           
@@ -176,57 +158,33 @@ useEffect(() => {
               </span>
             </motion.h1>
             
-            <motion.p 
+            {/* <motion.p 
               variants={itemVariants}
               className="text-lg md:text-xl mb-8 mx-auto max-w-lg"
             >
               Let's learn German together – the smart, fun, and simple way!
-            </motion.p>
+            </motion.p> */}
             
             <motion.div 
               variants={containerVariants}
-              className="mt-12 grid grid-cols-3 gap-6 max-w-xl mx-auto"
+              className="mt-8 grid grid-cols-3 gap-4 max-w-md mx-auto"
             >
-              <motion.div 
-                className="text-center"
-                variants={itemVariants}
-              >
-                
-                <motion.h3 
-                  className="text-2xl font-bold text-white"
+              {[
+                { value: `${count1}+`, label: "Years Experience" },
+                { value: `${count2}+`, label: "Students" },
+                { value: `${count3}%`, label: "Success Rate" }
+              ].map((stat, index) => (
+                <motion.div 
+                  key={index}
+                  className="text-center"
+                  variants={itemVariants}
                 >
-                  <motion.span>
-                    {count1}+
-                  </motion.span>
-                </motion.h3>
-                <p className="text-sm mt-1">Years Experience</p>
-              </motion.div>
-              <motion.div 
-                className="text-center"
-                variants={itemVariants}
-              >
-                <motion.h3 
-                  className="text-2xl font-bold text-white"
-                >
-                  <motion.span>
-                    {count2}+
-                  </motion.span>
-                </motion.h3>
-                <p className="text-sm mt-1">Students</p>
-              </motion.div>
-              <motion.div 
-                className="text-center"
-                variants={itemVariants}
-              >
-                <motion.h3 
-                  className="text-2xl font-bold text-white"
-                >
-                  <motion.span>
-                    {count3}%
-                  </motion.span>
-                </motion.h3>
-                <p className="text-sm mt-1">Success Rate</p>
-              </motion.div>
+                  <motion.h3 className="text-xl font-bold text-white">
+                    {stat.value}
+                  </motion.h3>
+                  <p className="text-xs mt-1 opacity-80">{stat.label}</p>
+                </motion.div>
+              ))}
             </motion.div>
 
             <motion.div 
@@ -244,7 +202,7 @@ useEffect(() => {
 
       {/* Video positioned at the wave */}
       
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
+      {/* <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
   <svg
     viewBox="0 0 1440 100"
     className="w-full h-[100px]"
@@ -255,11 +213,11 @@ useEffect(() => {
       d="M0 80 H1440 V10 A720 50 0 0 1 0 30 Z"
     />
   </svg>   
-</div>
+</div> */}
 
 
   {/* Video – smaller and elevated */}
-  <div className="absolute left-1/2 bottom-[-60px] transform -translate-x-1/2 z-20 w-[80vw] max-w-xl aspect-video rounded-2xl border-4 border-white shadow-xl overflow-hidden">
+  <div className="absolute left-1/2 bottom-[-60px] transform -translate-x-1/2 z-20 w-[70vw] max-w-md aspect-video rounded-2xl border-2 border-german-dark shadow-xl overflow-hidden">
     <iframe
       src="https://www.youtube.com/embed/FyB2bPPtpkU?si=Q7Zj6VD1M1-mLvNw"
       title="YouTube video player"
