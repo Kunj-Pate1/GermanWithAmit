@@ -116,11 +116,11 @@ const CourseTemplate = () => {
       <div className="bg-white py-16">
         <div className="container mx-auto px-4 md:px-6">
           <Tabs defaultValue="overview" className="max-w-4xl mx-auto">
-            <TabsList className="mb-8 grid grid-cols-4 gap-4">
+            <TabsList className="mb-8 grid grid-cols-3 gap-3">
               <TabsTrigger value="overview">Overview</TabsTrigger>
               <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
               <TabsTrigger value="instructor">Instructor</TabsTrigger>
-              <TabsTrigger value="reviews">Reviews</TabsTrigger>
+              {/* <TabsTrigger value="reviews">Reviews</TabsTrigger> */}
             </TabsList>
             
             <TabsContent value="overview" className="space-y-8">

@@ -244,23 +244,32 @@ useEffect(() => {
 
       {/* Video positioned at the wave */}
       
-
-      <div className="wave-bottom">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
-        </svg>
-      </div>
-      <div className="sm:bottom-[-30] absolute bottom-[-50] left-1/2 transform -translate-x-1/2 z-20 w-[90vw] max-w-md aspect-video shadow-2xl border-4 border-white/20 rounded-2xl overflow-hidden">
-  <iframe
-    src="https://www.youtube.com/embed/FyB2bPPtpkU?si=Q7Zj6VD1M1-mLvNw"
-    title="YouTube video player"
-    className="w-full h-full"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
-    allowFullScreen
-  ></iframe>
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
+  <svg
+    viewBox="0 0 1440 100"
+    className="w-full h-[100px]"
+    preserveAspectRatio="none"
+  >
+    <path
+      fill="#ffffff"
+      d="M0 80 H1440 V10 A720 50 0 0 1 0 30 Z"
+    />
+  </svg>   
 </div>
+
+
+  {/* Video – smaller and elevated */}
+  <div className="absolute left-1/2 bottom-[-60px] transform -translate-x-1/2 z-20 w-[80vw] max-w-xl aspect-video rounded-2xl border-4 border-white shadow-xl overflow-hidden">
+    <iframe
+      src="https://www.youtube.com/embed/FyB2bPPtpkU?si=Q7Zj6VD1M1-mLvNw"
+      title="YouTube video player"
+      className="w-full h-full"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      allowFullScreen
+    ></iframe>
+  </div>
     </section>
   );
 };

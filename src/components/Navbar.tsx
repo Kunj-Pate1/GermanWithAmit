@@ -16,47 +16,49 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Instagram, Facebook, Youtube } from 'lucide-react';
 
+
+
 const SocialTopBar = () => {
   return (
-    <div className="fixed top-0 left-0 right-0 z-[60] bg-gradient-to-r from-gray-900 to-gray-800 text-white py-3 px-4 border-b border-gray-700 shadow-lg">
+    <div className="fixed top-0 left-0 right-0 z-[60] bg-gradient-to-r from-german-dark to-gray-800 text-white py-0.5 px-4 border-b border-gray-700 shadow-lg">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Social Media Icons - Top on mobile, left on desktop */}
-        <div className="flex space-x-5 mb-2 md:mb-0">
+        <div className="flex space-x-4 mb-1 md:mb-0">
           <a 
             href="#" 
             className="hover:text-pink-500 transition-colors duration-300 transform hover:scale-110"
             aria-label="Instagram"
           >
-            <Instagram className="h-6 w-6" />
+            <Instagram className="h-5 w-5" />
           </a>
           <a 
             href="#" 
             className="hover:text-blue-400 transition-colors duration-300 transform hover:scale-110"
             aria-label="Facebook"
           >
-            <Facebook className="h-6 w-6" />
+            <Facebook className="h-5 w-5" />
           </a>
           <a 
             href="#" 
             className="hover:text-red-500 transition-colors duration-300 transform hover:scale-110"
             aria-label="YouTube"
           >
-            <Youtube className="h-6 w-6" />
+            <Youtube className="h-5 w-5" />
           </a>
         </div>
         
         {/* Navigation Links - Bottom on mobile, right on desktop */}
-        <div className="flex space-x-4 md:space-x-8">
+        <div className="flex space-x-3 md:space-x-6">
           <a 
             href="/study" 
-            className="text-sm md:text-base font-medium hover:text-blue-300 transition-colors duration-300 relative group"
+            className="text-xs md:text-sm font-medium hover:text-blue-300 transition-colors duration-300 relative group"
           >
             Study In Germany
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a 
             href="/nursing" 
-            className="text-sm md:text-base font-medium hover:text-blue-300 transition-colors duration-300 relative group"
+            className="text-xs md:text-sm font-medium hover:text-blue-300 transition-colors duration-300 relative group"
           >
             Nursing In Germany
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
@@ -120,15 +122,15 @@ const courseCategories = [
   },
   {
     name: "Exam Preparation Course",
-    path: "/courses/exam"
+    path: "/course/exam"
   },
+  // {
+  //   name: "Grammar Courses",
+  //   path: "/courses/grammar"
+  // },
   {
-    name: "Grammar Courses",
-    path: "/courses/grammar"
-  },
-  {
-    name: "Conversational Courses",
-    path: "/courses/conversational"
+    name: "Self-paced Courses",
+    path: "/courses/selfpaced"
   },
   {
     name: "1:1 German Coaching",
@@ -185,7 +187,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-[38px] left-0 right-0 w-full z-40 transition-all duration-300 ${
+      className={`fixed top-[25px] left-0 right-0 w-full z-40 transition-all duration-300 ${
         scrolled 
           ? 'bg-gradient-to-r backdrop-blur-md shadow-md py-2' 
           : 'bg-gradient-to-r bg-white backdrop-blur-sm py-3'

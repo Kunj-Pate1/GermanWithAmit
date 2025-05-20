@@ -69,7 +69,7 @@ const NursingGermanyProgram = () => {
     ],
     
     instructor: {
-      name: "Dr. Anika Müller",
+      name: "Amit Bansal",
       title: "International Nursing Placement Director",
       image: "/instructor-nursing.jpg",
       rating: "4.9 (128 reviews)",
