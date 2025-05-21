@@ -340,24 +340,30 @@ const CourseTemplate = () => {
             </TabsContent>
             
             <TabsContent value="instructor">
-              <div className="flex flex-col md:flex-row gap-6 items-start">
-                <Avatar className="w-24 h-24 border-4 border-german-light">
-                  <AvatarImage src={courseInfo.instructor.image} alt={courseInfo.instructor.name} />
-                  <AvatarFallback>{courseInfo.instructor.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-                </Avatar>
-                <div>
-                  <h2 className="text-2xl font-bold mb-2">{courseInfo.instructor.name}</h2>
-                  <p className="text-german-dark mb-4">{courseInfo.instructor.title}</p>
-                  <div className="flex items-center mb-4">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={star} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                    ))}
-                    <span className="ml-2 text-sm text-gray-500">{courseInfo.instructor.rating}</span>
+            <div className="space-y-8">
+              {courseInfo.instructor.map((instructor, index) => (
+                <div key={index} className="flex flex-col md:flex-row gap-6 items-start">
+                  <Avatar className="w-24 h-24 border-4 border-german-light">
+                    <AvatarImage src={instructor.image} alt={instructor.name} />
+                    <AvatarFallback>
+                      {instructor.name.split(' ').map(n => n[0]).join('')}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <h2 className="text-2xl font-bold mb-2">{instructor.name}</h2>
+                    <p className="text-german-dark mb-4">{instructor.title}</p>
+                    <div className="flex items-center mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                      ))}
+                      <span className="ml-2 text-sm text-gray-500">{instructor.rating}</span>
+                    </div>
+                    <p className="text-gray-600">{instructor.bio}</p>
                   </div>
-                  <p className="text-gray-600">{courseInfo.instructor.bio}</p>
                 </div>
-              </div>
-            </TabsContent>
+              ))}
+            </div>
+          </TabsContent>
             
             <TabsContent value="reviews">
               <h2 className="text-2xl font-bold mb-6">Student Reviews</h2>

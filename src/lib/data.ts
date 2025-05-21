@@ -34,7 +34,7 @@ export interface CourseInfo {
     bio: string;
     image: string;
     rating: string;
-  };
+  }[];
   relatedCourses: {
     title: string;
     description: string;
@@ -199,13 +199,36 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
         ]
       }
     ],
-    instructor: {
-      name: "Amit",
-      title: "Certified German Instructor (C2)",
-      bio: "With over 8 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
-      image: "/images/munich.jpg",
-      rating: "4.9/5"
-    },
+    instructor:[
+      {
+        name: "Amit Bansal",
+        title: "Certified German Instructor (C2)",
+        bio: "With over 8 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
+        image: "/images/munich.jpg",
+        rating: "4.9/5"
+      },
+      {
+        name: "Linda Selijimi",
+        title: "Native Tutor",
+        bio: "Former university professor with expertise in German grammar, literature, and business communication.",
+        image: "/images/munich.jpg",
+        rating: "4.9/5"
+      },
+      {
+        name: "Riya Suneja",
+        title: "Certified German Instructor (C1)",
+        bio: "Focuses on conversational German and professional contexts. Helps students with job applications in Germany.",
+        image: "/images/munich.jpg",
+        rating: "4.9/5"
+      },
+      {
+        name: "Chhavi Gupta",
+        title: "Certified German Instructor (C1)",
+        bio: "Specializes in beginner courses and pronunciation training. Makes learning German fun and accessible.",
+        image: "/images/munich.jpg",
+        rating: "4.9/5"
+      }
+    ],
     relatedCourses: [
       {
         title: "German A2 Course for Elementary Learners",
@@ -369,13 +392,36 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
         ]
       }
     ],
-    instructor: {
-      name: "Amit",
-      title: "Certified German Instructor (C2)",
-      bio: "With over 5 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
-      image: "/images/munich.jpg",
-      rating: "4.9/5"
-    },
+    instructor:[
+      {
+        name: "Amit Bansal",
+        title: "Certified German Instructor (C2)",
+        bio: "With over 8 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
+        image: "/images/munich.jpg",
+        rating: "4.9/5"
+      },
+      {
+        name: "Linda Selijimi",
+        title: "Native Tutor",
+        bio: "Former university professor with expertise in German grammar, literature, and business communication.",
+        image: "/images/munich.jpg",
+        rating: "4.9/5"
+      },
+      {
+        name: "Riya Suneja",
+        title: "Certified German Instructor (C1)",
+        bio: "Focuses on conversational German and professional contexts. Helps students with job applications in Germany.",
+        image: "/images/munich.jpg",
+        rating: "4.9/5"
+      },
+      {
+        name: "Chhavi Gupta",
+        title: "Certified German Instructor (C1)",
+        bio: "Specializes in beginner courses and pronunciation training. Makes learning German fun and accessible.",
+        image: "/images/munich.jpg",
+        rating: "4.9/5"
+      }
+    ],
     relatedCourses: [
       {
         title: "German A1 Course for Elementary Learners",
@@ -547,13 +593,36 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       ]
     }
   ],
-  instructor: {
-    name: "Amit",
-    title: "Certified German Instructor (C2)",
-    bio: "With over 5 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
-    image: "/images/instructors/amit.jpg",
-    rating: "4.9/5"
-  },
+  instructor:[
+    {
+      name: "Amit Bansal",
+      title: "Certified German Instructor (C2)",
+      bio: "With over 8 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
+      image: "/images/munich.jpg",
+      rating: "4.9/5"
+    },
+    {
+      name: "Linda Selijimi",
+      title: "Native Tutor",
+      bio: "Former university professor with expertise in German grammar, literature, and business communication.",
+      image: "/images/munich.jpg",
+      rating: "4.9/5"
+    },
+    {
+      name: "Riya Suneja",
+      title: "Certified German Instructor (C1)",
+      bio: "Focuses on conversational German and professional contexts. Helps students with job applications in Germany.",
+      image: "/images/munich.jpg",
+      rating: "4.9/5"
+    },
+    {
+      name: "Chhavi Gupta",
+      title: "Certified German Instructor (C1)",
+      bio: "Specializes in beginner courses and pronunciation training. Makes learning German fun and accessible.",
+      image: "/images/munich.jpg",
+      rating: "4.9/5"
+    }
+  ],
   relatedCourses: [
     {
       title: "German B2 Course for Upper-Intermediate Learners",
@@ -717,13 +786,36 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       ]
     }
   ],
-  instructor: {
-    name: "Amit",
-    title: "Certified German Instructor (C2)",
-    bio: "With over 5 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
-    image: "/images/instructors/amit.jpg",
-    rating: "4.9/5"
-  },
+  instructor:[
+    {
+      name: "Amit Bansal",
+      title: "Certified German Instructor (C2)",
+      bio: "With over 8 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
+      image: "/images/munich.jpg",
+      rating: "4.9/5"
+    },
+    {
+      name: "Linda Selijimi",
+      title: "Native Tutor",
+      bio: "Former university professor with expertise in German grammar, literature, and business communication.",
+      image: "/images/munich.jpg",
+      rating: "4.9/5"
+    },
+    {
+      name: "Riya Suneja",
+      title: "Certified German Instructor (C1)",
+      bio: "Focuses on conversational German and professional contexts. Helps students with job applications in Germany.",
+      image: "/images/munich.jpg",
+      rating: "4.9/5"
+    },
+    {
+      name: "Chhavi Gupta",
+      title: "Certified German Instructor (C1)",
+      bio: "Specializes in beginner courses and pronunciation training. Makes learning German fun and accessible.",
+      image: "/images/munich.jpg",
+      rating: "4.9/5"
+    }
+  ],
   relatedCourses: [
     {
       title: "German C1 Course for Advanced Learners",
@@ -888,13 +980,36 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       ]
     }
   ],
-  instructor: {
-    name: "Amit",
-    title: "Certified German Instructor (C2)",
-    bio: "With over 5 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
-    image: "/images/instructors/amit.jpg",
-    rating: "4.9/5"
-  },
+  instructor:[
+    {
+      name: "Amit Bansal",
+      title: "Certified German Instructor (C2)",
+      bio: "With over 8 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
+      image: "/images/munich.jpg",
+      rating: "4.9/5"
+    },
+    {
+      name: "Linda Selijimi",
+      title: "Native Tutor",
+      bio: "Former university professor with expertise in German grammar, literature, and business communication.",
+      image: "/images/munich.jpg",
+      rating: "4.9/5"
+    },
+    {
+      name: "Riya Suneja",
+      title: "Certified German Instructor (C1)",
+      bio: "Focuses on conversational German and professional contexts. Helps students with job applications in Germany.",
+      image: "/images/munich.jpg",
+      rating: "4.9/5"
+    },
+    {
+      name: "Chhavi Gupta",
+      title: "Certified German Instructor (C1)",
+      bio: "Specializes in beginner courses and pronunciation training. Makes learning German fun and accessible.",
+      image: "/images/munich.jpg",
+      rating: "4.9/5"
+    }
+  ],
   relatedCourses: [
     {
       title: "German C2 Course for Proficiency Learners",
@@ -1058,13 +1173,36 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       ]
     }
   ],
-  instructor: {
-    name: "Amit",
-    title: "Certified German Instructor (C2)",
-    bio: "With over 5 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
-    image: "/images/instructors/amit.jpg",
-    rating: "4.9/5"
-  },
+  instructor:[
+    {
+      name: "Amit Bansal",
+      title: "Certified German Instructor (C2)",
+      bio: "With over 8 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
+      image: "/images/munich.jpg",
+      rating: "4.9/5"
+    },
+    {
+      name: "Linda Selijimi",
+      title: "Native Tutor",
+      bio: "Former university professor with expertise in German grammar, literature, and business communication.",
+      image: "/images/munich.jpg",
+      rating: "4.9/5"
+    },
+    {
+      name: "Riya Suneja",
+      title: "Certified German Instructor (C1)",
+      bio: "Focuses on conversational German and professional contexts. Helps students with job applications in Germany.",
+      image: "/images/munich.jpg",
+      rating: "4.9/5"
+    },
+    {
+      name: "Chhavi Gupta",
+      title: "Certified German Instructor (C1)",
+      bio: "Specializes in beginner courses and pronunciation training. Makes learning German fun and accessible.",
+      image: "/images/munich.jpg",
+      rating: "4.9/5"
+    }
+  ],
   relatedCourses: [
     {
       title: "German B2 Course for Upper-Intermediate Learners",
@@ -1115,8 +1253,6 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
  */
 export const getCourseInfo = (category?: string, subcategory?: string): any => {
 
-  console.log(category,subcategory);
-  console.log(courseVariations[`${category}-${subcategory}`]);
   
   if (!category || !subcategory) {
     return courseVariations['beginner-a1'];
