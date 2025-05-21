@@ -51,7 +51,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     title: "German A1 Course for Absolute Beginners",
     description: "Learn German from scratch with daily live classes, structured materials, and full Goethe A1 exam prep – all in 7 weeks.",
     level: "A1 Beginner",
-    duration: "7–9 Weeks",
+    duration: "7-8 Weeks",
     lessons: 12,
     maxStudents: 15,
     price: "₹16,999",
@@ -73,7 +73,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     ],
     curriculum: [
       {
-        title: "Netzwerk Neu A1 Curriculum",
+        title: "Netzwerk Neu Based A1 Curriculum",
         duration: "12 chapters",
         lessons: [
           {
@@ -202,7 +202,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     instructor: {
       name: "Amit",
       title: "Certified German Instructor (C2)",
-      bio: "With over 5 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
+      bio: "With over 8 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
       image: "/images/munich.jpg",
       rating: "4.9/5"
     },
@@ -213,7 +213,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
         level: "A2 Elementary",
         price: "₹16,999",
         image: "/images/courses/a2.jpg",
-        link: "/courses/beginner-a2"
+        link: "/courses/beginner/a2"
       }
     ]
   },
@@ -243,7 +243,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     ],
     curriculum: [
       {
-        title: "Netzwerk Neu A2 Curriculum",
+        title: "Netzwerk Neu Based A2 Curriculum",
         duration: "12 chapters",
         lessons: [
           {
@@ -421,7 +421,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
   ],
   curriculum: [
     {
-      title: "Netzwerk Neu B1 Curriculum",
+      title: "Netzwerk Neu Based B1 Curriculum",
       duration: "12 chapters",
       lessons: [
         {
@@ -591,7 +591,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
   ],
   curriculum: [
     {
-      title: "Aspekte Neu B2 Curriculum",
+      title: "Aspekte Neu Based B2 Curriculum",
       duration: "12 chapters",
       lessons: [
         {
@@ -762,7 +762,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
   ],
   curriculum: [
     {
-      title: "Aspekte Neu C1 Curriculum",
+      title: "Aspekte Neu Based C1 Curriculum",
       duration: "12 chapters",
       lessons: [
         {
@@ -932,7 +932,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
   ],
   curriculum: [
     {
-      title: "Aspekte Neu C2 Curriculum",
+      title: "Aspekte Neu Based C2 Curriculum",
       duration: "12 chapters",
       lessons: [
         {

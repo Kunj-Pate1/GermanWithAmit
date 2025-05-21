@@ -15,11 +15,11 @@ const courses = [
     level: 'Beginner',
     lessons: 24,
     featured: true,
-    path: '/courses/a1',
+    path: '/courses/beginner/a1',
     intensity: 'Standard',
     certificate: true,
     tutorSupport: true,
-    price: '$299'
+    price: '₹16,999'
   },
   {
     id: 2,
@@ -29,11 +29,11 @@ const courses = [
     level: 'Elementary',
     lessons: 30,
     featured: false,
-    path: '/courses/a2',
+    path: '/courses/beginner/a2',
     intensity: 'Standard',
     certificate: true,
     tutorSupport: true,
-    price: '$349'
+    price: '₹17,500'
   },
   {
     id: 3,
@@ -43,11 +43,11 @@ const courses = [
     level: 'Intermediate',
     lessons: 36,
     featured: true,
-    path: '/courses/b1',
+    path: '/courses/intermediate/b1',
     intensity: 'Intensive',
     certificate: true,
     tutorSupport: true,
-    price: '$399'
+    price: '₹18,999'
   },
   {
     id: 4,
@@ -57,11 +57,11 @@ const courses = [
     level: 'Upper Intermediate',
     lessons: 42,
     featured: false,
-    path: '/courses/b2',
+    path: '/courses/intermediate/b2',
     intensity: 'Intensive',
     certificate: true,
     tutorSupport: true,
-    price: '$449'
+    price: '₹19,500'
   },
   {
     id: 5,
@@ -75,7 +75,7 @@ const courses = [
     intensity: 'Standard',
     certificate: true,
     tutorSupport: true,
-    price: '$599'
+    price: '₹29,999'
   },
   {
     id: 6,
@@ -117,7 +117,7 @@ const courses = [
     intensity: 'Flexible',
     certificate: true,
     tutorSupport: false,
-    price: '$349'
+    price: 'Hybrid'
   }
 ];
 

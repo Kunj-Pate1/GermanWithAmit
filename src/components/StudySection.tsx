@@ -119,7 +119,7 @@ const StudySection = () => {
             Why We Stand <span className="text-german">Out</span>
           </h2>
           <p className="text-gray-700 mb-12 text-lg text-center max-w-3xl mx-auto">
-            Compare German With Amit with other platforms and see the difference in quality, support, and results.
+          Why Learners Prefer German With Amit – Real Results, Real Commitment
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-0">

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Button } from '@/components/ui/button';
@@ -11,9 +11,20 @@ import { getCourseInfo } from '@/lib/data';
 import Navbar from '@/components/Navbar';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
+
 const CourseTemplate = () => {
   const { category, subcategory } = useParams();
   const [expandedLessons, setExpandedLessons] = useState<Record<string, boolean>>({});
+
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    // Scroll to top immediately
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    
+    // Then navigate after a tiny delay to ensure scroll happens
+    setTimeout(() => navigate(path), 10);
+  };
 
   const toggleLesson = (moduleIndex: number, lessonIndex: number) => {
     const key = `${moduleIndex}-${lessonIndex}`;
@@ -71,7 +82,8 @@ const CourseTemplate = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-white text-german hover:bg-blue-50">
+                <Button className="bg-white text-german hover:bg-blue-50"
+                onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}>
                   Enroll Now
                 </Button>
               </div>
@@ -102,7 +114,8 @@ const CourseTemplate = () => {
                     <ShieldCheck className="w-5 h-5 mr-2" />
                     <span>FREE Exam Prep</span>
                   </div>
-                  <Button className="w-full bg-german hover:bg-german-dark">
+                  <Button className="w-full bg-german hover:bg-german-dark"
+                  onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}>
                     Enroll Now
                   </Button>
                 </div>
@@ -134,6 +147,18 @@ const CourseTemplate = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold mb-4">What You'll Learn</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {courseInfo.learningPoints.map((point, index) => (
+                    <div key={index} className="flex">
+                      <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                      <span>{point}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
               
               {/* Free Exam Training Section */}
@@ -200,17 +225,6 @@ const CourseTemplate = () => {
                 </div>
               </div>
               
-              <div>
-                <h2 className="text-2xl font-bold mb-4">What You'll Learn</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {courseInfo.learningPoints.map((point, index) => (
-                    <div key={index} className="flex">
-                      <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
-                      <span>{point}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </TabsContent>
 
             <TabsContent value="curriculum">
@@ -385,9 +399,10 @@ const CourseTemplate = () => {
                   <p className="text-gray-600 text-sm mb-4 line-clamp-2">{course.description}</p>
                   <div className="flex justify-between items-center">
                     <span className="font-bold text-german-dark">{course.price}</span>
-                    <Link to={course.link} className="flex items-center text-german hover:underline">
+                    <button className="flex items-center text-german hover:underline"
+                    onClick={() => handleNavigation(course.link)} >
                       View Course <ArrowRight className="ml-1 w-4 h-4" />
-                    </Link>
+                    </button>
                   </div>
                 </CardContent>
               </Card>
