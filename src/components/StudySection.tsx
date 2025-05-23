@@ -51,12 +51,11 @@ const StudySection = () => {
 
   const comparisonData = [
     { icon: Calendar, feature: "Class Frequency", gwa: "Daily live sessions (Mon–Fri) – 1.5 to 2 hours", others: "Only 2–3 sessions per week" },
-    { icon: Clock, feature: "Completion Time", gwa: "Full level completed in 2 months", others: "2–3 months (less frequent contact)" },
     { icon: GraduationCap, feature: "Teaching Quality", gwa: "Daily interaction & feedback", others: "Quality drops with fewer sessions" },
-    { icon: Users, feature: "Instructor Quality", gwa: "University-qualified experts", others: "Often part-time freelancers" },
+    { icon: Users, feature: "Instructor Quality", gwa: "C1-C2 Certified with German Degree", others: "Often part-time freelancers" },
     { icon: MessageSquare, feature: "Speaking Practice", gwa: "More speaking time (small groups)", others: "Less opportunity to speak" },
     { icon: Target, feature: "Exam Preparation", gwa: "Free Goethe/ÖSD prep included", others: "Often extra or rushed" },
-    { icon: IndianRupee, feature: "Pricing", gwa: "₹16,999 (~€190) all included", others: "€600–€950 (limited extras)" },
+    { icon: IndianRupee, feature: "Pricing", gwa: "₹Reasonable and all included", others: "Expensive yet limited extras" },
     { icon: Book, feature: "Study Materials", gwa: "Netzwerk Neu + custom content", others: "Basic textbook materials" },
     { icon: Film, feature: "Recorded Lessons", gwa: "All recordings included", others: "Extra fee or not provided" },
     { icon: Headphones, feature: "Support", gwa: "24/7 WhatsApp + community", others: "Minimal outside class" }

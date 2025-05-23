@@ -48,19 +48,13 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-white font-bold mb-4">Resources</h3>
+            <h3 className="text-white font-bold mb-4">Our Policies</h3>
             <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-german-medium transition-colors">Free German Resources</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-german-medium transition-colors">FAQ</a>
-              </li>
               <li>
                 <a href="/privacypolicy" className="text-gray-400 hover:text-german-medium transition-colors">Privacy Policy</a>
               </li>
               <li>
-                <a href="/refund-policy" className="text-gray-400 hover:text-german-medium transition-colors">Refund Policy</a>
+                <a href="/refund-policy" className="text-gray-400 hover:text-german-medium transition-colors">Refund & Cancellation Policy</a>
               </li>
             </ul>
           </div>

@@ -95,59 +95,87 @@ const defaultReviews: ReviewProps[] = [
 
 const videoReviews = [
   {
+    id: "1",
+    name: "Nitish",
+    level: "Youtube Short",
+    thumbnail: "/images/avatars/nitish.png",
+    youtubeId: "5g1zxasmHMg",
+  },
+  {
     id: "2",
-    name: "Komal",
-    level: "YouTube Short",
-    thumbnail: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-    youtubeId: "mjzpJvTRlU8"
+    name: "Tanya",
+    level: "Youtube Short",
+    thumbnail: "/images/avatars/tanya.png",
+    youtubeId: "c4ZjjDoFkAs",
+  },
+  {
+    id: "3",
+    name: "Amit",
+    level: "Youtube Short",
+    thumbnail: "/images/avatars/amit.png",
+    youtubeId: "_gKyoBwRiHo",
   },
   {
     id: "4",
-    name: "Sanjana",
+    name: "Nitin",
+    level: "Youtube Short",
+    thumbnail: "/images/avatars/nitin.png",
+    youtubeId: "mOnnBla0Ctc",
+  },
+  {
+    id: "5",
+    name: "Komal",
     level: "YouTube Short",
-    thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-    youtubeId: "Z9ZUs3a1nZE"
+    thumbnail: "images/avatars/komal.png",
+    youtubeId: "mjzpJvTRlU8"
   },
   {
     id: "6",
+    name: "Sanjana",
+    level: "YouTube Short",
+    thumbnail: "images/avatars/sanjana.png",
+    youtubeId: "Z9ZUs3a1nZE"
+  },
+  {
+    id: "7",
     name: "Parul",
     level: "YouTube Short",
-    thumbnail: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+    thumbnail: "images/avatars/parul.png",
     youtubeId: "wTQfZgKCnlA"
   },
   {
     id: "8",
     name: "Kalpana",
     level: "YouTube Short",
-    thumbnail: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    thumbnail: "images/avatars/kalpana.png",
     youtubeId: "-__RrgkTqCE"
   },
   {
-    id: "10",
+    id: "9",
     name: "Rajat",
     level: "YouTube Short",
-    thumbnail: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    thumbnail: "images/avatars/rajat.png",
     youtubeId: "hjeGr3pQ4JI"
   },
   {
-    id: "14",
+    id: "10",
     name: "Kalash",
     level: "YouTube Short",
-    thumbnail: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+    thumbnail: "images/avatars/kalash.png",
     youtubeId: "0GJzMZOjZj8"
   },
   {
-    id: "16",
+    id: "11",
     name: "Muskaan",
     level: "YouTube Short",
-    thumbnail: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    thumbnail: "images/avatars/muskaan.png",
     youtubeId: "_AXKS9OKZwE"
   },
   {
-    id: "18",
+    id: "12",
     name: "Jagriti",
     level: "YouTube Short",
-    thumbnail: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    thumbnail: "images/avatars/jagriti.png",
     youtubeId: "Gahc6SjTnzA"
   }
 ];

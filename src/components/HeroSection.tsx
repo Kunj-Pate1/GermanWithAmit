@@ -75,9 +75,9 @@ useEffect(() => {
 
   const interval3 = setInterval(() => {
     setCount3((prev) => {
-      if (prev >= 95) {
+      if (prev >= 99) {
         clearInterval(interval3);
-        return 95;
+        return 99;
       }
       return prev + Math.floor(Math.random() * 10) + 5;
     });

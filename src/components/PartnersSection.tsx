@@ -7,15 +7,15 @@ const PartnersSection = () => {
   const logos = [
     {
       src: "/images/partner_logos/Fintiba_logo.png",
-      link: "http://partner.fintiba.com/germanwithamit" // Placeholder for http://partner.fintiba.com/germanwithamit
+      link: "http://partner.fintiba.com/germanwithamit" 
     },
     {
       src: "/images/partner_logos/Lernpunkt_logo.png",
-      link: "https://www.google.com/search?q=cbs+studienkolleg&oq=cbs+studi&gs_lcrp=EgZjaHJvbWUqDggBEEUYJxg7GIAEGIoFMgYIABBFGDkyDggBEEUYJxg7GIAEGIoFMg0IAhAuGMcBGNEDGIAEMgcIAxAAGIAEMg0IBBAuGMcBGNEDGIAEMg0IBRAuGMcBGNEDGIAEMg0IBhAuGMcBGNEDGIAEMgYIBxBFGDzSAQgzMDg3ajBqNKgCALACAQ&sourceid=chrome&ie=UTF-8" // Placeholder for https://www.google.com/...
+      link: "https://www.google.com/search?q=cbs+studienkolleg&oq=cbs+studi&gs_lcrp=EgZjaHJvbWUqDggBEEUYJxg7GIAEGIoFMgYIABBFGDkyDggBEEUYJxg7GIAEGIoFMg0IAhAuGMcBGNEDGIAEMgcIAxAAGIAEMg0IBBAuGMcBGNEDGIAEMg0IBRAuGMcBGNEDGIAEMg0IBhAuGMcBGNEDGIAEMgYIBxBFGDzSAQgzMDg3ajBqNKgCALACAQ&sourceid=chrome&ie=UTF-8" 
     },
     {
       src: "/images/partner_logos/CBS_logo.png",
-      link: "https://www.cbs.de/studienkolleg/prep4university];" // Placeholder for https://www.cbs.de/...
+      link: "https://www.cbs.de/studienkolleg/prep4university];" 
     },
   ];
   const mediaItems = [
@@ -78,7 +78,7 @@ const PartnersSection = () => {
       
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-center mb-6">
-            Trusted by Leading <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#56e0fe] to-[#076bfd]">Organizations</span>
+            Trusted by Leading <span className="text-transparent bg-clip-text bg-german">Organizations</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Our quality curriculum and teaching methodology have been recognized by prominent institutions.
@@ -107,7 +107,7 @@ const PartnersSection = () => {
         <div>
         <div className="max-w-3xl mx-auto text-center mb-16">
         <h2 className="text-4xl font-bold mb-6">
-          A Proud Milestone for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#56e0fe] to-[#076bfd]">German with Amit</span>
+          A Proud Milestone for <span className="text-transparent bg-clip-text bg-german">German with Amit</span>
         </h2>
       </div>
       

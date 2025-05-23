@@ -10,11 +10,21 @@ import { Check, Star, Clock, Users, BookOpen, ArrowRight, Play, Award, ShieldChe
 import { getCourseInfo } from '@/lib/data';
 import Navbar from '@/components/Navbar';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { StudentResultsSection } from './StudentResultsSection';
 
 
 const CourseTemplate = () => {
   const { category, subcategory } = useParams();
   const [expandedLessons, setExpandedLessons] = useState<Record<string, boolean>>({});
+
+  const [showDemoForm, setShowDemoForm] = useState(false);
+  const [email, setEmail] = useState('');
+  const handleDemoRequest = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission (send email, show demo, etc.)
+    console.log('Email submitted:', email);
+    setShowDemoForm(false);
+  };
 
   const navigate = useNavigate();
 
@@ -37,7 +47,6 @@ const CourseTemplate = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // This would be replaced with actual course data fetching in a real app
   const courseInfo = getCourseInfo(category, subcategory);
 
   return (
@@ -82,6 +91,12 @@ const CourseTemplate = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
+              <Button 
+                  className="bg-white text-german hover:bg-german-light"
+                  onClick={() => setShowDemoForm(true)}
+                >
+                  Watch Demo
+                </Button>
                 <Button className="bg-white text-german hover:bg-blue-50"
                 onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}>
                   Enroll Now
@@ -99,6 +114,14 @@ const CourseTemplate = () => {
                       className="w-full h-full object-cover"
                     />
                   </AspectRatio>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <button 
+                      className="bg-white/90 hover:bg-white rounded-full p-4 shadow-lg transition-transform transform hover:scale-110"
+                      onClick={() => setShowDemoForm(true)}
+                    >
+                      <Play className="w-10 h-10 text-german fill-german" />
+                    </button>
+                  </div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <button className="bg-white/90 hover:bg-white rounded-full p-4 shadow-lg transition-transform transform hover:scale-110">
                       <Play className="w-10 h-10 text-german fill-german" />
@@ -124,6 +147,41 @@ const CourseTemplate = () => {
           </div>
         </div>
       </div>
+
+      {showDemoForm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="bg-white rounded-lg p-6 max-w-md w-full"
+          >
+            <h3 className="text-xl font-bold mb-4">Watch Demo Class</h3>
+            <p className="mb-4">Enter your email to access the demo video:</p>
+            <form onSubmit={handleDemoRequest}>
+              <input
+                type="email"
+                required
+                placeholder="Your email address"
+                className="w-full p-3 border rounded mb-4"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <div className="flex justify-end gap-3">
+                <Button 
+                  type="button" 
+                  variant="outline" 
+                  onClick={() => setShowDemoForm(false)}
+                >
+                  Cancel
+                </Button>
+                <Button type="submit" className="bg-german hover:bg-german-dark">
+                  Watch Demo
+                </Button>
+              </div>
+            </form>
+          </motion.div>
+        </div>
+      )}
 
       {/* Course Content Section */}
       <div className="bg-white py-16">
@@ -208,7 +266,7 @@ const CourseTemplate = () => {
                       <ul className="space-y-3">
                         <li className="flex items-start">
                           <Check className="mr-2 h-5 w-5 flex-shrink-0 text-green-300" />
-                          <span>98% pass rate on first attempt</span>
+                          <span>99% pass rate on first attempt</span>
                         </li>
                         <li className="flex items-start">
                           <Check className="mr-2 h-5 w-5 flex-shrink-0 text-green-300" />
@@ -371,6 +429,10 @@ const CourseTemplate = () => {
             </TabsContent>
           </Tabs>
         </div>
+      </div>
+
+      <div className='bg-white'>
+      <StudentResultsSection />
       </div>
 
       {/* Related Courses */}
