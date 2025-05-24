@@ -12,6 +12,7 @@ import {
 import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog";
 import { LoadScript } from '@react-google-maps/api';
 import { useInView } from 'react-intersection-observer';
+import AppreciationsCarousel from './AppreciationCarousel';
 
 interface ReviewProps {
   name: string;
@@ -412,6 +413,8 @@ const ReviewSection = () => {
             </Carousel>
           </div>
         </div>
+
+        <AppreciationsCarousel />
 
         <LoadScript 
           googleMapsApiKey={GOOGLE_API_KEY} 

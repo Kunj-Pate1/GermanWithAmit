@@ -2,7 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { MessageSquare, Mail, Phone, MapPin } from 'lucide-react';
+import { MessageSquare, Mail, Phone, MapPin, LinkedinIcon } from 'lucide-react';
 
 const ContactSection = () => {
   return (
@@ -33,13 +33,30 @@ const ContactSection = () => {
                 <div className="bg-german-dark/50 p-3 rounded-lg">
                   <Phone className="h-6 w-6 text-german-light" />
                 </div>
+                
                 <div>
                   <h3 className="font-bold text-lg mb-1">Call Us</h3>
                   <p className="text-german-light">+49 (1764) 677-8072</p>
                   <p className="text-german-light">Monday-Friday, 9am-6pm CET</p>
                 </div>
+                
               </div>
+              <div className="flex items-start space-x-4">
+                <div className="bg-german-dark/50 p-3 rounded-lg">
+                  <LinkedinIcon className="h-6 w-6 text-german-light" href='https://www.linkedin.com/company/german-with-amit/'/>
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-1">Connect On LinkedIn</h3>
+                  <p className="text-german-light">Get in touch</p>
+                  
+                </div>
+                
+               
+                
+              </div>
+              
             </div>
+
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">

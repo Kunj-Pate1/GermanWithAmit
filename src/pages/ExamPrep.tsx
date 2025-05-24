@@ -1,6 +1,9 @@
 import { useState } from 'react';
-import { BookOpen, Clock, Headphones, Mic, Pen, Check, Download, Star, Award, ShieldCheck, ChevronRight } from 'lucide-react';
+import { BookOpen, Clock, Headphones, Mic, Pen, Check, Download, Star, Award, ShieldCheck, ChevronRight, Play } from 'lucide-react';
 import Navbar from '@/components/Navbar';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
 
 type GermanLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
 
@@ -28,6 +31,14 @@ interface ExamLevelData {
 
 const ExamPreparationPage = () => {
   const [activeLevel, setActiveLevel] = useState<GermanLevel>('A1');
+  const [showDemoForm, setShowDemoForm] = useState(false);
+  const [email, setEmail] = useState('');
+
+  const handleDemoRequest = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Email submitted:', email);
+    setShowDemoForm(false);
+  };
 
   const examData: Record<GermanLevel, ExamLevelData> = {
     A1: {
@@ -36,7 +47,7 @@ const ExamPreparationPage = () => {
           name: "Goethe-Zertifikat A1",
           duration: "60 minutes",
           parts: ["Reading", "Listening", "Writing", "Speaking"],
-          logo: "/logos/goethe.png",
+          logo: "/images/logos/goethe.png",
           features: [
             "Internationally recognized",
             "Focus on everyday German",
@@ -47,7 +58,7 @@ const ExamPreparationPage = () => {
           name: "telc Deutsch A1",
           duration: "70 minutes",
           parts: ["Written exam", "Oral exam"],
-          logo: "/logos/telc.png",
+          logo: "/images/logos/telc.svg",
           features: [
             "Practical language use",
             "Clear competency levels",
@@ -58,7 +69,7 @@ const ExamPreparationPage = () => {
           name: "ÖSD Zertifikat A1",
           duration: "90 minutes",
           parts: ["Reading", "Listening", "Writing", "Speaking"],
-          logo: "/logos/osd.png",
+          logo: "/images/logos/osd.png",
           features: [
             "Austrian German focus",
             "International recognition",
@@ -106,7 +117,7 @@ const ExamPreparationPage = () => {
           name: "Goethe-Zertifikat A2",
           duration: "80 minutes",
           parts: ["Reading", "Listening", "Writing", "Speaking"],
-          logo: "/logos/goethe.png",
+          logo: "/images/logos/goethe.png",
           features: [
             "Everyday communication",
             "Basic social interactions",
@@ -117,7 +128,7 @@ const ExamPreparationPage = () => {
           name: "telc Deutsch A2",
           duration: "90 minutes",
           parts: ["Written exam", "Oral exam"],
-          logo: "/logos/telc.png",
+          logo: "/images/logos/telc.svg",
           features: [
             "Practical situations",
             "Basic work-related language",
@@ -165,7 +176,7 @@ const ExamPreparationPage = () => {
           name: "Goethe-Zertifikat B1",
           duration: "150 minutes",
           parts: ["Reading", "Listening", "Writing", "Speaking"],
-          logo: "/logos/goethe.png",
+          logo: "/images/logos/goethe.png",
           features: [
             "Independent language use",
             "Work and study readiness",
@@ -176,7 +187,7 @@ const ExamPreparationPage = () => {
           name: "telc Deutsch B1",
           duration: "160 minutes",
           parts: ["Written exam", "Oral exam"],
-          logo: "/logos/telc.png",
+          logo: "/images/logos/telc.svg",
           features: [
             "Professional contexts",
             "Detailed descriptions",
@@ -224,7 +235,7 @@ const ExamPreparationPage = () => {
           name: "Goethe-Zertifikat B2",
           duration: "190 minutes",
           parts: ["Reading", "Listening", "Writing", "Speaking"],
-          logo: "/logos/goethe.png",
+          logo: "/images/logos/goethe.png",
           features: [
             "Advanced communication",
             "Academic preparation",
@@ -235,7 +246,7 @@ const ExamPreparationPage = () => {
           name: "telc Deutsch B2",
           duration: "200 minutes",
           parts: ["Written exam", "Oral exam"],
-          logo: "/logos/telc.png",
+          logo: "/images/logos/telc.svg",
           features: [
             "Professional communication",
             "Academic language",
@@ -283,7 +294,7 @@ const ExamPreparationPage = () => {
           name: "Goethe-Zertifikat C1",
           duration: "210 minutes",
           parts: ["Reading", "Listening", "Writing", "Speaking"],
-          logo: "/logos/goethe.png",
+          logo: "/images/logos/goethe.png",
           features: [
             "Professional proficiency",
             "Academic studies",
@@ -294,7 +305,7 @@ const ExamPreparationPage = () => {
           name: "telc Deutsch C1",
           duration: "220 minutes",
           parts: ["Written exam", "Oral exam"],
-          logo: "/logos/telc.png",
+          logo: "/images/logos/telc.svg",
           features: [
             "High-level professional use",
             "Academic research",
@@ -342,7 +353,7 @@ const ExamPreparationPage = () => {
           name: "Goethe-Zertifikat C2",
           duration: "240 minutes",
           parts: ["Reading", "Listening", "Writing", "Speaking"],
-          logo: "/logos/goethe.png",
+          logo: "/images/logos/goethe.png",
           features: [
             "Near-native fluency",
             "Professional expertise",
@@ -353,7 +364,7 @@ const ExamPreparationPage = () => {
           name: "telc Deutsch C2",
           duration: "250 minutes",
           parts: ["Written exam", "Oral exam"],
-          logo: "/logos/telc.png",
+          logo: "/images/logos/telc.svg",
           features: [
             "Mastery level proficiency",
             "Expert communication",
@@ -406,22 +417,135 @@ const ExamPreparationPage = () => {
     {/* <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white"> */}
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white mt-16">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-german-dark to-german text-white py-16 px-4 md:px-6">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">German Exam Preparation</h1>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-            Comprehensive resources tailored for each CEFR level from A1 to C2
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center mt-8 gap-4">
-            <button className="bg-white text-german-dark hover:bg-blue-50 px-6 py-3 rounded-lg font-medium flex items-center justify-center shadow-md transition-all">
-              <Star className="mr-2" /> Enroll Now
-            </button>
-            {/* <button className="bg-german-dark hover:bg-german px-6 py-3 rounded-lg font-medium flex items-center justify-center shadow-md transition-all">
-              <Award className="mr-2" /> Exam Strategies
-            </button> */}
+      <div className="bg-gradient-to-r from-german-dark to-german py-16">
+        <div className="container mx-auto px-4 md:px-6 p-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="text-white order-2 lg:order-1">
+              <div className="mb-4 flex items-center">
+                <span className="px-3 py-1 rounded-full bg-german-light/30 text-white text-sm font-medium">
+                  {activeLevel} Level
+                </span>
+                <div className="ml-4 flex items-center">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star 
+                      key={star} 
+                      className="w-4 h-4 text-yellow-300 fill-yellow-300" 
+                    />
+                  ))}
+                  <span className="ml-2 text-sm">4.8 star rating</span>
+                </div>
+              </div>
+              
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                German {activeLevel} Exam Preparation
+              </h1>
+              
+              <p className="text-lg md:text-xl mb-6 text-blue-50">
+                Comprehensive resources and expert guidance to help you ace your German {activeLevel} exam
+              </p>
+              
+              <div className="flex flex-wrap gap-4 mb-8">
+                <div className="flex items-center">
+                  <Clock className="w-5 h-5 mr-2" />
+                  <span>Flexible Learning Schedule</span>
+                </div>
+                <div className="flex items-center">
+                  <Award className="w-5 h-5 mr-2" />
+                  <span>Free Exam Training Included</span>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  className="bg-white text-german hover:bg-german-light"
+                  onClick={() => setShowDemoForm(true)}
+                >
+                  Watch Demo
+                </Button>
+                <Button 
+                  className="bg-white text-german hover:bg-blue-50"
+                  onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}
+                >
+                  Enroll Now
+                </Button>
+              </div>
+            </div>
+            
+            <div className="order-1 lg:order-2">
+              <div className="rounded-xl overflow-hidden shadow-xl">
+                <div className="relative">
+                  <AspectRatio ratio={16/9}>
+                    <img 
+                      src="/images/exam-prep-hero.jpg" 
+                      alt="German Exam Preparation" 
+                      className="w-full h-full object-cover"
+                    />
+                  </AspectRatio>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <button 
+                      className="bg-white/90 hover:bg-white rounded-full p-4 shadow-lg transition-transform transform hover:scale-110"
+                      onClick={() => setShowDemoForm(true)}
+                    >
+                      <Play className="w-10 h-10 text-german fill-german" />
+                    </button>
+                  </div>
+                </div>
+                <div className="bg-white p-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <div className="text-3xl font-bold text-gray-900">₹5,999</div>
+                    <div className="text-lg text-gray-500 line-through">₹8,999</div>
+                  </div>
+                  <div className="mb-4 flex items-center text-green-600 font-medium">
+                    <ShieldCheck className="w-5 h-5 mr-2" />
+                    <span>FREE Exam Prep</span>
+                  </div>
+                  <Button 
+                    className="w-full bg-german hover:bg-german-dark"
+                    onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}
+                  >
+                    Enroll Now
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      {showDemoForm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="bg-white rounded-lg p-6 max-w-md w-full"
+          >
+            <h3 className="text-xl font-bold mb-4">Watch Demo Class</h3>
+            <p className="mb-4">Enter your email to access the demo video:</p>
+            <form onSubmit={handleDemoRequest}>
+              <input
+                type="email"
+                required
+                placeholder="Your email address"
+                className="w-full p-3 border rounded mb-4"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <div className="flex justify-end gap-3">
+                <Button 
+                  type="button" 
+                  variant="outline" 
+                  onClick={() => setShowDemoForm(false)}
+                >
+                  Cancel
+                </Button>
+                <Button type="submit" className="bg-german hover:bg-german-dark">
+                  Watch Demo
+                </Button>
+              </div>
+            </form>
+          </motion.div>
+        </div>
+      )}
 
       {/* Main Content */}
       <div className="container mx-auto px-4 md:px-6 py-12">
@@ -523,7 +647,7 @@ const ExamPreparationPage = () => {
                 <div className="bg-blue-50 p-6">
                   <h3 className="text-xl font-bold text-gray-800 flex items-center">
                     <Download className="w-5 h-5 mr-3 text-german-dark" />
-                    Preparation Resources
+                    Free Preparation Resources
                   </h3>
                 </div>
                 <div className="p-6">

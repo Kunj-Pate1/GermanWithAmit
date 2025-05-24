@@ -138,6 +138,16 @@ const courseCategories = [
     path: "/courses/coaching"
   }
 ];
+const movingCategories = [
+  {
+    name:"Study In Germany",
+    path:"/study"
+  },
+  {
+    name:"Nursing Courses",
+    path:"/nursing"
+  }
+]
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -285,7 +295,8 @@ interface NavLinksProps {
 const DesktopNavLinks = ({ activeSection }: NavLinksProps) => {
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'Courses', href: '#courses', dropdown: true },
+    { name: 'Courses', href: '#courses', dropdown: true,id:"course" },
+    { name: 'Moving To Germany', href: '#courses', dropdown: true,id:"moving" },
     { name: 'Study', href: '#study' },
     { name: 'About Us', href: '#about' },
     { name: 'FAQ', href: '#faq' },
@@ -323,7 +334,7 @@ const DesktopNavLinks = ({ activeSection }: NavLinksProps) => {
                 align="start"
               >
                 <DropdownMenuGroup>
-                  {courseCategories.map((category) => (
+                  {item.id === "course" && courseCategories.map((category) => (
                     <div key={category.name} className="relative">
                       {category.path ? (
                         <DropdownMenuItem asChild>
@@ -359,6 +370,46 @@ const DesktopNavLinks = ({ activeSection }: NavLinksProps) => {
                             </DropdownMenuSubContent>
                           </DropdownMenuPortal>
                         </DropdownMenuSub>
+                      )}
+                    </div>
+                  ))}
+                  {item.id === "moving" && movingCategories.map((category) => (
+                    <div key={category.name} className="relative">
+                      {category.path ? (
+                        <DropdownMenuItem asChild>
+                          <a 
+                            href={category.path} 
+                            className="cursor-pointer hover:bg-german-light/20 w-full px-3 py-2 text-sm rounded-md transition-colors duration-150 flex items-center"
+                          >
+                            {category.name}
+                          </a>
+                        </DropdownMenuItem>
+                      ) : (
+                        // <DropdownMenuSub>
+                        //   <DropdownMenuSubTrigger 
+                        //     className="font-medium hover:bg-german-light/20 px-3 py-2 text-sm rounded-md transition-colors duration-150 w-full text-left flex items-center justify-between"
+                        //   >
+                        //     {category.name}
+                        //   </DropdownMenuSubTrigger>
+                        //   <DropdownMenuPortal>
+                        //     <DropdownMenuSubContent 
+                        //       className="bg-white/95 backdrop-blur-md border border-gray-100 shadow-xl p-2 min-w-[240px] rounded-lg ml-1"
+                        //       alignOffset={-8}
+                        //     >
+                        //       {category.subcategories?.map((subcat) => (
+                        //         <DropdownMenuItem key={subcat.name} asChild>
+                        //           <a 
+                        //             href={subcat.path} 
+                        //             className="cursor-pointer hover:bg-german-light/20 w-full px-3 py-2 text-sm rounded-md transition-colors duration-150"
+                        //           >
+                        //             {subcat.name}
+                        //           </a>
+                        //         </DropdownMenuItem>
+                        //       ))}
+                        //     </DropdownMenuSubContent>
+                        //   </DropdownMenuPortal>
+                        // </DropdownMenuSub>
+                        <></>
                       )}
                     </div>
                   ))}
@@ -410,11 +461,9 @@ const MobileNavLinks = ({ className = "", activeSection,setIsMenuOpen,isMenuOpen
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'Courses', href: '#courses', dropdown: true },
+    { name: 'Courses', href: '#courses', dropdown: true ,id:"courses"},
+    {name:"Study In Germany",href:"#",dropdown:true,id:"moving"},
     { name: 'Study', href: '#study' },
-    { name: 'Partners', href: '#partners' },
-    { name: 'Content', href: '#content' },
-    { name: 'Reviews', href: '#reviews' },
     { name: 'About Us', href: '#about' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
@@ -428,7 +477,8 @@ const MobileNavLinks = ({ className = "", activeSection,setIsMenuOpen,isMenuOpen
         
         if (item.dropdown) {
           return (
-            <div key={item.name} className="space-y-1">
+            <>
+            {item?.id === "courses" && (<div key={item.name} className="space-y-1">
               <motion.button
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -517,7 +567,61 @@ const MobileNavLinks = ({ className = "", activeSection,setIsMenuOpen,isMenuOpen
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </div>)}
+            <>
+            {item?.id === "moving" && (<div key={item.name} className="space-y-1">
+              <motion.button
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.05 }}
+                onClick={() => toggleCategory('moving')}
+                className={`flex justify-between items-center w-full px-4 py-3 font-medium rounded-lg transition-all duration-300 ${
+                  isActive 
+                    ? 'text-german-dark font-semibold' 
+                    : 'text-german-dark hover:text-german'
+                }`}
+              >
+                <span>{item.name}</span>
+                <ChevronDown 
+                  className={`h-5 w-5 transition-transform ${openCategory === 'courses' ? 'rotate-180' : ''}`} 
+                />
+              </motion.button>
+              
+              <AnimatePresence>
+                {openCategory === 'moving' && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="ml-4 pl-2 border-l border-white/20"
+                  >
+                    {movingCategories.map((category, catIndex) => (
+                      <div key={category.name} className="py-1">
+                        {category.path ? (
+                          <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: catIndex * 0.05 }}
+                          >
+                            <a 
+                              href={category.path}
+                              className="block px-3 py-2 text-white/90 hover:text-white rounded"
+                            >
+                              {category.name}
+                            </a>
+                          </motion.div>
+                        ) : (
+                          <></>
+                        )}
+                      </div>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>)}
+            </>
+            </>
+            
           );
         }
         
