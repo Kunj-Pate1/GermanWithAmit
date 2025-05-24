@@ -13,6 +13,8 @@ import ExamPreparationPage from "./pages/ExamPrep";
 import SelfPacedCourse from "./pages/SelfPaced"
 import PrivacyPolicyPage from "./pages/PrivacyPolicy";
 import RefundPolicyPage from "./pages/RefundPolicy";
+import MeetOurFounder from "./pages/founder";
+import ComboCoursesPage from "./pages/ComboCoursePage";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +35,8 @@ const App = () => (
           <Route path="courses/selfpaced" element={<SelfPacedCourse />}/>
           <Route path="/privacypolicy" element={<PrivacyPolicyPage/>} />
           <Route path="/refund-policy" element={<RefundPolicyPage/>} />
+          <Route path="/About-our-Founder" element={<MeetOurFounder />} />
+          <Route path="/combo-course" element={<ComboCoursesPage/>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

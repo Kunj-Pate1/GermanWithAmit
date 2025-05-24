@@ -15,7 +15,7 @@ const PartnersSection = () => {
     },
     {
       src: "/images/partner_logos/CBS_logo.png",
-      link: "https://www.cbs.de/studienkolleg/prep4university];" 
+      link: "https://prep4university-studienkolleg.de/en/" 
     },
   ];
   const mediaItems = [

@@ -332,10 +332,10 @@ import { ChevronDown, ChevronUp, Clock, BookOpen, Award, Check, X, ArrowRight } 
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-import A1Image from "/images/munich.jpg";
+import A1Image from "/images/course/coursea1.webp";
 import A2Image from "/images/munich.jpg";
 import B1Image from "/images/munich.jpg";
-import B2Image from"/images/munich.jpg";
+import B2Image from"/images/course/b2.jpg";
 import ComboImage from "/images/munich.jpg";
 import ExamImage from "/images/munich.jpg";
 import GrammarImage from "/images/munich.jpg";
@@ -348,7 +348,7 @@ const courses = [
     description: 'Beginner German course for complete starters',
     duration: '8 weeks',
     level: 'Beginner',
-    lessons: 24,
+    lessons: 70,
     featured: true,
     path: '/courses/beginner/a1',
     intensity: 'Standard',
@@ -362,7 +362,7 @@ const courses = [
     description: 'Elementary German for basic communication',
     duration: '10 weeks',
     level: 'Elementary',
-    lessons: 30,
+    lessons: 70,
     featured: false,
     path: '/courses/beginner/a2',
     intensity: 'Standard',
@@ -376,7 +376,7 @@ const courses = [
     description: 'Intermediate German for daily life',
     duration: '12 weeks',
     level: 'Intermediate',
-    lessons: 36,
+    lessons: 90,
     featured: true,
     path: '/courses/intermediate/b1',
     intensity: 'Intensive',
@@ -386,11 +386,11 @@ const courses = [
   },
   {
     id: 4,
-    title: 'B2 Level',
+    title: 'B2 Level (B2.1 + B2.2)',
     description: 'Upper intermediate for complex conversations',
     duration: '14 weeks',
     level: 'Upper Intermediate',
-    lessons: 42,
+    lessons: 170,
     featured: false,
     path: '/courses/intermediate/b2',
     intensity: 'Intensive',
@@ -404,7 +404,7 @@ const courses = [
     description: 'Complete beginner to elementary package',
     duration: '16 weeks',
     level: 'Beginner to Elementary',
-    lessons: 48,
+    lessons: 140,
     featured: true,
     path: '/courses/a1a2',
     intensity: 'Standard',
@@ -417,13 +417,13 @@ const courses = [
     title: 'Exam Prep',
     description: 'TestDaF, Goethe or DSH exam preparation',
     duration: '10 weeks',
-    level: 'B1-C1',
+    level: 'A1-C1',
     lessons: 30,
     featured: true,
     path: '/course/exam',
     intensity: 'Intensive',
     tutorSupport: true,
-    price: '₹19,999',
+    // price: '₹19,999',
     image: ExamImage
   },
   // {
@@ -444,14 +444,14 @@ const courses = [
     id: 8,
     title: 'Self-paced',
     description: 'Flexible schedule with full access',
-    duration: '8 weeks',
-    level: 'A2-B2',
+    duration: 'Price & Duration As Per Respective Course',
+    level: 'A1-B2',
     lessons: 24,
-    featured: false,
+    featured: true,
     path: '/courses/selfpaced',
     intensity: 'Flexible',
     tutorSupport: false,
-    price: '₹14,999',
+    // price: '',
     image: SelfPacedImage
   }
 ];
@@ -520,7 +520,7 @@ const CourseSection = () => {
                       </div>
                       <div>
                         <p className="text-gray-500">Includes</p>
-                        <p className="font-medium text-gray-800">{course.lessons} lessons</p>
+                        <p className="font-medium text-gray-800">{course.lessons} hours of live sessions</p>
                       </div>
                     </div>
                     
@@ -534,7 +534,7 @@ const CourseSection = () => {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-3">
+                    {/* <div className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-full bg-german/10 flex items-center justify-center">
                         <Clock className="h-4 w-4 text-german" />
                       </div>
@@ -542,7 +542,7 @@ const CourseSection = () => {
                         <p className="text-gray-500">Intensity</p>
                         <p className="font-medium text-gray-800">{course.intensity}</p>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </CardContent>
                 

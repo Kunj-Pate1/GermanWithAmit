@@ -266,11 +266,11 @@ const VideoReviewCircle = ({ review }: { review: typeof videoReviews[0] }) => {
                 className="w-full h-full rounded-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+              {/* <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                 <div className="w-8 h-8 rounded-full bg-white/80 flex items-center justify-center">
                   <Video className="w-4 h-4 text-german" />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <p className="text-xs mt-2 text-gray-600 text-center">{review.name}</p>
@@ -317,8 +317,8 @@ const VideoReviewCircle = ({ review }: { review: typeof videoReviews[0] }) => {
 
 const StudentNumber = () => (
   <div className="bg-german rounded-lg p-6 text-white mb-10 max-w-xs mx-auto">
-    <div className="text-4xl md:text-5xl font-bold mb-2">13,693+</div>
-    <div className="text-xl italic font-medium">students have taken this course!</div>
+    <div className="text-xl md:text-2xl font-bold mb-2">10,000+ Students</div>
+    <div className="text-md italic ">Trust us to make German Easy and Enjoyable!</div>
   </div>
 );
 
@@ -382,9 +382,9 @@ const ReviewSection = () => {
     <section id="reviews" className="py-20 bg-german-light/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Student Success Stories</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Success Stories from GermanWithAmit Students</h2>
           <p className="max-w-2xl mx-auto text-gray-600 text-lg mb-10">
-            Hear from our students who have transformed their German language skills through our courses.
+          They started just like you — now they’re telling their success stories.
           </p>
           
           <StudentNumber />

@@ -126,7 +126,9 @@ useEffect(() => {
           loop
           muted
           poster="images/munich1.png"
-          // src='https://youtu.be/FyB2bPPtpkU'
+          // poster="images/Amit/Amit_b2.jpg"
+          // poster="images/Amit/Amit_bg3.jpg"
+          // src='https://youtu.be/HMeIgYt9K_s?si=fPJpHoKcCh6KYoDV'
         >
           {/* <source src="https://youtu.be/FyB2bPPtpkU" type="video/mp4" /> */}
           

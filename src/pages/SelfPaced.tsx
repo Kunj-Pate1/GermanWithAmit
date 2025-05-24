@@ -46,14 +46,14 @@ const SelfPacedCourse = () => {
       "Learn anytime — access 70–90 hours of recorded live classes",
       "Join weekly live sessions to clear doubts & practice speaking",
       "Get PDF books, workbooks, and grammar worksheets",
-      "Receive a course completion certificate",
+      // "Receive a course completion certificate",
       "Already trusted by 100+ active learners"
     ],
     included: [
       "Full access to recorded live batch classes",
       "PDF course book, workbook, and grammar sheets",
       "Weekly live doubt-clearing sessions",
-      "Course completion certificate",
+      // "Course completion certificate",
       "Lifetime access to recordings"
     ],
     pricing: [

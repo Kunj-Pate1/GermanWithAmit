@@ -136,10 +136,11 @@ const ImageCarousel = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   
   const images = [
-    "/images/Amit/lib3.jpg",
-    "/images/Amit/lib.jpg",
-    "/images/Amit/outside.jpg",
+    "/images/Amit/amit_laptop.jpg",
     "/images/Amit/teaching.jpg",
+    "/images/Amit/lib3.jpg",
+    "/images/Amit/outside.jpg",
+    "/images/Amit/lib.jpg",
   ];
   
   useEffect(() => {
@@ -385,8 +386,8 @@ const AboutSection = () => {
     viewport={{ once: true }}
   >
     <a
-      href="/your-new-page" 
-      className="bg-gradient-to-r from-german-dark to-german text-white px-8 py-3 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+      href="/About-our-Founder" 
+      className="bg-german text-white px-8 py-3 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
     >
       Learn More About Our Founder
     </a>
@@ -394,7 +395,7 @@ const AboutSection = () => {
     
     
     {/* Our Mission Section */}
-    <motion.div 
+    {/* <motion.div 
     className="w-full"
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -429,13 +430,13 @@ const AboutSection = () => {
       </ul>
       
     </div>
-  </motion.div>
+  </motion.div> */}
   </div>
 </div>
 
         {/* Our Story Section */}
         <div className="mb-24">
-          {!showFullStory ? (
+          {/* {!showFullStory ? (
             <div className="text-center">
               <motion.button
                 onClick={() => setShowFullStory(true)}
@@ -447,7 +448,7 @@ const AboutSection = () => {
                 <ChevronDown size={20} />
               </motion.button>
             </div>
-          ) : (
+          ) : ( */}
             <motion.div 
               className="bg-gradient-to-r from-german to-german-dark p-8 md:p-12 rounded-2xl text-white"
               initial={{ opacity: 0, y: 20 }}
@@ -499,17 +500,17 @@ const AboutSection = () => {
                   </p>
                 </motion.div>
                 <div className="text-center mt-8">
-                  <button
+                  {/* <button
                     onClick={() => setShowFullStory(false)}
                     className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-full transition-colors duration-300"
                   >
                     <span>Show Less</span>
                     <ChevronUp size={18} />
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </motion.div>
-          )}
+          {/* )} */}
         </div>
 
         {/* Teachers section */}

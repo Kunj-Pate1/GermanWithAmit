@@ -49,7 +49,7 @@ const SocialTopBar = () => {
         </div>
         
         {/* Navigation Links - Bottom on mobile, right on desktop */}
-        <div className="flex space-x-3 md:space-x-6">
+        {/* <div className="flex space-x-3 md:space-x-6">
           <a 
             href="/study" 
             className="text-xs md:text-sm font-medium hover:text-blue-300 transition-colors duration-300 relative group"
@@ -64,7 +64,7 @@ const SocialTopBar = () => {
             Nursing In Germany
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -91,35 +91,36 @@ const courseCategories = [
         path: "/courses/intermediate/b2",
       },
       { 
-        name: "C1", 
+        name: "C1 Level", 
         path: "/courses/advanced/c1",
       },
       { 
-        name: "C2", 
+        name: "C2 Level", 
         path: "/courses/advanced/c2",
       }
     ]
   },
   {
     name: "Combo Courses",
-    subcategories: [
-      { 
-        name: "A1 + A2 Level", 
-        path: "/courses/a1a2",
-      },
-      { 
-        name: "A1 + A2 + A3 Level", 
-        path: "/courses/a1a2a3",
-      },
-      { 
-        name: "A2 + B1 Level", 
-        path: "/courses/a2b1",
-      },
-      { 
-        name: "B2.1 + B2.2 Level", 
-        path: "/courses/b21b22",
-      }
-    ]
+    path: "/combo-course"
+    // subcategories: [
+    //   { 
+    //     name: "A1 + A2 Level", 
+    //     path: "/courses/a1a2",
+    //   },
+    //   { 
+    //     name: "A1 + A2 + A3 Level", 
+    //     path: "/courses/a1a2a3",
+    //   },
+    //   { 
+    //     name: "A2 + B1 Level", 
+    //     path: "/courses/a2b1",
+    //   },
+    //   { 
+    //     name: "B2.1 + B2.2 Level", 
+    //     path: "/courses/b21b22",
+    //   }
+    // ]
   },
   {
     name: "Exam Preparation Course",
@@ -144,7 +145,11 @@ const movingCategories = [
     path:"/study"
   },
   {
-    name:"Nursing Courses",
+    name:"Nursing In Germany",
+    path:"/nursing"
+  },
+  {
+    name:"Ausbildung In Germany",
     path:"/nursing"
   }
 ]
@@ -296,8 +301,8 @@ const DesktopNavLinks = ({ activeSection }: NavLinksProps) => {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'Courses', href: '#courses', dropdown: true,id:"course" },
-    { name: 'Moving To Germany', href: '#courses', dropdown: true,id:"moving" },
-    { name: 'Study', href: '#study' },
+    { name: 'Moving To Germany', href: '#study', dropdown: true,id:"moving" },
+    // { name: 'Study', href: '#study' },
     { name: 'About Us', href: '#about' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },

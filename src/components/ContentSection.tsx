@@ -49,6 +49,13 @@ const reels: ReelProps[] = [
     url: "https://www.instagram.com/reel/DI3r_4pMZIL/",
     views: "10K",
     date: "3 months ago"
+  },
+  {
+    id: "6",
+    title: "CBS Cologne: Your Gateway to a German Bachelor",
+    url: "https://www.instagram.com/german_with_amit/reel/DKCDxmsMsp-/",
+    views: "10K",
+    date: "3 months ago"
   }
 ];
 

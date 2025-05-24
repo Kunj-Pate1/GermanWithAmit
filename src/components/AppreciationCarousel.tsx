@@ -92,12 +92,12 @@ const AppreciationsCarousel = () => {
       className="py-16 bg-gray-50 relative overflow-hidden"
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">
+        {/* <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">
           What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-german-dark to-german">Students Say</span>
         </h2>
         <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-12">
           Hear from our community of successful German learners
-        </p>
+        </p> */}
 
         <div 
           ref={containerRef}
