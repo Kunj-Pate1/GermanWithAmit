@@ -87,113 +87,113 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
             }
           },
           {
-            title: "Friends & Colleagues",
+            title: "Friends, Colleagues and Me",
             duration: "1 week",
             details: {
-              topics: ["Professions", "Describing people", "Hobbies", "Days of the week"],
-              grammar: ["Verb conjugation", "Definite articles", "Negation with nicht/kein"],
-              pronunciation: ["Stress in compound words"],
-              culture: ["Work-life balance in Germany"]
+              topics: ["Professions", "Making Plans", "Hobbies", "Days of the week","Working Hours"],
+              grammar: ["Irrelgular verbs", "Yes/No Questions", "Definite articles*die, der, das)", "Singular/Plural Nouns", "Verbs Haben & Sie"],
+              pronunciation: ["Sentence melody in questions and answers"],
+              culture: ["Clubs and social groups in Germany"]
             }
           },
           {
             title: "In Hamburg",
             duration: "1 week",
             details: {
-              topics: ["City navigation", "Weather", "Planning activities"],
-              grammar: ["Modal verbs", "Prepositions of place"],
-              pronunciation: ["Sentence melody in questions"],
-              culture: ["German cities and travel habits"]
+              topics: ["Places", "Buildings", "Transportation", "Directions", "Seasons","Months"],
+              grammar: ["Indefinite articles (ein, eine)" , "Negation (kein)", "Imperative with Sie", "Adjectives with sein."],
+              pronunciation: ["Long and short vowels"],
+              culture: ["Events in Hamburg and seasons in German-speaking countries."]
             }
           },
           {
-            title: "Daily Routine",
+            title: "Enjoy Your Meal!",
             duration: "1 week",
             details: {
-              topics: ["Telling time", "Daily schedules", "Describing a typical day"],
-              grammar: ["Separable verbs", "Time phrases"],
-              pronunciation: ["Linking sounds in speech"],
-              culture: ["German punctuality"]
+              topics: ["Shopping", "Dinning", "Ordering Food", "Food Preferences"],
+              grammar: ["Accusative case", "Verbs with accusative", "Mögen & Möchten", "Sentence structure"],
+              pronunciation: ["Umlauts (ä, ö, ü)"],
+              culture: ["Food Related Professions"]
             }
           },
           {
-            title: "Family & Home",
+            title: "Daily Life and Family",
             duration: "1 week",
             details: {
-              topics: ["Family members", "Home description", "Furniture"],
-              grammar: ["Possessive pronouns", "Accusative case"],
-              pronunciation: ["Word stress"],
-              culture: ["Family structures in Germany"]
+              topics: ["Telling Time", "Making appointments", "Family", "Apologizing for Delays"],
+              grammar: ["Time expressions (am, um, von…bis)", "Possessive articles (nominative & accusative)", "Modal verbs (müssen, können, wollen)"],
+              pronunciation: ["The r sound"],
+              culture: ["Punctuality in German culture"]
             }
           },
           {
-            title: "Shopping & Food",
+            title: "Time with Friends",
             duration: "1 week",
             details: {
-              topics: ["Grocery shopping", "Meal times", "Menus"],
-              grammar: ["Plural forms", "Quantifiers", "Imperatives"],
-              pronunciation: ["Long vs. short vowels"],
-              culture: ["German food habits"]
+              topics: ["Leisure activities", "Dates", "Birthdays", "Invitations", "Restaurant orders"],
+              grammar: ["Ordinal numbers", "Separable verbs","Personal pronouns (accusative)", "Prepositions (accusative)", "Past tense of haben & sein"],
+              pronunciation: ["Diphthongs (ei, eu, au)"],
+              culture: ["Pubs and events in German-speaking countries"]
             }
           },
           {
-            title: "Appointments",
+            title: "Work Life",
             duration: "1 week",
             details: {
-              topics: ["Making plans", "At the doctor", "Dates & times"],
-              grammar: ["Dative case", "Prepositions of time"],
-              pronunciation: ["Intonation in polite requests"],
-              culture: ["Healthcare system in Germany"]
+              topics: ["Daily work life", "Workplace conversations", "Location references",  "Writing emails"],
+              grammar: ["Sentence connectors (und, oder, aber)", "Dative case", "Prepositions with dative"],
+              pronunciation: ["s vs sch, st"],
+              culture: ["Workplace small talk in Germany"]
             }
           },
           {
-            title: "Health",
+            title: "Fit and Healthy",
             duration: "1 week",
             details: {
-              topics: ["Body parts", "Describing symptoms", "Healthy lifestyle"],
-              grammar: ["Reflexive verbs", "Modal verbs in the past"],
-              pronunciation: ["Medical terms"],
-              culture: ["Pharmacies and health insurance in Germany"]
+              topics: ["Body parts", "Giving Instructions", "Medical Advice","Health Tips"],
+              grammar: ["Imperatives (du, ihr, Sie)", "Modal verbs (sollen, müssen, Dürfen)"],
+              pronunciation: ["p/b, t/d, k/g"],
+              culture: ["Home Remedies and Health Traditions"]
             }
           },
           {
-            title: "Leisure Time",
+            title: "My Apartment",
             duration: "1 week",
             details: {
-              topics: ["Hobbies", "Sports", "Leisure activities"],
-              grammar: ["Verb position", "Conjunctions"],
-              pronunciation: ["Activity-specific vocabulary"],
-              culture: ["Clubs and associations in Germany"]
+              topics: ["Understanding Rental ads", "Describing Apartments, Furtniture and Colors"],
+              grammar: ["Sein + Adjective", "Prepositions(accusative & Dative"],
+              pronunciation: ["Long and SHort E"],
+              culture: ["Housing STyles in Germany"]
             }
           },
           {
-            title: "Travel",
+            title: "Studies and Work",
             duration: "1 week",
             details: {
-              topics: ["Transport", "Booking accommodations", "Planning a trip"],
-              grammar: ["Prepositions with accusative/dative", "Comparatives"],
-              pronunciation: ["Travel-related phrases"],
-              culture: ["Holiday traditions in Germany"]
+              topics: ["Daily Routines", "Past Events", "Job Search","Phone calls", "Career Discussions"],
+              grammar: ["Present Perfect tense", "Past Participles(haben & sein)"],
+              pronunciation: ["The h sound"],
+              culture: ["Seasonal Jobs in Germany"]
             }
           },
           {
-            title: "Orientation",
+            title: "I Like That Jacket!",
             duration: "1 week",
             details: {
-              topics: ["Giving directions", "Finding places", "Describing surroundings"],
-              grammar: ["Two-way prepositions", "Imperative commands"],
-              pronunciation: ["Directional terms"],
-              culture: ["Public transport systems"]
+              topics: ["Clothing", "Shopping", "Compliments", "Department Store Navigation"],
+              grammar: ["Demonstrative pronouns (dieser, dieses, diese)", "Past participles (separable & inseparable verbs)", "Personal pronouns (dative)"],
+              pronunciation: ["Stress in verbs with prefixes"],
+              culture: ["Berlin as a fashion trend city"]
             }
           },
           {
-            title: "German Learning Review",
+            title: "Off on Vacation",
             duration: "1 week",
             details: {
-              topics: ["Reviewing all chapters", "Self-assessment"],
-              grammar: ["All key grammar topics"],
-              pronunciation: ["Revision of pronunciation points"],
-              culture: ["Recap of cultural elements"]
+              topics: ["Planning trips", "Directions", "Travel experiences", "Postcards", "Weather"],
+              grammar: ["Pronouns (man)", "Sentence connectors (denn)", "Question words (wer, wen, wem, was)", "Dative time expressions"],
+              pronunciation: ["f,v,w"],
+              culture: ["Travel destinations in Germany"]
             }
           }
         ]
@@ -204,28 +204,28 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
         name: "Amit Bansal",
         title: "Certified German Instructor (C2)",
         bio: "With over 8 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
-        image: "/images/munich.jpg",
+        image: "/images/Amit/amit_laptop.jpg",
         rating: "4.9/5"
       },
       {
         name: "Linda Selijimi",
         title: "Native Tutor",
         bio: "Former university professor with expertise in German grammar, literature, and business communication.",
-        image: "/images/munich.jpg",
+        image: "/images/teachers/linda.webp",
         rating: "4.9/5"
       },
       {
         name: "Riya Suneja",
         title: "Certified German Instructor (C1)",
         bio: "Focuses on conversational German and professional contexts. Helps students with job applications in Germany.",
-        image: "/images/munich.jpg",
+        image: "/images/teachers/riya.webp",
         rating: "4.9/5"
       },
       {
         name: "Chhavi Gupta",
         title: "Certified German Instructor (C1)",
         bio: "Specializes in beginner courses and pronunciation training. Makes learning German fun and accessible.",
-        image: "/images/munich.jpg",
+        image: "/images/teachers/chhavi.webp",
         rating: "4.9/5"
       }
     ],
@@ -250,7 +250,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     maxStudents: 15,
     price: "₹17,499",
     discount: "None",
-    image: "/images/courses/a2.jpg",
+    image: "/images/course/course_a2.png",
     overview: [
       "Daily live sessions and intensive speaking practice",
       "Goethe A2 exam prep with model papers",
@@ -397,28 +397,28 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
         name: "Amit Bansal",
         title: "Certified German Instructor (C2)",
         bio: "With over 8 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
-        image: "/images/munich.jpg",
+        image: "/images/Amit/amit_laptop.jpg",
         rating: "4.9/5"
       },
       {
         name: "Linda Selijimi",
         title: "Native Tutor",
         bio: "Former university professor with expertise in German grammar, literature, and business communication.",
-        image: "/images/munich.jpg",
+        image: "/images/teachers/linda.webp",
         rating: "4.9/5"
       },
       {
         name: "Riya Suneja",
         title: "Certified German Instructor (C1)",
         bio: "Focuses on conversational German and professional contexts. Helps students with job applications in Germany.",
-        image: "/images/munich.jpg",
+        image: "/images/teachers/riya.webp",
         rating: "4.9/5"
       },
       {
         name: "Chhavi Gupta",
         title: "Certified German Instructor (C1)",
         bio: "Specializes in beginner courses and pronunciation training. Makes learning German fun and accessible.",
-        image: "/images/munich.jpg",
+        image: "/images/teachers/chhavi.webp",
         rating: "4.9/5"
       }
     ],
@@ -598,28 +598,28 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       name: "Amit Bansal",
       title: "Certified German Instructor (C2)",
       bio: "With over 8 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
-      image: "/images/munich.jpg",
+      image: "/images/Amit/amit_laptop.jpg",
       rating: "4.9/5"
     },
     {
       name: "Linda Selijimi",
       title: "Native Tutor",
       bio: "Former university professor with expertise in German grammar, literature, and business communication.",
-      image: "/images/munich.jpg",
+      image: "/images/teachers/linda.webp",
       rating: "4.9/5"
     },
     {
       name: "Riya Suneja",
       title: "Certified German Instructor (C1)",
       bio: "Focuses on conversational German and professional contexts. Helps students with job applications in Germany.",
-      image: "/images/munich.jpg",
+      image: "/images/teachers/riya.webp",
       rating: "4.9/5"
     },
     {
       name: "Chhavi Gupta",
       title: "Certified German Instructor (C1)",
       bio: "Specializes in beginner courses and pronunciation training. Makes learning German fun and accessible.",
-      image: "/images/munich.jpg",
+      image: "/images/teachers/chhavi.webp",
       rating: "4.9/5"
     }
   ],
@@ -791,28 +791,28 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       name: "Amit Bansal",
       title: "Certified German Instructor (C2)",
       bio: "With over 8 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
-      image: "/images/munich.jpg",
+      image: "/images/Amit/amit_laptop.jpg",
       rating: "4.9/5"
     },
     {
       name: "Linda Selijimi",
       title: "Native Tutor",
       bio: "Former university professor with expertise in German grammar, literature, and business communication.",
-      image: "/images/munich.jpg",
+      image: "/images/teachers/linda.webp",
       rating: "4.9/5"
     },
     {
       name: "Riya Suneja",
       title: "Certified German Instructor (C1)",
       bio: "Focuses on conversational German and professional contexts. Helps students with job applications in Germany.",
-      image: "/images/munich.jpg",
+      image: "/images/teachers/riya.webp",
       rating: "4.9/5"
     },
     {
       name: "Chhavi Gupta",
       title: "Certified German Instructor (C1)",
       bio: "Specializes in beginner courses and pronunciation training. Makes learning German fun and accessible.",
-      image: "/images/munich.jpg",
+      image: "/images/teachers/chhavi.webp",
       rating: "4.9/5"
     }
   ],
@@ -985,28 +985,28 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       name: "Amit Bansal",
       title: "Certified German Instructor (C2)",
       bio: "With over 8 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
-      image: "/images/munich.jpg",
+      image: "/images/Amit/amit_laptop.jpg",
       rating: "4.9/5"
     },
     {
       name: "Linda Selijimi",
       title: "Native Tutor",
       bio: "Former university professor with expertise in German grammar, literature, and business communication.",
-      image: "/images/munich.jpg",
+      image: "/images/teachers/linda.webp",
       rating: "4.9/5"
     },
     {
       name: "Riya Suneja",
       title: "Certified German Instructor (C1)",
       bio: "Focuses on conversational German and professional contexts. Helps students with job applications in Germany.",
-      image: "/images/munich.jpg",
+      image: "/images/teachers/riya.webp",
       rating: "4.9/5"
     },
     {
       name: "Chhavi Gupta",
       title: "Certified German Instructor (C1)",
       bio: "Specializes in beginner courses and pronunciation training. Makes learning German fun and accessible.",
-      image: "/images/munich.jpg",
+      image: "/images/teachers/chhavi.webp",
       rating: "4.9/5"
     }
   ],
@@ -1178,28 +1178,28 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       name: "Amit Bansal",
       title: "Certified German Instructor (C2)",
       bio: "With over 8 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
-      image: "/images/munich.jpg",
+      image: "/images/Amit/amit_laptop.jpg",
       rating: "4.9/5"
     },
     {
       name: "Linda Selijimi",
       title: "Native Tutor",
       bio: "Former university professor with expertise in German grammar, literature, and business communication.",
-      image: "/images/munich.jpg",
+      image: "/images/teachers/linda.webp",
       rating: "4.9/5"
     },
     {
       name: "Riya Suneja",
       title: "Certified German Instructor (C1)",
       bio: "Focuses on conversational German and professional contexts. Helps students with job applications in Germany.",
-      image: "/images/munich.jpg",
+      image: "/images/teachers/riya.webp",
       rating: "4.9/5"
     },
     {
       name: "Chhavi Gupta",
       title: "Certified German Instructor (C1)",
       bio: "Specializes in beginner courses and pronunciation training. Makes learning German fun and accessible.",
-      image: "/images/munich.jpg",
+      image: "/images/teachers/chhavi.webp",
       rating: "4.9/5"
     }
   ],

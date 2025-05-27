@@ -15,6 +15,9 @@ import PrivacyPolicyPage from "./pages/PrivacyPolicy";
 import RefundPolicyPage from "./pages/RefundPolicy";
 import MeetOurFounder from "./pages/founder";
 import ComboCoursesPage from "./pages/ComboCoursePage";
+import BlogsPage from "./pages/Blog";
+import CoachingPage from "./pages/Coaching";
+import AusbildungPage from "./pages/AusbildungPage";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +40,10 @@ const App = () => (
           <Route path="/refund-policy" element={<RefundPolicyPage/>} />
           <Route path="/About-our-Founder" element={<MeetOurFounder />} />
           <Route path="/combo-course" element={<ComboCoursesPage/>} />
+          <Route path="/blogs" element={<BlogsPage />} />
+          <Route path="/courses/coaching" element={<CoachingPage />} />
+          <Route path="/Ausbildung-in-Germany" element={<AusbildungPage />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

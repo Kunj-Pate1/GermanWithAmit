@@ -8,32 +8,6 @@ interface FaqItem {
   answer: string;
 }
 
-// const faqs: FaqItem[] = [
-//   {
-//     question: "How long does it take to learn German?",
-//     answer: "Learning time varies based on your starting level, study intensity, and language aptitude. Generally, reaching A1 level takes around 80-100 hours, B1 level around 300-400 hours, and C1 level around 700-800 hours of study. Our structured courses are designed to optimize your learning time."
-//   },
-//   {
-//     question: "What level should I start with?",
-//     answer: "We offer a free assessment test to determine your current level. Complete beginners should start with our A1 course, while those with some knowledge can take our placement test to find the perfect starting point."
-//   },
-//   {
-//     question: "Are your courses suitable for preparing for official exams?",
-//     answer: "Yes, our courses are aligned with the Common European Framework of Reference for Languages (CEFR) and prepare you for official exams like the Goethe-Zertifikat, TestDaF, and telc Deutsch."
-//   },
-//   {
-//     question: "How are the online classes conducted?",
-//     answer: "Our online classes take place via Zoom with small groups of 4-8 students to ensure personalized attention. Classes include interactive exercises, conversation practice, and multimedia resources that make learning engaging and effective."
-//   },
-//   {
-//     question: "Do you offer individual lessons?",
-//     answer: "Yes, we offer one-on-one tutoring tailored to your specific needs and learning pace. Individual lessons can focus on general German, business German, exam preparation, or specific areas you want to improve."
-//   },
-//   {
-//     question: "What's your refund policy?",
-//     answer: "We offer a 7-day satisfaction guarantee. If you're not satisfied with the course after your first week, we'll provide a full refund. For more details, please refer to our Terms and Conditions."
-//   }
-// ];
 const faqs: FaqItem[] = [
   {
     question: "Who is GermanWithAmit?",

@@ -49,22 +49,22 @@ const SocialTopBar = () => {
         </div>
         
         {/* Navigation Links - Bottom on mobile, right on desktop */}
-        {/* <div className="flex space-x-3 md:space-x-6">
+        <div className="flex space-x-3 md:space-x-6">
           <a 
-            href="/study" 
+            href="/blogs" 
             className="text-xs md:text-sm font-medium hover:text-blue-300 transition-colors duration-300 relative group"
           >
-            Study In Germany
+            Our Blogs
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a 
+          {/* <a 
             href="/nursing" 
             className="text-xs md:text-sm font-medium hover:text-blue-300 transition-colors duration-300 relative group"
           >
             Nursing In Germany
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-        </div> */}
+          </a> */}
+        </div>
       </div>
     </div>
   );
@@ -150,7 +150,7 @@ const movingCategories = [
   },
   {
     name:"Ausbildung In Germany",
-    path:"/nursing"
+    path:"/Ausbildung-in-Germany"
   }
 ]
 
