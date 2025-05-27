@@ -11,6 +11,7 @@ import { getCourseInfo } from '@/lib/data';
 import Navbar from '@/components/Navbar';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { StudentResultsSection } from './StudentResultsSection';
+import { log } from 'console';
 
 
 const CourseTemplate = () => {
@@ -19,11 +20,55 @@ const CourseTemplate = () => {
 
   const [showDemoForm, setShowDemoForm] = useState(false);
   const [email, setEmail] = useState('');
-  const handleDemoRequest = (e: React.FormEvent) => {
+
+  const [showVideoPopup, setShowVideoPopup] = useState(false);
+  const [isEmailSubmitted, setIsEmailSubmitted] = useState(false);
+
+  
+  useEffect(() => {
+    const submitted = localStorage.getItem('demoEmailSubmitted') === 'true';
+    setIsEmailSubmitted(submitted);
+  }, []);
+
+  const handleDemoRequest = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission (send email, show demo, etc.)
-    console.log('Email submitted:', email);
-    setShowDemoForm(false);
+    
+    // try {
+    //   // Send email to your backend (replace with your actual API call)
+    //   const response = await fetch('/api/submit-email', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ email }),
+    //   });
+
+    //   if (response.ok) {
+        // Save to localStorage and state
+        console.log(email);
+        
+        localStorage.setItem('demoEmailSubmitted', 'true');
+        localStorage.setItem('demoEmail', email);
+        setIsEmailSubmitted(true);
+        setShowDemoForm(false);
+        setShowVideoPopup(true);
+    //   } else {
+    //     alert('Failed to submit email. Please try again.');
+    //   }
+    // } catch (error) {
+    //   console.error('Error submitting email:', error);
+    //   alert('An error occurred. Please try again.');
+    // }
+  };
+
+  const handleWatchDemoClick = () => {
+    if (isEmailSubmitted) {
+      // Skip form and show video directly
+      setShowVideoPopup(true);
+    } else {
+      // Show email form
+      setShowDemoForm(true);
+    }
   };
 
   const navigate = useNavigate();
@@ -93,7 +138,7 @@ const CourseTemplate = () => {
               <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                   className="bg-white text-german hover:bg-german-light"
-                  onClick={() => setShowDemoForm(true)}
+                  onClick={handleWatchDemoClick}
                 >
                   Watch Demo
                 </Button>
@@ -182,6 +227,39 @@ const CourseTemplate = () => {
           </motion.div>
         </div>
       )}
+
+      {/* YouTube Video Popup */}
+      {showVideoPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="relative w-full max-w-4xl"
+          >
+            <button 
+              onClick={() => setShowVideoPopup(false)}
+              className="absolute -top-10 right-0 text-white text-3xl hover:text-gray-300"
+            >
+              ×
+            </button>
+            <div className="aspect-w-16 aspect-h-9">
+              <iframe
+                className="w-full h-96 md:h-[500px]"
+                src={`https://www.youtube.com/embed/MYY35jf7ucI?autoplay=1`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            {isEmailSubmitted && (
+              <p className="text-white text-center mt-2">
+                Welcome!! You can access this demo anytime.
+              </p>
+            )}
+          </motion.div>
+        </div>
+      )}
+
 
       {/* Course Content Section */}
       <div className="bg-white py-16">
