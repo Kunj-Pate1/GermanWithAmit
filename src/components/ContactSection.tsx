@@ -191,13 +191,10 @@ const ContactSection = () => {
                 required
               >
                 <option value="">Previous German experience?*</option>
-                <option value="Never">No experience</option>
-                <option value="A1">A1 (Beginner)</option>
-                <option value="A2">A2 (Elementary)</option>
-                <option value="B1">B1 (Intermediate)</option>
-                <option value="B2">B2 (Upper Intermediate)</option>
-                <option value="C1">C1 (Advanced)</option>
-                <option value="C2">C2 (Proficient)</option>
+                <option value="Beginner">Beginner(A1-A2)</option>
+                <option value="Intermediate">Intermediate(B1-B2)</option>
+                <option value="Advanced">Advanced(C1-C2)</option>
+                <option value="Never">No, I havent studied German before.</option>
               </select>
             </div>
           </div>
@@ -205,7 +202,7 @@ const ContactSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <select 
-                name="Desired_Level"
+                name="What is your desired German Level?"
                  className="w-full h-12 bg-white/5 border-white/20 text-white placeholder:text-white/50 px-3 py-2 rounded-md border border-gray-300"
                 required
               >
@@ -246,6 +243,8 @@ const ContactSection = () => {
                 <option value="">When do you want to Learn?*</option>
                 <option value="Weekdays">Weekdays</option>
                 <option value="Weekends">Weekends</option>
+                <option value="Both">Both</option>
+                <option value="Flexible">Flexible/No Preference</option>
               </select>
             </div>
             <div>
@@ -255,9 +254,9 @@ const ContactSection = () => {
                 required
               >
                 <option value="">Preferred lesson times?*</option>
-                <option value="Morning">Morning</option>
-                <option value="Afternoon">Afternoon</option>
-                <option value="Evening">Evening</option>
+                <option value="Morning">Morning(6am - 12 pm)</option>
+                <option value="Evening">Evening(4pm - 8pm)</option>
+                <option value="Late Evening">Late Evening(8pm - 10pm)</option>
               </select>
             </div>
           </div>

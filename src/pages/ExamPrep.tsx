@@ -85,23 +85,23 @@ const ExamPreparationPage = () => {
       ],
       examStructure: {
         reading: [
-          "Part 1: Read two texts and the questions. Mark with a cross: true or false.",
-          "Part 2: Read the texts and questions. Mark with a cross: a or b.",
-          "Part 3: Read the texts and questions. Mark with a cross: true or false."
+          "Read two texts and the questions. Mark with a cross: true or false.",
+          "Read the texts and questions. Mark with a cross: a or b.",
+          "Read the texts and questions. Mark with a cross: true or false."
         ],
         listening: [
-          "Part 1: Mark with a cross: a, b, or c. You will hear each text twice.",
-          "Part 2: Mark with a cross: true or false. You will hear each text once.",
-          "Part 3: Mark with a cross: a, b, or c. You will hear each text twice."
+          "Mark with a cross: a, b, or c. You will hear each text twice.",
+          "Mark with a cross: true or false. You will hear each text once.",
+          "Mark with a cross: a, b, or c. You will hear each text twice."
         ],
         writing: [
-          "Part 1: You will fill out a form.",
-          "Part 2: You will write a short, personal text about an everyday situation. (E-mail/letter)"
+          "You will fill out a form.",
+          "You will write a short, personal text about an everyday situation. (E-mail/letter)"
         ],
         speaking: [
-          "Part 1: You will introduce yourself: Name, age, country, place of residence, languages, job, hobby.",
-          "Part 2: You will ask for information and give information.",
-          "Part 3: You will formulate requests and respond to them."
+          "You will introduce yourself: Name, age, country, place of residence, languages, job, hobby.",
+          "You will ask for information and give information.",
+          "You will formulate requests and respond to them."
         ]
       },
       tips: [
@@ -144,23 +144,23 @@ const ExamPreparationPage = () => {
       ],
       examStructure: {
         reading: [
-          "Part 1: Short messages and notices",
-          "Part 2: Longer texts with multiple choice",
-          "Part 3: Matching headings to paragraphs"
+          "  Short messages and notices",
+          " Longer texts with multiple choice",
+          " Matching headings to paragraphs"
         ],
         listening: [
-          "Part 1: Short conversations (twice)",
-          "Part 2: Announcements (once)",
-          "Part 3: Dialogues (twice)"
+          "  Short conversations (twice)",
+          " Announcements (once)",
+          " Dialogues (twice)"
         ],
         writing: [
-          "Part 1: Form filling",
-          "Part 2: Short letter/email (80 words)"
+          "  Form filling",
+          " Short letter/email (80 words)"
         ],
         speaking: [
-          "Part 1: Personal introduction",
-          "Part 2: Discussion based on picture",
-          "Part 3: Making arrangements"
+          "  Personal introduction",
+          " Discussion based on picture",
+          " Making arrangements"
         ]
       },
       tips: [
@@ -203,23 +203,23 @@ const ExamPreparationPage = () => {
       ],
       examStructure: {
         reading: [
-          "Part 1: Multiple choice (short texts)",
-          "Part 2: Matching (longer texts)",
-          "Part 3: True/false (articles)"
+          "  Multiple choice (short texts)",
+          " Matching (longer texts)",
+          " True/false (articles)"
         ],
         listening: [
-          "Part 1: Radio interviews (twice)",
-          "Part 2: Discussions (once)",
-          "Part 3: Opinions (twice)"
+          "  Radio interviews (twice)",
+          " Discussions (once)",
+          " Opinions (twice)"
         ],
         writing: [
-          "Part 1: Formal letter (100 words)",
-          "Part 2: Opinion essay (80 words)"
+          "  Formal letter (100 words)",
+          " Opinion essay (80 words)"
         ],
         speaking: [
-          "Part 1: Presentation (3 minutes)",
-          "Part 2: Discussion (5 minutes)",
-          "Part 3: Problem solving (5 minutes)"
+          "  Presentation (3 minutes)",
+          " Discussion (5 minutes)",
+          " Problem solving (5 minutes)"
         ]
       },
       tips: [
@@ -262,23 +262,23 @@ const ExamPreparationPage = () => {
       ],
       examStructure: {
         reading: [
-          "Part 1: Multiple choice (complex texts)",
-          "Part 2: Gap text (academic style)",
-          "Part 3: Opinion matching"
+          "  Multiple choice (complex texts)",
+          " Gap text (academic style)",
+          " Opinion matching"
         ],
         listening: [
-          "Part 1: Lectures (once)",
-          "Part 2: Discussions (twice)",
-          "Part 3: Radio reports (once)"
+          "  Lectures (once)",
+          " Discussions (twice)",
+          " Radio reports (once)"
         ],
         writing: [
-          "Part 1: Report (150 words)",
-          "Part 2: Argumentative essay (200 words)"
+          "  Report (150 words)",
+          " Argumentative essay (200 words)"
         ],
         speaking: [
-          "Part 1: Presentation (5 minutes)",
-          "Part 2: Debate (10 minutes)",
-          "Part 3: Problem solving (5 minutes)"
+          "  Presentation (5 minutes)",
+          " Debate (10 minutes)",
+          " Problem solving (5 minutes)"
         ]
       },
       tips: [
@@ -321,23 +321,23 @@ const ExamPreparationPage = () => {
       ],
       examStructure: {
         reading: [
-          "Part 1: Complex text analysis",
-          "Part 2: Academic text comprehension",
-          "Part 3: Abstract concepts"
+          "  Complex text analysis",
+          " Academic text comprehension",
+          " Abstract concepts"
         ],
         listening: [
-          "Part 1: Academic lectures",
-          "Part 2: Professional discussions",
-          "Part 3: Abstract concepts"
+          "  Academic lectures",
+          " Professional discussions",
+          " Abstract concepts"
         ],
         writing: [
-          "Part 1: Summary and response",
-          "Part 2: Research-based essay"
+          "  Summary and response",
+          " Research-based essay"
         ],
         speaking: [
-          "Part 1: Academic presentation",
-          "Part 2: Professional discussion",
-          "Part 3: Abstract topic debate"
+          "  Academic presentation",
+          " Professional discussion",
+          " Abstract topic debate"
         ]
       },
       tips: [
@@ -380,23 +380,23 @@ const ExamPreparationPage = () => {
       ],
       examStructure: {
         reading: [
-          "Part 1: Literary text analysis",
-          "Part 2: Complex argument evaluation",
-          "Part 3: Subtle meaning interpretation"
+          "  Literary text analysis",
+          " Complex argument evaluation",
+          " Subtle meaning interpretation"
         ],
         listening: [
-          "Part 1: Fast native conversations",
-          "Part 2: Specialized lectures",
-          "Part 3: Cultural references"
+          "  Fast native conversations",
+          " Specialized lectures",
+          " Cultural references"
         ],
         writing: [
-          "Part 1: Critical analysis",
-          "Part 2: Professional document"
+          "  Critical analysis",
+          " Professional document"
         ],
         speaking: [
-          "Part 1: Expert presentation",
-          "Part 2: Nuanced debate",
-          "Part 3: Cultural discussion"
+          "  Expert presentation",
+          " Nuanced debate",
+          " Cultural discussion"
         ]
       },
       tips: [
@@ -757,7 +757,7 @@ const ExamPreparationPage = () => {
                     </div>
                     <ul className="space-y-4">
                       {currentLevelData.examStructure.writing.map((item, i) => (
-                        <li key={i} className="flex items-start">
+                        <li key={i} className="flex items-start ">
                           <span className="bg-amber-50 text-amber-600 text-xs font-bold px-2 py-1 rounded mr-3">
                             Part {i+1}
                           </span>

@@ -15,9 +15,9 @@ const comboCourses = [
     duration: '6 Months',
     lessons: '80+ Lessons',
     level: 'Beginner',
-    price: '₹12,999',
-    originalPrice: '₹15,998',
-    discount: '18% OFF',
+    price: '₹29,999',
+    originalPrice: '₹34,999',
+    discount: '15% OFF',
     features: [
       'A1 & A2 full curriculum',
       '2 mock exams included',
@@ -29,13 +29,13 @@ const comboCourses = [
       {
         module: 'A1 Level',
         courses: [
-          { name: 'A1 Beginner German', link: '/courses/beginner/a1-1' },
+          { name: 'A1 Beginner German', link: '/courses/beginner/a1' },
         ]
       },
       {
         module: 'A2 Level',
         courses: [
-          { name: 'A2 Pre-Intermediate', link: '/courses/elementary/a2-1' },
+          { name: 'A2 Pre-Intermediate', link: '/courses/beginner/a2' },
         ]
       }
     ]
@@ -47,9 +47,9 @@ const comboCourses = [
     duration: '9 Months',
     lessons: '120+ Lessons',
     level: 'Beginner to Intermediate',
-    price: '₹18,999',
-    originalPrice: '₹23,997',
-    discount: '21% OFF',
+    price: '₹47,999',
+    originalPrice: '₹54,000',
+    discount: '15% OFF',
     features: [
       'A1, A2 & B1 full curriculum',
       '3 mock exams included',
@@ -61,22 +61,19 @@ const comboCourses = [
       {
         module: 'A1 Level',
         courses: [
-          { name: 'A1.1 Beginner German', link: '/courses/beginner/a1-1' },
-          { name: 'A1.2 Elementary German', link: '/courses/beginner/a1-2' }
+          { name: 'A1.1 Beginner German', link: '/courses/beginner/a1' },
         ]
       },
       {
         module: 'A2 Level',
         courses: [
-          { name: 'A2.1 Pre-Intermediate', link: '/courses/elementary/a2-1' },
-          { name: 'A2.2 Elementary Mastery', link: '/courses/elementary/a2-2' }
+          { name: 'A2.1 Pre-Intermediate', link: '/courses/beginner/a2' },
         ]
       },
       {
         module: 'B1 Level',
         courses: [
-          { name: 'B1.1 Intermediate', link: '/courses/intermediate/b1-1' },
-          { name: 'B1.2 Intermediate Plus', link: '/courses/intermediate/b1-2' }
+          { name: 'B1.1 Intermediate', link: '/courses/intermediate/b1' },
         ]
       }
     ]
@@ -88,9 +85,9 @@ const comboCourses = [
     duration: '5 Months',
     lessons: '70+ Lessons',
     level: 'Elementary to Intermediate',
-    price: '₹14,499',
-    originalPrice: '₹17,998',
-    discount: '19% OFF',
+    price: '₹31,999',
+    originalPrice: '₹36,000',
+    discount: '14% OFF',
     features: [
       'A2 & B1 full curriculum',
       'Focus on conversation skills',
@@ -102,15 +99,13 @@ const comboCourses = [
       {
         module: 'A2 Level',
         courses: [
-          { name: 'A2.1 Pre-Intermediate', link: '/courses/elementary/a2-1' },
-          { name: 'A2.2 Elementary Mastery', link: '/courses/elementary/a2-2' }
+          { name: 'A2.1 Pre-Intermediate', link: '/courses/beginner/a2' },
         ]
       },
       {
         module: 'B1 Level',
         courses: [
-          { name: 'B1.1 Intermediate', link: '/courses/intermediate/b1-1' },
-          { name: 'B1.2 Intermediate Plus', link: '/courses/intermediate/b1-2' }
+          { name: 'B1.1 Intermediate', link: '/courses/intermediate/b1' },
         ]
       }
     ]

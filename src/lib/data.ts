@@ -947,10 +947,10 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
   ]
 },
 
-"intermediate-b2": {
-  title: "German B2 Course for Upper-Intermediate Learners",
-  description: "Strengthen your language skills with advanced grammar, rich vocabulary, and practical exam preparation for Goethe B2.",
-  level: "B2 Upper-Intermediate",
+"intermediate-b2.1": {
+  title: "German B2.1 Course for Upper-Intermediate Learners",
+  description: "Strengthen your language skills with advanced grammar, rich vocabulary, and practical exam preparation for Goethe B2.1",
+  level: "B2.1 Upper-Intermediate",
   duration: "10–12 Weeks",
   lessons: 12,
   maxStudents: 15,
@@ -959,7 +959,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
   image: "/images/courses/b2.jpg",
   overview: [
     "Daily live classes with communicative focus",
-    "Thorough Goethe B2 exam training",
+    "Thorough Goethe B2.1 exam training",
     "In-depth grammar and vocabulary expansion",
     "Interactive speaking and writing exercises"
   ],
@@ -968,131 +968,448 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     "Understand the main ideas of complex texts",
     "Produce clear, detailed texts on various subjects",
     "Use idiomatic expressions and connect ideas coherently",
-    "Prepare effectively for the B2 exam"
+    "Prepare effectively for the B2.1 exam"
   ],
   curriculum: [
     {
-      title: "Aspekte Neu Based B2 Curriculum",
+      title: "Aspekte Neu Based B2.1 Curriculum",
       duration: "12 chapters",
       lessons: [
         {
-          title: "Social Networks and Communication",
+          title: "Leute heute",
           duration: "1 week",
           details: {
-            topics: ["Digital communication", "Social media", "Influence of technology"],
-            grammar: ["Passive voice", "Konjunktiv II for polite requests"],
-            pronunciation: ["Word stress in borrowed words"],
-            culture: ["Impact of social networks in Germany"]
+            topics: [
+              "Lebensträume",
+              "Freundschaft",
+              "Heldentum",
+              "Glück und Erfolg"
+            ],
+            grammar: [
+              "Tempusformen (Vergangenheit)",
+              "Verben mit Ergänzungen"
+            ],
+            pronunciation: [], // Not specified in original
+            culture: [] // Not specified
           }
         },
         {
-          title: "Education and Learning",
+          title: "Wohnwelten",
           duration: "1 week",
           details: {
-            topics: ["Educational systems", "Lifelong learning", "Study habits"],
-            grammar: ["Relative clauses", "Infinitive constructions"],
-            pronunciation: ["Clear articulation of complex terms"],
-            culture: ["German education culture and reforms"]
+            topics: [
+              "Wohntypen",
+              "Wohlfühlen im Wohnraum",
+              "Obdachlosigkeit",
+              "außergewöhnliche Hotels",
+              "Hotel Mama"
+            ],
+            grammar: [
+              "Trennbare und untrennbare Verben",
+              "n-Deklination"
+            ],
+            pronunciation: [], // Not specified
+            culture: [] // Not specified
           }
         },
         {
-          title: "Work and Professional Life",
+          title: "Wie geht’s denn so?",
           duration: "1 week",
           details: {
-            topics: ["Workplace dynamics", "Career planning", "Job interviews"],
-            grammar: ["Konjunktiv I for indirect speech", "Modal verbs in past"],
-            pronunciation: ["Formal pronunciation"],
-            culture: ["German work ethics and labor laws"]
+            topics: [
+              "Gesundheit",
+              "Ernährung",
+              "Lachen",
+              "Stressbewältigung"
+            ],
+            grammar: [
+              "Pluralbildung der Nomen",
+              "Adjektivdeklination"
+            ],
+            pronunciation: [], // Not specified
+            culture: [] // Not specified
           }
         },
         {
-          title: "Environment and Sustainability",
+          title: "Viel Spaß!",
           duration: "1 week",
           details: {
-            topics: ["Environmental protection", "Sustainable living", "Climate policies"],
-            grammar: ["Subjunctive mood", "Conditional sentences"],
-            pronunciation: ["Emphasis on scientific vocabulary"],
-            culture: ["Environmental awareness in Germany"]
+            topics: [
+              "Freizeitgestaltung",
+              "Spiele",
+              "Abenteuerberichte",
+              "Filmkritik"
+            ],
+            grammar: [
+              "Komparativ und Superlativ",
+              "Konnektoren (kausal, konzessiv, konsekutiv)"
+            ],
+            pronunciation: [], // Not specified
+            culture: [] // Not specified
           }
         },
         {
-          title: "Media and Public Opinion",
+          title: "Alles will gelernt sein",
           duration: "1 week",
           details: {
-            topics: ["Media influence", "Public opinion", "Fake news"],
-            grammar: ["Complex sentence connectors", "Indirect speech"],
-            pronunciation: ["Speech rhythm in debates"],
-            culture: ["German media landscape"]
+            topics: [
+              "Lernorte",
+              "lebenslanges Lernen",
+              "Denkaufgaben",
+              "Lerntechniken"
+            ],
+            grammar: [
+              "Infinitiv mit und ohne zu",
+              "Modalverben (Tempus und Bedeutung)"
+            ],
+            pronunciation: [], // Not specified
+            culture: [] // Not specified
           }
         },
         {
-          title: "Health and Lifestyle",
+          title: "Berufsbilder",
           duration: "1 week",
           details: {
-            topics: ["Healthy habits", "Psychology", "Alternative medicine"],
-            grammar: ["Subordinate clauses", "Concessive clauses"],
-            pronunciation: ["Intonation for emphasis"],
-            culture: ["Health culture in Germany"]
+            topics: [
+              "Berufswünsche",
+              "Geschäftsideen",
+              "Bewerbungstipps",
+              "ungewöhnliche Berufe"
+            ],
+            grammar: [
+              "Zukünftiges ausdrücken (Präsens, Futur I)",
+              "Verben mit Präpositionen",
+              "Präpositionaladverbien",
+              "Fragewörter"
+            ],
+            pronunciation: [], // Not specified
+            culture: [] // Not specified
           }
         },
         {
-          title: "Culture and Identity",
+          title: "Für immer und ewig",
           duration: "1 week",
           details: {
-            topics: ["Cultural diversity", "Traditions", "Immigration"],
-            grammar: ["Adjective endings", "Passive voice"],
-            pronunciation: ["Pronunciation of dialects and regional accents"],
-            culture: ["Multiculturalism in Germany"]
+            topics: [
+              "Lebensformen",
+              "große Liebe",
+              "virtuelle Beziehungen"
+            ],
+            grammar: [
+              "Reflexive Verben",
+              "Relativsätze"
+            ],
+            pronunciation: [], // Not specified
+            culture: [] // Not specified
           }
         },
         {
-          title: "Science and Innovation",
+          title: "Kaufen, kaufen, kaufen",
           duration: "1 week",
           details: {
-            topics: ["Technological developments", "Research", "Ethics in science"],
-            grammar: ["Nominalization", "Passive constructions"],
-            pronunciation: ["Technical vocabulary"],
-            culture: ["Science policy in Germany"]
+            topics: [
+              "Konsum",
+              "Werbung",
+              "Reklamationen",
+              "Kaufentscheidungen"
+            ],
+            grammar: [
+              "Finalsätze",
+              "Konjunktiv II"
+            ],
+            pronunciation: [], // Not specified
+            culture: [] // Not specified
           }
         },
         {
-          title: "Travel and Leisure",
+          title: "Endlich Urlaub",
           duration: "1 week",
           details: {
-            topics: ["Tourism", "Travel experiences", "Hobbies"],
-            grammar: ["Prepositions with accusative and dative", "Comparatives and superlatives"],
-            pronunciation: ["Natural flow in storytelling"],
-            culture: ["Travel habits and holidays in Germany"]
+            topics: [
+              "Reisetypen",
+              "Weltreisen",
+              "Reiseangebote",
+              "Hamburg als Reiseziel"
+            ],
+            grammar: [
+              "Temporalsätze",
+              "temporale Präpositionen"
+            ],
+            pronunciation: [], // Not specified
+            culture: [] // Not specified
           }
         },
         {
-          title: "Society and Politics",
+          title: "Natürlich Natur!",
           duration: "1 week",
           details: {
-            topics: ["Political systems", "Social issues", "Voting and elections"],
-            grammar: ["Subjunctive II", "Complex conjunctions"],
-            pronunciation: ["Formal speech patterns"],
-            culture: ["German political system and participation"]
+            topics: [
+              "Umweltprobleme",
+              "Tierschutz",
+              "Wasser als Ressource"
+            ],
+            grammar: [
+              "Passiv",
+              "lokale Präpositionen (mit Wechselpräpositionen)"
+            ],
+            pronunciation: [], // Not specified
+            culture: [] // Not specified
+          }
+        }
+      ]
+    }
+  ],
+  instructor:[
+    {
+      name: "Amit Bansal",
+      title: "Certified German Instructor (C2)",
+      bio: "With over 8 years of experience teaching German, Amit specializes in immersive, result-driven language education with daily live classes and exam training.",
+      image: "/images/Amit/amit_laptop.jpg",
+      rating: "4.9/5"
+    },
+    {
+      name: "Linda Selijimi",
+      title: "Native Tutor",
+      bio: "Former university professor with expertise in German grammar, literature, and business communication.",
+      image: "/images/teachers/linda.webp",
+      rating: "4.9/5"
+    },
+    {
+      name: "Riya Suneja",
+      title: "Certified German Instructor (C1)",
+      bio: "Focuses on conversational German and professional contexts. Helps students with job applications in Germany.",
+      image: "/images/teachers/riya.webp",
+      rating: "4.9/5"
+    },
+    {
+      name: "Chhavi Gupta",
+      title: "Certified German Instructor (C1)",
+      bio: "Specializes in beginner courses and pronunciation training. Makes learning German fun and accessible.",
+      image: "/images/teachers/chhavi.webp",
+      rating: "4.9/5"
+    }
+  ],
+  relatedCourses: [
+    {
+      title: "German C1 Course for Advanced Learners",
+      description: "Achieve advanced fluency and tackle complex language tasks with expert guidance.",
+      level: "C1 Advanced",
+      price: "₹21,999",
+      image: "/images/courses/c1.jpg",
+      link: "/courses/advanced-c1"
+    }
+  ]
+},
+
+"intermediate-b2.2": {
+  title: "German B2.2 Course for Upper-Intermediate Learners",
+  description: "Strengthen your language skills with advanced grammar, rich vocabulary, and practical exam preparation for Goethe B2.",
+  level: "B2.2 Upper-Intermediate",
+  duration: "10–12 Weeks",
+  lessons: 12,
+  maxStudents: 15,
+  price: "₹19,499",
+  discount: "None",
+  image: "/images/courses/b2.jpg",
+  overview: [
+    "Daily live classes with communicative focus",
+    "Thorough Goethe B2.2 exam training",
+    "In-depth grammar and vocabulary expansion",
+    "Interactive speaking and writing exercises"
+  ],
+  learningPoints: [
+    "Discuss complex topics fluently and spontaneously",
+    "Understand the main ideas of complex texts",
+    "Produce clear, detailed texts on various subjects",
+    "Use idiomatic expressions and connect ideas coherently",
+    "Prepare effectively for the B2.2 exam"
+  ],
+  curriculum: [
+    {
+      title: "Aspekte Neu Based B2.2 Curriculum",
+      duration: "12 chapters",
+      lessons: [
+        {
+          title: "Heimat ist ...",
+          duration: "1 week",
+          details: {
+            topics: [
+              "Heimat",
+              "Migration",
+              "Integration",
+              "kulturelle Identität"
+            ],
+            grammar: [
+              "Wortstellung im Satz",
+              "Negation"
+            ],
+            pronunciation: [],
+            culture: []
           }
         },
         {
-          title: "Exam Preparation and Practice",
+          title: "Sprich mit mir!",
           duration: "1 week",
           details: {
-            topics: ["Exam strategies", "Mock tests", "Error analysis"],
-            grammar: ["Comprehensive grammar review"],
-            pronunciation: ["Exam relevant pronunciation tips"],
-            culture: ["Cultural topics for the exam"]
+            topics: [
+              "Kommunikation",
+              "Körpersprache",
+              "Sprachförderung",
+              "Smalltalk"
+            ],
+            grammar: [
+              "Vergleichssätze",
+              "das Wort 'es'"
+            ],
+            pronunciation: [],
+            culture: []
           }
         },
         {
-          title: "Final Presentation and Review",
+          title: "Arbeit ist das halbe Leben?",
           duration: "1 week",
           details: {
-            topics: ["Presentation skills", "Debate and discussion", "Course recap"],
-            grammar: ["Advanced syntax and usage"],
-            pronunciation: ["Public speaking and fluency"],
-            culture: ["Effective communication in German"]
+            topics: [
+              "Beruf",
+              "Teamarbeit",
+              "Bewerbung",
+              "Arbeitszufriedenheit"
+            ],
+            grammar: [
+              "Zweiteilige Konnektoren",
+              "Konnektoren mit zu + Infinitiv",
+              "Alternativen"
+            ],
+            pronunciation: [],
+            culture: []
+          }
+        },
+        {
+          title: "Zusammen leben",
+          duration: "1 week",
+          details: {
+            topics: [
+              "Gewaltprävention",
+              "Armut",
+              "Internetverhalten",
+              "Zukunftswünsche"
+            ],
+            grammar: [
+              "Relativsätze mit wer",
+              "Nomen-Verb-Verbindungen"
+            ],
+            pronunciation: [],
+            culture: []
+          }
+        },
+        {
+          title: "Wer Wissen schafft, macht Wissenschaft",
+          duration: "1 week",
+          details: {
+            topics: [
+              "Kinder und Wissenschaft",
+              "Lügen",
+              "Zukunftsvisionen",
+              "Büroalltag"
+            ],
+            grammar: [
+              "Passiv",
+              "Passiversatzformen",
+              "Indefinitpronomen"
+            ],
+            pronunciation: [],
+            culture: []
+          }
+        },
+        {
+          title: "Fit für ...",
+          duration: "1 week",
+          details: {
+            topics: [
+              "Onlinekauf",
+              "Telefonieren",
+              "Umgang mit Kollegen",
+              "Prüfungsvorbereitung"
+            ],
+            grammar: [
+              "Passiv mit sein",
+              "Vergleichssätze mit als, als ob und als wenn im Konjunktiv II"
+            ],
+            pronunciation: [],
+            culture: []
+          }
+        },
+        {
+          title: "Kulturwelten",
+          duration: "1 week",
+          details: {
+            topics: [
+              "UNESCO-Welterbe",
+              "Kunstraub",
+              "Sprachensterben",
+              "Buchrezensionen"
+            ],
+            grammar: [
+              "Textzusammenhang",
+              "Modalität mit müssen"
+            ],
+            pronunciation: [],
+            culture: []
+          }
+        },
+        {
+          title: "Das macht(e) Geschichte",
+          duration: "1 week",
+          details: {
+            topics: [
+              "Geschichte erleben",
+              "Mauerfall",
+              "historische Irrtümer",
+              "Grenzen"
+            ],
+            grammar: [
+              "Nomen, Verben und Adjektive mit Präposition",
+              "indirekte Rede mit Konjunktiv I"
+            ],
+            pronunciation: [],
+            culture: []
+          }
+        },
+        {
+          title: "Mit viel Gefühl ...",
+          duration: "1 week",
+          details: {
+            topics: [
+              "Musik",
+              "Farben",
+              "Gefühle",
+              "Entscheidungen"
+            ],
+            grammar: [
+              "Nominalisierung von Verben",
+              "Modalpartikeln"
+            ],
+            pronunciation: [],
+            culture: []
+          }
+        },
+        {
+          title: "Ein Blick in die Zukunft",
+          duration: "1 week",
+          details: {
+            topics: [
+              "Roboter",
+              "Gesundheit",
+              "Berufe der Zukunft",
+              "Zukunftsszenarien"
+            ],
+            grammar: [
+              "Partizipien als Adjektive",
+              "während",
+              "Präpositionen mit Genitiv"
+            ],
+            pronunciation: [],
+            culture: []
           }
         }
       ]

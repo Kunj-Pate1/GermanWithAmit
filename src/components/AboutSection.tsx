@@ -3,6 +3,12 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Facebook, Instagram, Linkedin, Twitter, BookOpen, Globe, Award, CheckCircle, ChevronDown, ChevronUp, ScrollText } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { 
+  GraduationCap,
+  Users,
+  Briefcase,
+  Mic
+} from "lucide-react";
 
 interface TeacherProps {
   name: string;
@@ -337,23 +343,70 @@ const AboutSection = () => {
       {/* Right side container for Our Story and Milestones */}
       <div className="w-full lg:w-1/2 space-y-6">
         {/* Our Story */}
-        <motion.div 
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: true }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true, margin: "-50px" }}
         >
-          <div className="bg-gradient-to-r from-german-dark to-german p-8 md:p-12 rounded-2xl text-white">
-            <h2 className="text-3xl font-bold text-white mb-6 text-center">From Delhi to Deutschland</h2>
-            <div className="text-white space-y-4 text-justify">
-              <p>
-                Born and raised in Delhi, India
-                Holds a Bachelor's and Master's degree in German Studies
-                Founder of the online platform "German With Amit" with over 130,000 followers on Instagram
-                Guest Professor at Delhi University
-                Translator and interpreter (including for India's Prime Minister's broadcast Mann Ki Baat)
-                Former Account Manager at Amazon for the German market.
-              </p>
+          <div className="relative bg-gradient-to-br from-german-dark via-german to-german p-8 md:p-10 rounded-3xl text-white overflow-hidden">
+            {/* Decorative elements */}
+            <div className="absolute -top-10 -right-10 w-32 h-32 bg-blue-600/20 rounded-full blur-xl"></div>
+            <div className="absolute -bottom-5 -left-5 w-20 h-20 bg-indigo-600/20 rounded-full blur-lg"></div>
+            
+            {/* Content */}
+            <div className="relative z-10">
+              <div className="flex items-center justify-center mb-8">
+                <Globe className="h-8 w-8 mr-3 text-white" />
+                <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-white bg-gradient-to-r from-blue-200 to-white">
+                  From Delhi to Deutschland
+                </h2>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <div className="flex items-start">
+                    <GraduationCap className="h-5 w-5 mt-1 mr-3 flex-shrink-0 text-white" />
+                    <p className="text-blue-100">
+                      <span className="font-semibold text-white">Education:</span> Bachelor's & Master's in German Studies from Germany.
+                    </p>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <Users className="h-5 w-5 mt-1 mr-3 flex-shrink-0 text-white" />
+                    <p className="text-blue-100">
+                      <span className="font-semibold text-white">Community:</span> Founder of "German With Amit" (130K+ on Instagram).
+                    </p>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex items-start">
+                    <Briefcase className="h-5 w-5 mt-1 mr-3 flex-shrink-0 text-white" />
+                    <p className="text-blue-100">
+                      <span className="font-semibold text-white">Experience:</span> Ex-Amazon Account Manager (German market).
+                    </p>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <Mic className="h-5 w-5 mt-1 mr-3 flex-shrink-0 text-white" />
+                    <p className="text-blue-100">
+                      <span className="font-semibold text-white">Translation:</span> Official interpreter for PM's Mann Ki Baat.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <motion.div 
+                className="mt-8 pt-6 border-t border-german-light text-center"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+              >
+                <p className="text-german-light italic">
+                  "Bringing cultures together through language education"
+                </p>
+              </motion.div>
             </div>
           </div>
         </motion.div>
@@ -379,7 +432,7 @@ const AboutSection = () => {
     </div>
 
     <motion.div
-    className="flex justify-center my-12"
+    className="flex justify-center"
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay: 0.4 }}
@@ -435,8 +488,8 @@ const AboutSection = () => {
 </div>
 
         {/* Our Story Section */}
-        <div className="mb-24">
-          {/* {!showFullStory ? (
+        <div>
+          {!showFullStory ? (
             <div className="text-center">
               <motion.button
                 onClick={() => setShowFullStory(true)}
@@ -448,7 +501,7 @@ const AboutSection = () => {
                 <ChevronDown size={20} />
               </motion.button>
             </div>
-          ) : ( */}
+          ) : (
             <motion.div 
               className="bg-gradient-to-r from-german to-german-dark p-8 md:p-12 rounded-2xl text-white"
               initial={{ opacity: 0, y: 20 }}
@@ -500,17 +553,17 @@ const AboutSection = () => {
                   </p>
                 </motion.div>
                 <div className="text-center mt-8">
-                  {/* <button
+                  <button
                     onClick={() => setShowFullStory(false)}
                     className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-full transition-colors duration-300"
                   >
                     <span>Show Less</span>
                     <ChevronUp size={18} />
-                  </button> */}
+                  </button>
                 </div>
               </div>
             </motion.div>
-          {/* )} */}
+          )}
         </div>
 
         {/* Teachers section */}
@@ -520,7 +573,7 @@ const AboutSection = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <div className="text-center mb-8">
+          {/* <div className="text-center mb-8">
             <motion.button
               onClick={() => setShowTeachers(!showTeachers)}
               className="mx-auto flex items-center gap-2 px-6 py-3 bg-german hover:bg-german-dark text-white font-medium rounded-full transition-colors duration-300 shadow-md hover:shadow-lg"
@@ -540,20 +593,24 @@ const AboutSection = () => {
             </motion.button>
           </div>
           
-          {showTeachers && (
+          {showTeachers && ( */}
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.5 }}
+              className="text-center mb-16 "
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 py-4">
+                Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-german-dark to-german">Teachers</span>
+              </h1>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8 text-left">
                 {teachers.map((teacher, index) => (
                   <TeacherCard key={index} {...teacher} />
                 ))}
               </div>
             </motion.div>
-          )}
+          {/* )} */}
         </motion.div>
       </div>
     </section>
