@@ -87,11 +87,19 @@ const courseCategories = [
         path: "/courses/intermediate/b1",
       },
       { 
-        name: "B2 Level", 
+        name: "B2.1 Level", 
         path: "/courses/intermediate/b2",
       },
       { 
-        name: "C1 Level", 
+        name: "B2.2 Level", 
+        path: "/courses/intermediate/b2",
+      },
+      { 
+        name: "C1.1 Level", 
+        path: "/courses/advanced/c1",
+      },
+      { 
+        name: "C1.2 Level", 
         path: "/courses/advanced/c1",
       },
       { 
@@ -467,8 +475,8 @@ const MobileNavLinks = ({ className = "", activeSection,setIsMenuOpen,isMenuOpen
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'Courses', href: '#courses', dropdown: true ,id:"courses"},
-    {name:"Study In Germany",href:"#",dropdown:true,id:"moving"},
-    { name: 'Study', href: '#study' },
+    {name:"Moving to Germany",href:"#",dropdown:true,id:"moving"},
+    // { name: 'Study', href: '#study' },
     { name: 'About Us', href: '#about' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },

@@ -270,123 +270,264 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
         duration: "12 chapters",
         lessons: [
           {
-            title: "New in the City",
+            title: "Und was machst du?",
             duration: "1 week",
             details: {
-              topics: ["Introducing yourself in more detail", "Asking and giving information about routines", "Finding your way around town"],
-              grammar: ["Past tense (Perfekt)", "Separable verbs in past tense", "Personal pronouns in dative"],
-              pronunciation: ["Final consonants"],
-              culture: ["City registration in Germany"]
+              topics: [
+                "sich vorstellen",
+                "über Vergangenes berichten",
+                "sich verabreden",
+                "etwas begründen",
+                "Informationen auf einer Homepage verstehen",
+                "ein Restaurant vorstellen"
+              ],
+              grammar: [
+                "Genitiv: Name + s",
+                "Wiederholung: Perfekt",
+                "Nebensatz mit 'weil'"
+              ],
+              pronunciation: ["Wörter mit allen Sinnen lernen"],
+              culture: ["Essen ohne Licht"]
             }
           },
           {
-            title: "At Home",
+            title: "Nach der Schulzeit",
             duration: "1 week",
             details: {
-              topics: ["Describing your home", "Talking about housing preferences", "Writing emails about living situations"],
-              grammar: ["Two-way prepositions", "Adjective endings with definite/indefinite articles"],
-              pronunciation: ["Word stress in compounds"],
-              culture: ["Renting in Germany"]
+              topics: [
+                "Berichte aus der Schulzeit verstehen",
+                "über die Schulzeit sprechen",
+                "Kommentare schreiben",
+                "eine Radiosendung verstehen",
+                "über Erfahrungen sprechen",
+                "die eigene Meinung sagen",
+                "etwas präsentieren",
+                "Informationen über ein Schulsystem verstehen",
+                "über Schultypen sprechen"
+              ],
+              grammar: [
+                "Modalverben im Präteritum",
+                "Wiederholung: Artikel",
+                "Possessivartikel im Dativ"
+              ],
+              pronunciation: ["wichtige Redemittel auswendig lernen"],
+              culture: ["Schultypen in Deutschland"]
             }
           },
           {
-            title: "Daily Life",
+            title: "Immer online?",
             duration: "1 week",
             details: {
-              topics: ["Everyday routines", "Shopping", "Going to the bank"],
-              grammar: ["Modal verbs in the past", "Prepositions with dative/accusative"],
-              pronunciation: ["Intonation in polite requests"],
-              culture: ["Banking system in Germany"]
+              topics: [
+                "über Vor- und Nachteile sprechen",
+                "Vergleiche formulieren",
+                "ein Interview machen",
+                "Meinungen in Texten verstehen",
+                "die eigene Meinung äußern",
+                "über Filme sprechen",
+                "Filmbeschreibungen verstehen",
+                "einen Film kommentieren",
+                "einen Film verstehen und schreiben"
+              ],
+              grammar: [
+                "Adjektive: Komparativ und Superlativ",
+                "Vergleiche mit 'als' und 'wie'",
+                "Nebensätze mit 'dass'"
+              ],
+              pronunciation: ["lange Texte lesen"],
+              culture: ["Kino! Kino!"]
             }
           },
           {
-            title: "Food & Drink",
+            title: "Große und kleine Gefühle",
             duration: "1 week",
             details: {
-              topics: ["Ordering in a restaurant", "Traditional dishes", "Food shopping"],
-              grammar: ["Imperative", "Genitive introduction"],
-              pronunciation: ["Long vs short vowels"],
-              culture: ["Regional cuisines in Germany"]
+              topics: [
+                "über Gefühle sprechen",
+                "Glückwünsche ausdrücken",
+                "sich bedanken",
+                "Freude oder Bedauern ausdrücken",
+                "über ein Ereignis sprechen",
+                "über eine Veranstaltung sprechen",
+                "Blogs verstehen und schreiben"
+              ],
+              grammar: [
+                "Nebensatz mit 'wenn'",
+                "reflexive Verben"
+              ],
+              pronunciation: ["emotionales Sprechen"],
+              culture: ["Ein Fest im Norden"]
             }
           },
           {
-            title: "Leisure and Media",
+            title: "Leben in der Stadt",
             duration: "1 week",
             details: {
-              topics: ["Media usage", "TV habits", "Describing hobbies in detail"],
-              grammar: ["Subordinate clauses (weil, dass)", "Verb position"],
-              pronunciation: ["Syllable emphasis"],
-              culture: ["Media and entertainment in Germany"]
+              topics: [
+                "ein Vorstellungsgespräch verstehen",
+                "nach Dingen fragen",
+                "Gespräche bei Banken und Behörden verstehen",
+                "höflich um etwas bitten",
+                "einer Stadt-Tour folgen",
+                "eine Stadt beschreiben"
+              ],
+              grammar: [
+                "Adjektive nach dem bestimmten Artikel",
+                "Präpositionen 'ohne' + Akkusativ und 'mit' + Dativ",
+                "Konjunktiv II: 'könnte'"
+              ],
+              pronunciation: ["freundliche Bitten"],
+              culture: ["Rund um den Ring: Wien"]
             }
           },
           {
-            title: "At Work",
+            title: "Arbeitswelten",
             duration: "1 week",
             details: {
-              topics: ["Describing your job", "Talking about your workday", "Colleague interactions"],
-              grammar: ["Reflexive verbs", "Preterite for haben/sein"],
-              pronunciation: ["Stress in complex words"],
-              culture: ["Work culture in Germany"]
+              topics: [
+                "ein Gespräch am Fahrkartenschalter führen",
+                "über Freizeitangebote sprechen",
+                "Textinformationen entnehmen",
+                "Personen vorstellen",
+                "Berufswünsche äußern",
+                "über einen Traumberuf schreiben",
+                "ein Telefongespräch vorbereiten"
+              ],
+              grammar: [
+                "Adjektive nach dem unbestimmten Artikel",
+                "Wiederholung: 'oder / noch'"
+              ],
+              pronunciation: ["auf Deutsch telefonieren"],
+              culture: ["Telefonieren am Arbeitsplatz"]
             }
           },
           {
-            title: "Health & Appointments",
+            title: "Ganz schön mobil",
             duration: "1 week",
             details: {
-              topics: ["Making appointments", "Describing symptoms", "Health insurance"],
-              grammar: ["Modal verbs review", "Time phrases with 'seit'"],
-              pronunciation: ["Medical vocabulary"],
-              culture: ["Visiting a doctor in Germany"]
+              topics: [
+                "Informationen erfragen",
+                "eine Wegbeschreibung verstehen und geben",
+                "über Vor- und Nachteile sprechen",
+                "die eigene Meinung sagen",
+                "über den Weg zur Arbeit sprechen",
+                "eine Grafik beschreiben",
+                "kurze Geschichten verstehen und schreiben"
+              ],
+              grammar: [
+                "indirekte Fragesätze: W-Fragen und Ja-/Nein-Fragen mit 'ob'",
+                "Ortsangaben: Präpositionen"
+              ],
+              pronunciation: ["schwierige Wörter"],
+              culture: ["Der Weg zur Arbeit in D-A-CH"]
             }
           },
           {
-            title: "Travel & Mobility",
+            title: "Gelernt ist gelernt!",
             duration: "1 week",
             details: {
-              topics: ["Public transport", "Booking travel", "Describing past trips"],
-              grammar: ["Perfect tense with sein/haben", "Prepositions of direction"],
-              pronunciation: ["Travel phrases"],
-              culture: ["German train and bus systems"]
+              topics: [
+                "Lernprobleme verstehen und beschreiben",
+                "Ratschläge verstehen und geben",
+                "Berichte über den Berufsalltag verstehen",
+                "Informationen erfragen und antworten",
+                "ein Interview verstehen",
+                "eine kurze Präsentation halten"
+              ],
+              grammar: [
+                "Konjunktiv II: 'sollte' (Ratschläge)",
+                "Interrogativartikel: 'Was für ein/e?'"
+              ],
+              pronunciation: ["b, d und g am Wortende"],
+              culture: ["Der Verein 'Nachbarn für Nachbarn'"]
             }
           },
           {
-            title: "Festivals & Traditions",
+            title: "Sportlich, sportlich",
             duration: "1 week",
             details: {
-              topics: ["German holidays", "Writing about traditions", "Describing photos"],
-              grammar: ["Noun-verb combinations", "Adjective endings"],
-              pronunciation: ["Pronunciation of compound nouns"],
-              culture: ["Traditional German festivals"]
+              topics: [
+                "Begeisterung, Hoffnung und Enttäuschung ausdrücken",
+                "Kommentare verstehen und schreiben",
+                "Lob und Widerspruch ausdrücken",
+                "Vorschläge machen und reagieren",
+                "ein Reiseziel vorstellen"
+              ],
+              grammar: [
+                "Sätze verbinden: 'deshalb', 'trotzdem'",
+                "Verben mit Dativ und Akkusativ"
+              ],
+              pronunciation: ["schwierige Texte verstehen"],
+              culture: ["Ein Ort für Sport"]
             }
           },
           {
-            title: "Learning & Languages",
+            title: "Zusammen leben",
             duration: "1 week",
             details: {
-              topics: ["Learning strategies", "Talking about multilingualism"],
-              grammar: ["Conjunctions obwohl, wenn", "Sentence structure revision"],
-              pronunciation: ["Sound shifts in speech"],
-              culture: ["Language learning in Germany"]
+              topics: [
+                "um einen Gefallen bitten",
+                "sich beschweren",
+                "sich entschuldigen",
+                "Ortsangaben machen",
+                "ein Fest verstehen",
+                "Erfahrungsberichte verstehen",
+                "über Vergangenes berichten",
+                "eine Stadt präsentieren",
+                "über Haustiere sprechen",
+                "Informationen verstehen und verbessern"
+              ],
+              grammar: [
+                "Wechselpräpositionen",
+                "Positions- und Richtungsverben",
+                "Nebensatz mit 'als' und 'wenn'"
+              ],
+              pronunciation: ["Satzakzent"],
+              culture: ["Die Deutschen und ihre Haustiere"]
             }
           },
           {
-            title: "Plans and Projects",
+            title: "Wie die Zeit vergeht!",
             duration: "1 week",
             details: {
-              topics: ["Future plans", "Making suggestions", "Organizing a project"],
-              grammar: ["Futur I", "Modal verbs with infinitives"],
-              pronunciation: ["Intonation in future expressions"],
-              culture: ["Project culture in education/work"]
+              topics: [
+                "Aussagen über Zeitprobleme verstehen",
+                "Wünsche äußern",
+                "Ratschläge geben",
+                "gemeinsam etwas planen",
+                "anderen etwas fragen",
+                "Texte erschließen",
+                "Informationen austauschen",
+                "über Sprichwörter sprechen"
+              ],
+              grammar: [
+                "Konjunktiv II",
+                "Verben mit Präposition"
+              ],
+              pronunciation: ["Satzakzent"],
+              culture: ["Leben wie in einer anderen Zeit"]
             }
           },
           {
-            title: "German Learning Review",
+            title: "Gute Unterhaltung!",
             duration: "1 week",
             details: {
-              topics: ["Review and practice exams", "Self-evaluation"],
-              grammar: ["Review of all key A2 grammar"],
-              pronunciation: ["Review and drills"],
-              culture: ["Recap of cultural knowledge"]
+              topics: [
+                "einen Festivalbesuch planen",
+                "nachfragen",
+                "über Musik sprechen",
+                "einen Musiker / eine Musikerin / eine Band vorstellen",
+                "Zeitungsmeldungen verstehen",
+                "Informationen über Malerei verstehen",
+                "über ein Bild sprechen und schreiben"
+              ],
+              grammar: [
+                "Indefinitpronomen",
+                "Relativsätze im Nominativ und Akkusativ",
+                "Rückfragen"
+              ],
+              pronunciation: ["ein Bild beschreiben"],
+              culture: ["Malerei gestern und heute"]
             }
           }
         ]
@@ -432,9 +573,17 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
         link: "/courses/beginner-a2"
       },
       {
-        title: "German B1 Course for Intermediate Learners",
-        description: "Take the next step after A1 with daily classes and confidence-building practice.",
-        level: "A2 Elementary",
+        title: "German Combo Course A1 + A2 +B1 Course for Dedicated Learners",
+        description: "Take the first step to consistent learning with daily classes and confidence-building practice.",
+        level: "A1 + A2 + B1 Combo",
+        price: "₹16,999",
+        image: "/images/courses/a2.jpg",
+        link: "/courses/beginner-a2"
+      },
+      {
+        title: "German Combo Course A2 + B1 Course for Intermediate Learners",
+        description: "Take the first step to consistent learning with daily classes and confidence-building practice.",
+        level: "A2 + B1 Combo",
         price: "₹16,999",
         image: "/images/courses/a2.jpg",
         link: "/courses/beginner-a2"
@@ -471,123 +620,286 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       duration: "12 chapters",
       lessons: [
         {
-          title: "Getting to Know Each Other",
+          title: "Gute Reise!",
           duration: "1 week",
           details: {
-            topics: ["Introducing yourself and others", "Talking about personal experiences", "Describing character traits"],
-            grammar: ["Perfect tense (Perfekt)", "Separable and inseparable verbs", "Modal verbs in the past"],
-            pronunciation: ["Sentence intonation", "Stress in compound words"],
-            culture: ["Social interactions and greetings in Germany"]
+            topics: [
+              "über Vorlieben und Abneigungen sprechen",
+              "Gespräche über die Reiseplanung führen",
+              "Informationen zu Reisezielen verstehen",
+              "eine Urlaubsgeschichte schreiben",
+              "Durchsagen verstehen",
+              "einen Blogeintrag verstehen"
+            ],
+            grammar: [
+              "Infinitiv mit zu",
+              "Nebensätze mit da/weil und obwohl"
+            ],
+            pronunciation: ["n, ng, nk"],
+            culture: [
+              "Arbeiten auf der Alm",
+              "Film: Ranger im Nationalpark Schwarzwald"
+            ]
           }
         },
         {
-          title: "Daily Life and Routines",
+          title: "Das ist ja praktisch!",
           duration: "1 week",
           details: {
-            topics: ["Describing daily routines", "Talking about habits and hobbies", "Discussing health and fitness"],
-            grammar: ["Simple past (Präteritum) of common verbs", "Reflexive verbs", "Accusative and dative cases"],
-            pronunciation: ["Connected speech", "Vowel length"],
-            culture: ["Healthy lifestyle trends in Germany"]
+            topics: [
+              "über Kaufverhalten und Dienstleistungen sprechen",
+              "Folgen ausdrücken",
+              "etwas reklamieren",
+              "Informationen über neue Technik verstehen",
+              "Gründe und Gegengründe ausdrücken",
+              "einen Kommentar schreiben",
+              "Werbeanzeigen vergleichen",
+              "über Werbestrategien sprechen"
+            ],
+            grammar: [
+              "Verb lassen",
+              "Folgekonnektoren: deshalb, deswegen, darum, daher, sodass, so … dass",
+              "Genitiv",
+              "Präpositionen wegen und trotz + Genitiv"
+            ],
+            pronunciation: ["ts und tst"],
+            culture: [
+              "Werbung in Deutschland",
+              "Die Netzwerk-WG: Zu Besuch im Repair Café"
+            ]
           }
         },
         {
-          title: "Work and Education",
+          title: "Veränderungen",
           duration: "1 week",
           details: {
-            topics: ["Jobs and professions", "Work environment", "Education systems"],
-            grammar: ["Relative clauses", "Passive voice (Präsens and Perfekt)", "Konjunktiv II (conditional) basics"],
-            pronunciation: ["Pronouncing difficult consonant clusters"],
-            culture: ["Work culture and education in Germany"]
+            topics: [
+              "über Veränderungen im Leben sprechen",
+              "über Vergangenes berichten",
+              "über Glück sprechen",
+              "Zeitangaben machen",
+              "eine Radiosendung verstehen",
+              "von Veränderungen erzählen",
+              "über gutes Benehmen sprechen"
+            ],
+            grammar: [
+              "Präteritum",
+              "Zeitangaben mit Präpositionen im Dativ und Genitiv"
+            ],
+            pronunciation: ["mehrere Konsonanten hintereinander"],
+            culture: [
+              "Höflichkeit in D-A-CH",
+              "Film: Boxen – mehr als nur ein Sport"
+            ]
           }
         },
         {
-          title: "Travel and Holidays",
+          title: "Arbeitswelt",
           duration: "1 week",
           details: {
-            topics: ["Booking trips and accommodations", "Talking about travel experiences", "Describing weather and landscapes"],
-            grammar: ["Prepositions with cases", "Comparatives and superlatives", "Future tense (Futur I)"],
-            pronunciation: ["Intonation in questions and statements"],
-            culture: ["Popular travel destinations in Germany and Europe"]
+            topics: [
+              "Gespräche bei der Arbeit verstehen",
+              "Irreales ausdrücken",
+              "sich entschuldigen",
+              "auf Entschuldigungen reagieren",
+              "Bewerbungstipps verstehen",
+              "über Bewerbungen sprechen",
+              "Informationen geben",
+              "Tipps austauschen"
+            ],
+            grammar: [
+              "Konjunktiv II",
+              "irreale Bedingungssätze",
+              "Pronomen und Pronominaladverbien",
+              "Verben mit Präposition + Nebensatz"
+            ],
+            pronunciation: ["freundlich oder unfreundlich?"],
+            culture: [
+              "Bewerbungsgespräch in Deutschland",
+              "Film: Arbeiten im Ausland"
+            ]
           }
         },
         {
-          title: "Media and Technology",
+          title: "Umweltfreundlich?",
           duration: "1 week",
           details: {
-            topics: ["Using media devices", "Social media and internet", "Discussing advantages and disadvantages"],
-            grammar: ["Konjunktiv II for polite requests and wishes", "Word order in complex sentences"],
-            pronunciation: ["Pronunciation of foreign loanwords"],
-            culture: ["Media consumption in Germany"]
+            topics: [
+              "etwas vergleichen",
+              "über Ideen sprechen",
+              "Ziele ausdrücken",
+              "über das Wetter sprechen",
+              "über Start-ups und Umweltschutz diskutieren",
+              "eine Umweltaktion vorstellen"
+            ],
+            grammar: [
+              "Komparativ und Superlativ von Nomen",
+              "Nebensätze mit damit und um ... zu"
+            ],
+            pronunciation: ["lange Sätze sprechen"],
+            culture: [
+              "Das Wetter in D-A-CH",
+              "Engagement für Mensch und Natur",
+              "Film: Foodsharing"
+            ]
           }
         },
         {
-          title: "Shopping and Services",
+          title: "Blick nach vorn",
           duration: "1 week",
           details: {
-            topics: ["Shopping for clothes and food", "Making complaints", "Using public services"],
-            grammar: ["Indirect questions", "Dative verbs", "Imperatives"],
-            pronunciation: ["Sentence rhythm and stress"],
-            culture: ["Consumer rights and services in Germany"]
+            topics: [
+              "Pläne und Vorsätze verstehen",
+              "Ratschläge geben",
+              "über Zukunftsvorstellungen sprechen",
+              "Ziele besprechen und schreiben",
+              "über Lieder sprechen"
+            ],
+            grammar: [
+              "Futur I",
+              "Relativsätze mit Präposition",
+              "Vokale vor s/ß"
+            ],
+            pronunciation: ["deutliche Betonung"],
+            culture: [
+              "Das Lied Kaum erwarten",
+              "Blick in die Zukunft"
+            ]
           }
         },
         {
-          title: "Family and Relationships",
+          title: "Zwischenmenschliches",
           duration: "1 week",
           details: {
-            topics: ["Family structures", "Describing relationships", "Life events and celebrations"],
-            grammar: ["Subordinate clauses", "Possessive pronouns", "Genitive case basics"],
-            pronunciation: ["Emphasis and intonation in emotional speech"],
-            culture: ["Family life and traditions in Germany"]
+            topics: [
+              "Freundschaftsgeschichten verstehen",
+              "zeitliche Abfolgen ausdrücken",
+              "von Freundschaften erzählen",
+              "Konflikte und Konfliktgespräche führen",
+              "ein Paar vorstellen",
+              "über Fabeln sprechen"
+            ],
+            grammar: [
+              "Plusquamperfekt",
+              "Temporale Nebensätze: bevor, bis, nachdem, seit/seitdem, während"
+            ],
+            pronunciation: ["Intonation bei Modalpartikeln"],
+            culture: [
+              "Berühmte Paare",
+              "Film: Zusammenleben – WG 50+"
+            ]
           }
         },
         {
-          title: "Environment and Nature",
+          title: "Rund um Körper und Geist",
           duration: "1 week",
           details: {
-            topics: ["Environmental issues", "Nature and wildlife", "Sustainable living"],
-            grammar: ["Passive voice in different tenses", "Konjunktiv I (reported speech)"],
-            pronunciation: ["Clear articulation of complex words"],
-            culture: ["Environmental policies in Germany"]
+            topics: [
+              "Hilfe anbieten und ablehnen",
+              "jemanden warnen",
+              "über Musik und Gefühle sprechen",
+              "Diskussion im Radio verstehen"
+            ],
+            grammar: [
+              "nicht/kein/nur + brauchen + zu + Infinitiv",
+              "Reflexivpronomen"
+            ],
+            pronunciation: ["Satzmelodie"],
+            culture: [
+              "Sinnesorte in D-A-CH",
+              "Die Netzwerk-WG: Tanzen ist Leidenschaft"
+            ]
           }
         },
         {
-          title: "Health and Fitness",
+          title: "Kunststücke",
           duration: "1 week",
           details: {
-            topics: ["Healthy habits", "Medical visits", "Fitness activities"],
-            grammar: ["Modal verbs in different tenses", "Reflexive verbs in various cases"],
-            pronunciation: ["Medical and fitness vocabulary pronunciation"],
-            culture: ["Healthcare system and fitness culture in Germany"]
+            topics: [
+              "Informationen aus Zeitungstexten weitergeben",
+              "ein Kursprogramm verstehen",
+              "Kunst beschreiben",
+              "Impro-Geschichten und Interviews verstehen"
+            ],
+            grammar: [
+              "Stellung von nicht",
+              "Adjektive ohne Artikel",
+              "Vokal am Wortanfang"
+            ],
+            pronunciation: ["Wortakzent"],
+            culture: [
+              "Kunst in Innsbruck",
+              "Volkslieder",
+              "Film: Theater – Wie entsteht ein Bühnenstück?"
+            ]
           }
         },
         {
-          title: "Culture and Arts",
+          title: "Miteinander",
           duration: "1 week",
           details: {
-            topics: ["German festivals", "Art and music", "Cinema and literature"],
-            grammar: ["Adjective endings", "Relative clauses"],
-            pronunciation: ["Pronunciation of cultural terms"],
-            culture: ["German cultural events and traditions"]
+            topics: [
+              "über soziales Engagement sprechen",
+              "über ein Projekt schreiben",
+              "über Institutionen und die EU sprechen",
+              "eine Präsentation halten"
+            ],
+            grammar: [
+              "Passiv (Präsens, Präteritum, Perfekt)",
+              "Passiv mit Modalverb"
+            ],
+            pronunciation: ["Kontrastakzente in Fragen mit oder"],
+            culture: [
+              "Mini-München",
+              "Europäische Union",
+              "Film: Interkulturelles Dolmetschen – Was ist das?"
+            ]
           }
         },
         {
-          title: "Social Issues",
+          title: "Stadt, Land, Fluss",
           duration: "1 week",
           details: {
-            topics: ["Social problems", "Integration and diversity", "Volunteering"],
-            grammar: ["Konjunktiv II for hypothetical situations", "Complex sentence connectors"],
-            pronunciation: ["Emphatic stress"],
-            culture: ["Social integration in Germany"]
+            topics: [
+              "über das Leben in der Stadt sprechen",
+              "einen Magazintext verstehen",
+              "einen Bericht schreiben",
+              "über lebenswerte Städte diskutieren",
+              "einen Stadtbesuch planen"
+            ],
+            grammar: [
+              "Artikelwörter als Pronomen",
+              "irgendein/eine/welche",
+              "Adjektive als Nomen",
+              "Relativsätze mit was und wo"
+            ],
+            pronunciation: ["Texte vorlesen – Satzzeichen helfen"],
+            culture: [
+              "Leipzig, Zürich",
+              "Film: Tübingen – ein Stadtporträt"
+            ]
           }
         },
         {
-          title: "Exam Preparation and Review",
+          title: "Geld regiert die Welt?",
           duration: "1 week",
           details: {
-            topics: ["Review of all topics", "Exam strategies", "Mock exam practice"],
-            grammar: ["Review of all major grammar points"],
-            pronunciation: ["Review of pronunciation and intonation"],
-            culture: ["Recap of cultural topics"]
+            topics: [
+              "Bankgespräche führen",
+              "Informationen auf Webseiten verstehen",
+              "über Tätigkeiten sprechen",
+              "schwierige Situationen beschreiben",
+              "informativen Text schreiben"
+            ],
+            grammar: [
+              "Sätze mit je … desto/umso",
+              "Partizip II als Adjektiv"
+            ],
+            pronunciation: ["Wortakzent"],
+            culture: [
+              "Die Fuggerei in Augsburg",
+              "Film: Tauschring"
+            ]
           }
         }
       ]
