@@ -88,20 +88,24 @@ const courseCategories = [
       },
       { 
         name: "B2.1 Level", 
-        path: "/courses/intermediate/b2",
+        path: "/courses/intermediate/b2.1",
       },
       { 
         name: "B2.2 Level", 
-        path: "/courses/intermediate/b2",
+        path: "/courses/intermediate/b2.2",
       },
       { 
-        name: "C1.1 Level", 
+        name: "C1 Level", 
         path: "/courses/advanced/c1",
       },
-      { 
-        name: "C1.2 Level", 
-        path: "/courses/advanced/c1",
-      },
+      // { 
+      //   name: "C1.1 Level", 
+      //   path: "/courses/advanced/c1",
+      // },
+      // { 
+      //   name: "C1.2 Level", 
+      //   path: "/courses/advanced/c1",
+      // },
       { 
         name: "C2 Level", 
         path: "/courses/advanced/c2",

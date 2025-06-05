@@ -66,7 +66,7 @@ const courses = [
     level: 'Upper Intermediate',
     lessons: 170,
     featured: false,
-    path: '/courses/intermediate/b2',
+    path: '/courses/combo-course',
     intensity: 'Intensive',
     tutorSupport: true,
     price: '₹37,999',

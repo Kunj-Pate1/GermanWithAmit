@@ -28,14 +28,14 @@ const AppreciationsCarousel = () => {
       // Duplicate items to allow seamless looping
       return [...columnItems, ...columnItems];
     });
-  };
+  }; 
 
   const [columns, setColumns] = useState(initializeColumns());
   const columnRefs = Array(COLUMN_COUNT).fill(0).map(() => useRef<HTMLDivElement>(null));
   const animationRef = useRef<number>();
   const positions = useRef(Array(COLUMN_COUNT).fill(0));
 
-  // Animation loop with all columns scrolling up
+  //Animation loop with all columns scrolling up
   const animate = () => {
     columnRefs.forEach((ref, colIndex) => {
       if (!ref.current) return;
@@ -54,7 +54,8 @@ const AppreciationsCarousel = () => {
     });
 
     animationRef.current = requestAnimationFrame(animate);
-  };
+  }; 
+
 
   useEffect(() => {
     animationRef.current = requestAnimationFrame(animate);

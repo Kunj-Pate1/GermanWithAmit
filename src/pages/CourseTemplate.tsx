@@ -513,6 +513,60 @@ const CourseTemplate = () => {
       <StudentResultsSection />
       </div>
 
+      {/* What You Can Do Section */}
+      <div className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+              {courseInfo.whatYouCanDo.title}
+            </h2>
+            <p className="text-lg text-center mb-8 text-gray-600">
+              {courseInfo.whatYouCanDo.description}
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {courseInfo.whatYouCanDo.abilities.map((ability, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                  <div className="flex items-start">
+                    <Check className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-700">{ability}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="bg-white py-16">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-4">
+              {courseInfo.faqs.map((faq, index) => (
+                <div key={index} className="border-b border-gray-200 pb-4">
+                  <details className="group">
+                    <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
+                      <span className="text-lg text-gray-800 group-hover:text-german-dark transition-colors">
+                        {faq.question}
+                      </span>
+                      <span className="transition-transform group-open:rotate-180">
+                        <ChevronDown className="w-5 h-5 text-gray-500" />
+                      </span>
+                    </summary>
+                    <p className="mt-3 text-gray-600">
+                      {faq.answer}
+                    </p>
+                  </details>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Related Courses */}
       <div className="bg-gray-50 py-16">
         <div className="container mx-auto px-4 md:px-6">

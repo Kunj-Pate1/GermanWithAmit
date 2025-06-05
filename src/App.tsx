@@ -19,6 +19,7 @@ import BlogsPage from "./pages/Blog";
 import CoachingPage from "./pages/Coaching";
 import AusbildungPage from "./pages/AusbildungPage";
 
+
 const queryClient = new QueryClient();
 
 const App = () => (

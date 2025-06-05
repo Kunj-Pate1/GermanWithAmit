@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Check, Star, Clock, Users, Award, ArrowRight, Play } from 'lucide-react';
+import { Check, Star, Clock, Users, Award, ArrowRight, Play, Info, AlertCircle, BookOpen, CalendarDays, CheckCircle, ClipboardList, Mail, MessageSquare, Phone, Send, User } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
@@ -11,20 +11,20 @@ const comboCourses = [
   {
     id: 'a1-a2',
     title: 'A1 + A2 Combo',
-    description: 'Complete beginner to elementary German. Master everyday conversations and basic grammar.',
-    duration: '6 Months',
-    lessons: '80+ Lessons',
+    subtitle: 'Ideal for new learners who want to make fast, structured progress.',
+    description: 'Go from zero to confident German speaker with this all-in-one A1–A2 program. Learn to speak, listen, read, and write through interactive lessons designed to build real-life language skills step by step.',
+    duration: '4 Months',
+    lessons: '140+ Hours of Live Lessons',
     level: 'Beginner',
-    price: '₹29,999',
-    originalPrice: '₹34,999',
+    price: '₹31,999',
+    originalPrice: '₹36,000',
     discount: '15% OFF',
     features: [
       'A1 & A2 full curriculum',
-      '2 mock exams included',
+      '4 mock exams included',
       'Personalized feedback',
-      'Certificate for both levels'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    videoUrl: 'https://www.youtube.com/embed/tnZ3OeJQ2FY',
     curriculum: [
       {
         module: 'A1 Level',
@@ -43,37 +43,37 @@ const comboCourses = [
   {
     id: 'a1-a2-b1',
     title: 'A1 + A2 + B1 Combo',
-    description: 'From complete beginner to intermediate German. Comprehensive package for serious learners.',
-    duration: '9 Months',
-    lessons: '120+ Lessons',
+    subtitle: 'Perfect for learners who want to move confidently from beginner to intermediate German in one structured program.',
+    description: 'Start from scratch and reach independent speaker level with this complete A1–A2–B1 combo course. You’ll develop real-world skills in speaking, listening, reading, and writing, guided by expert instructors and exam-focused lessons.',
+    duration: '6 Months',
+    lessons: '230+ Hours of Live Lessons',
     level: 'Beginner to Intermediate',
     price: '₹47,999',
     originalPrice: '₹54,000',
     discount: '15% OFF',
     features: [
       'A1, A2 & B1 full curriculum',
-      '3 mock exams included',
+      '6 mock exams included',
       'Exam strategies workshop',
-      'All level certificates'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    videoUrl: 'https://www.youtube.com/embed/h6nqX2eb6h0?si=LXDT_ghV57fM21QL',
     curriculum: [
       {
         module: 'A1 Level',
         courses: [
-          { name: 'A1.1 Beginner German', link: '/courses/beginner/a1' },
+          { name: 'A1 Beginner German', link: '/courses/beginner/a1' },
         ]
       },
       {
         module: 'A2 Level',
         courses: [
-          { name: 'A2.1 Pre-Intermediate', link: '/courses/beginner/a2' },
+          { name: 'A2 Pre-Intermediate', link: '/courses/beginner/a2' },
         ]
       },
       {
         module: 'B1 Level',
         courses: [
-          { name: 'B1.1 Intermediate', link: '/courses/intermediate/b1' },
+          { name: 'B1 Intermediate', link: '/courses/intermediate/b1' },
         ]
       }
     ]
@@ -81,9 +81,10 @@ const comboCourses = [
   {
     id: 'a2-b1',
     title: 'A2 + B1 Combo',
-    description: 'For elementary learners advancing to intermediate. Bridge the gap to fluent communication.',
-    duration: '5 Months',
-    lessons: '70+ Lessons',
+    subtitle:'Ideal for learners aiming for Goethe B1 certification or everyday German in work, travel, and life.',
+    description: 'Already know the basics? Take your German to the next level with this A2–B1 combo course, designed to boost your confidence and fluency. Master all four skills — speaking, listening, reading, and writing — through engaging lessons and real-life practice.',
+    duration: '4-5 Months',
+    lessons: '160+ Hours of Live Lessons',
     level: 'Elementary to Intermediate',
     price: '₹31,999',
     originalPrice: '₹36,000',
@@ -91,21 +92,21 @@ const comboCourses = [
     features: [
       'A2 & B1 full curriculum',
       'Focus on conversation skills',
-      'Business German basics',
-      '2 mock exams included'
+      'Work German basics',
+      '4 mock exams included'
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    videoUrl: 'https://www.youtube.com/embed/HMeIgYt9K_s?si=LFqXuvQR6tmycH_N',
     curriculum: [
       {
         module: 'A2 Level',
         courses: [
-          { name: 'A2.1 Pre-Intermediate', link: '/courses/beginner/a2' },
+          { name: 'A2 Pre-Intermediate', link: '/courses/beginner/a2' },
         ]
       },
       {
         module: 'B1 Level',
         courses: [
-          { name: 'B1.1 Intermediate', link: '/courses/intermediate/b1' },
+          { name: 'B1 Intermediate', link: '/courses/intermediate/b1' },
         ]
       }
     ]
@@ -113,9 +114,10 @@ const comboCourses = [
   {
     id: 'b2-complete',
     title: 'Complete B2 (B2.1 + B2.2)',
-    description: 'Master upper-intermediate German. Achieve fluency for academic and professional settings.',
-    duration: '6 Months',
-    lessons: '90+ Lessons',
+    subtitle:'Ideal for university admission, career opportunities, or mastering upper-intermediate German',
+    description: 'Take your German from intermediate to advanced with our B2 course, designed to sharpen your skills for real-life, academic, and professional use. You’ll improve your fluency, accuracy, and comprehension across speaking, listening, reading, and writing — all aligned with the Goethe-Zertifikat B2.',
+    duration: '4-5 Months',
+    lessons: '160+ Hours of Live Lessons',
     level: 'Upper Intermediate',
     price: '₹16,999',
     originalPrice: '₹19,998',
@@ -176,9 +178,12 @@ const ComboCoursesPage = () => {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
                 Combo Courses - Learn More, Save More
               </h1>
-              <p className="text-xl mb-6">
-                Bundle multiple levels together and save up to 21% on your German learning journey
+              <p className="text-xl mb-6 my-6">
+                Bundle multiple levels together and save up to ₹6,000 — that's 11% of your total course fee.
               </p>
+              <p><i>Perfect for learners aiming for A1 to B2 or beyond...</i></p>
+              <br />
+              <p><b>Enroll Now and fast-track your German fluency — for less.</b></p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   className="bg-white text-german hover:bg-blue-50"
@@ -207,12 +212,12 @@ const ComboCoursesPage = () => {
                   ></iframe>
                 </AspectRatio>
               </div>
-              <button 
+              {/* <button 
                 className="absolute inset-0 m-auto bg-white/90 hover:bg-white rounded-full p-4 shadow-lg transition-transform transform hover:scale-110 w-16 h-16 flex items-center justify-center"
                 onClick={() => setShowDemoModal(true)}
               >
                 <Play className="w-10 h-10 text-german fill-german" />
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
@@ -284,6 +289,10 @@ const ComboCoursesPage = () => {
                     {/* Course Details */}
                     <div>
                       <h2 className="text-2xl font-bold mb-4">{course.title}</h2>
+                      <div className="mb-6 flex items-center">
+                      <Info className="w-5 h-5 mr-2 text-german"/>
+                      <span className='text-german'>{course.subtitle}</span>
+                      </div>
                       <p className="text-gray-700 mb-6">{course.description}</p>
                       
                       <div className="flex items-center gap-6 mb-6">
@@ -396,18 +405,229 @@ const ComboCoursesPage = () => {
       </div>
 
       {/* Final CTA */}
-      <div className="bg-gradient-to-r from-german-dark to-german py-16 text-white text-center">
-        <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Learning?</h2>
-          <p className="text-xl mb-8">Choose your perfect combo course today!</p>
-          <Button 
-            className="bg-white text-german hover:bg-blue-50 text-lg px-8 py-6"
-            onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}
-          >
-            Enroll Now
-          </Button>
+      <div className="bg-gradient-to-r from-german-dark/95 to-german/95 py-12 px-4 sm:px-6 rounded-xl shadow-xl">
+  {/* Header Section */}
+  <div className="text-center mb-8">
+    <div className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm p-3 rounded-full mb-4">
+      <BookOpen className="w-6 h-6 text-white" />
+    </div>
+    <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Ready to get started?</h2>
+    <p className="text-blue-100/80 text-lg">Fill out the form below to book your exam training session</p>
+  </div>
+
+  {/* Form Container */}
+  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+    <form 
+    // onSubmit={handleSubmit} 
+    className="space-y-6">
+      {/* Form Title */}
+      <div className="flex items-center mb-6">
+        <ClipboardList className="w-5 h-5 text-white mr-2" />
+        <h3 className="text-xl font-semibold text-white">Exam Preparation Inquiry Form</h3>
+      </div>
+
+      {/* Personal Information */}
+      <div className="space-y-4">
+        <div>
+          <label className="block text-sm font-medium text-white/80 mb-1">Full Name*</label>
+          <div className="relative">
+            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/60" />
+            <input
+              type="text"
+              placeholder="Your Full Name"
+              className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder:text-white/50 focus:ring-2 focus:ring-white/30 focus:outline-none"
+              required
+            />
+          </div>
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-white/80 mb-1">Email Address*</label>
+          <div className="relative">
+            <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/60" />
+            <input
+              type="email"
+              placeholder="you@example.com"
+              className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder:text-white/50 focus:ring-2 focus:ring-white/30 focus:outline-none"
+              required
+            />
+          </div>
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-white/80 mb-1">Phone Number (with country code)*</label>
+          <div className="relative">
+            <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/60" />
+            <input
+              type="tel"
+              placeholder="+91XXXXXXXXXX"
+              className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder:text-white/50 focus:ring-2 focus:ring-white/30 focus:outline-none"
+              required
+            />
+          </div>
         </div>
       </div>
+
+      {/* Radio Button Groups */}
+      <div className="space-y-6">
+        <div>
+          <label className="block text-sm font-medium text-white/80 mb-3">Level you're preparing for:*</label>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {['A1', 'A2', 'B1', 'B2', 'C1', 'C2'].map((level) => (
+              <label key={level} className="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="level"
+                  value={level}
+                  className="h-4 w-4 text-german focus:ring-german border-white/30"
+                  required
+                />
+                <span className="text-white/90">{level}</span>
+              </label>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-white/80 mb-3">Have you already booked the exam?*</label>
+          <div className="flex space-x-6">
+            <label className="flex items-center space-x-2">
+              <input
+                type="radio"
+                name="examBooked"
+                value="yes"
+                className="h-4 w-4 text-german focus:ring-german border-white/30"
+                required
+              />
+              <span className="text-white/90">Yes</span>
+            </label>
+            <label className="flex items-center space-x-2">
+              <input
+                type="radio"
+                name="examBooked"
+                value="no"
+                className="h-4 w-4 text-german focus:ring-german border-white/30"
+                required
+              />
+              <span className="text-white/90">No</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-white/80 mb-3">Exam Training Format:*</label>
+          <div className="space-y-2">
+            {[
+              { value: "group", label: "Group class (if available)" },
+              { value: "one-to-one", label: "One-to-one session" },
+              { value: "either", label: "Either is fine" }
+            ].map((option) => (
+              <label key={option.value} className="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="trainingFormat"
+                  value={option.value}
+                  className="h-4 w-4 text-german focus:ring-german border-white/30"
+                  required
+                />
+                <span className="text-white/90">{option.label}</span>
+              </label>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label className="block text-sm font-medium text-white/80 mb-3">Preferred Timing:*</label>
+            <div className="space-y-2">
+              {['Morning', 'Evening', 'Flexible'].map((time) => (
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="preferredTiming"
+                    value={time.toLowerCase()}
+                    className="h-4 w-4 text-german focus:ring-german border-white/30"
+                    required
+                  />
+                  <span className="text-white/90">{time}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-white/80 mb-3">Preferred Days:*</label>
+            <div className="space-y-2">
+              {['Weekdays', 'Weekends', 'Either is fine'].map((days) => (
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="preferredDays"
+                    value={days.toLowerCase()}
+                    className="h-4 w-4 text-german focus:ring-german border-white/30"
+                    required
+                  />
+                  <span className="text-white/90">{days}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Date Picker */}
+      <div>
+        <label className="block text-sm font-medium text-white/80 mb-1">Preferred Start Date:*</label>
+        <div className="relative">
+          <CalendarDays className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/60" />
+          <input
+            type="date"
+            className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder:text-white/50 focus:ring-2 focus:ring-white/30 focus:outline-none"
+            required
+          />
+        </div>
+      </div>
+
+      {/* Comments */}
+      <div>
+        <label className="block text-sm font-medium text-white/80 mb-1">Any specific goals or comments?</label>
+        <div className="relative">
+          <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-white/60" />
+          <textarea
+            rows={4}
+            className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder:text-white/50 focus:ring-2 focus:ring-white/30 focus:outline-none"
+            placeholder="Please share any specific requirements..."
+          ></textarea>
+        </div>
+      </div>
+
+      {/* Submit Button */}
+      <button
+        type="submit"
+        className="w-full bg-white text-german hover:bg-german-light hover:text-white py-3 px-6 rounded-lg font-medium transition-colors duration-200 mt-6 flex items-center justify-center"
+      >
+        <Send className="w-5 h-5 mr-2" />
+        Submit Inquiry
+      </button>
+
+      {/* Status Message */}
+      {/* {submitStatus && (
+        <div className={`mt-4 p-3 rounded-md flex items-center ${
+          submitStatus.type === 'success' 
+            ? 'bg-green-500/20 text-green-100' 
+            : 'bg-red-500/20 text-red-100'
+        }`}>
+          {submitStatus.type === 'success' ? (
+            <CheckCircle className="mr-2 h-5 w-5" />
+          ) : (
+            <AlertCircle className="mr-2 h-5 w-5" />
+          )}
+          {submitStatus.message}
+        </div>
+      )} */}
+    </form>
+  </div>
+</div>
     </>
   );
 };

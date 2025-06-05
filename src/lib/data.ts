@@ -43,6 +43,15 @@ export interface CourseInfo {
     image: string;
     link: string;
   }[];
+  whatYouCanDo: {
+    title: string;
+    description: string;
+    abilities: string[];
+  };
+  faqs: {
+    question: string;
+    answer: string;
+  }[];
 }
 
 // Default course data
@@ -238,6 +247,28 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
         image: "/images/courses/a2.jpg",
         link: "/courses/beginner/a2"
       }
+    ],
+    whatYouCanDo: {
+      title: "What You Can Achieve After This Course",
+      description: "After completing this A1 level course, you'll be able to:",
+      abilities: [
+        "Introduce yourself and others",
+        "Ask and answer simple questions about personal details",
+        "Interact in a simple way if the other person talks slowly and clearly",
+        "Understand and use familiar everyday expressions",
+        "Write simple notes and messages"
+      ]
+    },
+    faqs: [
+      {
+        question: "How long will I have access to the course materials?",
+        answer: "You'll have lifetime access to all course materials, including any future updates."
+      },
+      {
+        question: "What if I miss a live class?",
+        answer: "All live classes are recorded and available for you to watch at any time."
+      },
+      // ... more FAQs ...
     ]
   },
 

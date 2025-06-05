@@ -336,20 +336,126 @@ const NursingGermanyProgram = () => {
               </div>
             </TabsContent>
             
+            
             <TabsContent value="process">
-              <h2 className="text-2xl font-bold mb-6">Application Process Timeline</h2>
-              <div className="space-y-4">
-                {programData.process.map((step, index) => (
-                  <div key={index} className="flex items-center bg-white p-4 rounded-lg shadow-sm">
-                    <div className="bg-blue-100 p-2 rounded-full mr-4 text-blue-700 font-bold">
-                      {index + 1}
+              <h2 className="text-2xl font-bold mb-6">How to Work as a Nurse in Germany (for Indian B.Sc Nurses)</h2>
+              <div className="space-y-6">
+                {/* Steps in India */}
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-red-100 p-2 rounded-full mr-4 text-red-700 font-bold">🇮🇳</div>
+                    <h3 className="text-xl font-bold">Steps to Complete in India</h3>
+                  </div>
+                  
+                  <div className="space-y-4 ml-12">
+                    <div className="flex items-start">
+                      <div className="bg-blue-100 p-2 rounded-full mr-4 text-blue-700 font-bold min-w-[32px] text-center">1</div>
+                      <div>
+                        <h4 className="font-medium">Learn German – Aim for B1 or B2</h4>
+                        <ul className="text-sm text-gray-500 list-disc pl-5 mt-1 space-y-1">
+                          <li>Most German states require at least B1, some require B2</li>
+                          <li>Join a certified institute (Goethe, telc, ÖSD)</li>
+                          <li>Duration: 6–12 months, depending on your speed</li>
+                        </ul>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-medium">{step.title}</h3>
-                      <p className="text-sm text-gray-500">{step.duration}</p>
+                    
+                    <div className="flex items-start">
+                      <div className="bg-blue-100 p-2 rounded-full mr-4 text-blue-700 font-bold min-w-[32px] text-center">2</div>
+                      <div>
+                        <h4 className="font-medium">Gather and Translate Your Documents</h4>
+                        <ul className="text-sm text-gray-500 list-disc pl-5 mt-1 space-y-1">
+                          <li>B.Sc Nursing degree</li>
+                          <li>Transcripts and syllabus</li>
+                          <li>Nursing registration (INC/state council)</li>
+                          <li>Work experience (if any)</li>
+                          <li>Passport, ID proofs</li>
+                          <li>All documents must be certified translated into German</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="bg-blue-100 p-2 rounded-full mr-4 text-blue-700 font-bold min-w-[32px] text-center">3</div>
+                      <div>
+                        <h4 className="font-medium">Apply for Recognition (Anerkennung)</h4>
+                        <ul className="text-sm text-gray-500 list-disc pl-5 mt-1 space-y-1">
+                          <li>Send documents to the recognition authority (Anerkennungsstelle) in the German state you're targeting</li>
+                          <li>Duration: 3–6 months for processing</li>
+                          <li>You'll get a decision: full recognition, partial (deficiency notice), or no recognition</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="bg-blue-100 p-2 rounded-full mr-4 text-blue-700 font-bold min-w-[32px] text-center">4</div>
+                      <div>
+                        <h4 className="font-medium">Secure a Job Offer or Adaptation Program Placement</h4>
+                        <ul className="text-sm text-gray-500 list-disc pl-5 mt-1 space-y-1">
+                          <li>Apply directly to German hospitals/care homes</li>
+                          <li>Or use trusted recruiters with German adaptation programs</li>
+                          <li>Duration: 1–3 months, varies by employer</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="bg-blue-100 p-2 rounded-full mr-4 text-blue-700 font-bold min-w-[32px] text-center">5</div>
+                      <div>
+                        <h4 className="font-medium">Apply for the German Visa (National D Visa)</h4>
+                        <ul className="text-sm text-gray-500 list-disc pl-5 mt-1 space-y-1">
+                          <li>Submit job offer, recognition letter, language certificate, proof of funds</li>
+                          <li>Apply through the German Embassy or VFS in India</li>
+                          <li>Duration: 4–8 weeks</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                ))}
+                </div>
+                
+                {/* After Arrival in Germany */}
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-yellow-100 p-2 rounded-full mr-4 text-yellow-700 font-bold">🇩🇪</div>
+                    <h3 className="text-xl font-bold">After You Arrive in Germany</h3>
+                  </div>
+                  
+                  <div className="space-y-4 ml-12">
+                    <div className="flex items-start">
+                      <div className="bg-green-100 p-2 rounded-full mr-4 text-green-700 font-bold min-w-[32px] text-center">1</div>
+                      <div>
+                        <h4 className="font-medium">Start Adaptation Training or Knowledge Test Prep</h4>
+                        <ul className="text-sm text-gray-500 list-disc pl-5 mt-1 space-y-1">
+                          <li>If you received a deficiency notice, you'll either:</li>
+                          <li>Join a hospital for a 6–12 month adaptation program (Anpassungslehrgang)</li>
+                          <li>Or prepare for a nursing knowledge test (Kenntnisprüfung)</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="bg-green-100 p-2 rounded-full mr-4 text-green-700 font-bold min-w-[32px] text-center">2</div>
+                      <div>
+                        <h4 className="font-medium">Complete the Program and Pass the Exam</h4>
+                        <ul className="text-sm text-gray-500 list-disc pl-5 mt-1 space-y-1">
+                          <li>After successful completion, apply for your nursing license (Berufsurkunde)</li>
+                          <li>This makes you a fully registered nurse in Germany</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="bg-green-100 p-2 rounded-full mr-4 text-green-700 font-bold min-w-[32px] text-center">3</div>
+                      <div>
+                        <h4 className="font-medium">Start Working as a Registered Nurse</h4>
+                        <ul className="text-sm text-gray-500 list-disc pl-5 mt-1 space-y-1">
+                          <li>You're now eligible for full-time work</li>
+                          <li>You can also apply for long-term residence or PR in the future</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </TabsContent>
           </Tabs>
