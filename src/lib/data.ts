@@ -240,10 +240,18 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     ],
     relatedCourses: [
       {
-        title: "German A2 Course for Elementary Learners",
-        description: "Take the next step after A1 with daily classes and confidence-building practice.",
+        title: "German A1+A2 Combo Course for Elementary Learners",
+        description: "Here comes the description.",
         level: "A2 Elementary",
-        price: "₹16,999",
+        price: "₹31,999",
+        image: "/images/courses/a2.jpg",
+        link: "/courses/beginner/a2"
+      },
+      {
+        title: "German A1+A2+B1 Combo Course for Elementary Learners",
+        description: "Here comes the description.",
+        level: "A2 Elementary",
+        price: "₹47,999",
         image: "/images/courses/a2.jpg",
         link: "/courses/beginner/a2"
       }
@@ -261,14 +269,45 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     },
     faqs: [
       {
-        question: "How long will I have access to the course materials?",
-        answer: "You'll have lifetime access to all course materials, including any future updates."
+        question: "Who is this course for?",
+        answer: "This course is designed for complete beginners. No prior knowledge of German is required — just bring a good mood and the motivation to learn!"
       },
       {
-        question: "What if I miss a live class?",
-        answer: "All live classes are recorded and available for you to watch at any time."
+        question: "How long does the course take to complete?",
+        answer: "The course includes 70 hours of live instruction. The duration depends on how many hours you attend per week. Most students complete the A1 level in 7 to 9 weeks, but this can vary based on your schedule."
       },
-      // ... more FAQs ...
+      {
+        question: "Can I access course materials and recordings at any time?",
+        answer: "Yes! All course materials are included, and you'll have full access to class recordings, so you can review lessons anytime at your own pace."
+      },
+      {
+        question: "How much does the course cost?",
+        answer: "A1 level only: ₹16,999\n\nA1 to B1 bundle: ₹47,999 (Save ₹6,000 – regular price ₹54,000)"
+      },
+      {
+        question: "Are there any prerequisites for this course?",
+        answer: "No prerequisites! You only need enthusiasm and consistency. The course is built for beginners with zero background in German."
+      },
+      {
+        question: "Is exam preparation included in the A1 course?",
+        answer: "Yes! We include 1 week of free dedicated exam training at the end of the course:\n\n• Covers all sections of the A1 Goethe/ÖSD-style exam: speaking, listening, reading, and writing\n\n• Includes mock tests, tips, and feedback to help you feel confident and ready"
+      },
+      {
+        question: "Will I be fluent after this course?",
+        answer: "A1 is the introductory level of German. After completing it, you'll be able to handle basic conversations and everyday situations. Fluency requires time and progression up to C1 level."
+      },
+      {
+        question: "How are the classes conducted?",
+        answer: "Classes are conducted live over Zoom. They are interactive, with lots of speaking practice, real-time feedback, and personalized support from the instructor."
+      },
+      {
+        question: "What if I miss a class?",
+        answer: "No problem! Every session is recorded. You'll get lifetime access to the recordings so you can catch up or revise whenever needed."
+      },
+      {
+        question: "How can I contact you if I have more questions?",
+        answer: "Feel free to email us at director@germanwithamit.com – we're happy to help!"
+      }
     ]
   },
 
@@ -596,28 +635,81 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     ],
     relatedCourses: [
       {
-        title: "German A1 Course for Elementary Learners",
-        description: "Take the next step after A1 with daily classes and confidence-building practice.",
-        level: "A2 Elementary",
-        price: "₹16,999",
+        title: "German A1+A2 Combo Course for Elementary Learners",
+        description: "Here comes the description.",
+        level: "A1+A2",
+        price: "₹31,999",
         image: "/images/courses/a2.jpg",
-        link: "/courses/beginner-a2"
+        link: "/combo-course"
       },
       {
-        title: "German Combo Course A1 + A2 +B1 Course for Dedicated Learners",
-        description: "Take the first step to consistent learning with daily classes and confidence-building practice.",
-        level: "A1 + A2 + B1 Combo",
-        price: "₹16,999",
+        title: "German A1+A2+B1 Combo Course for Elementary Learners",
+        description: "Here comes the description.",
+        level: "A1+A2+B1",
+        price: "₹47,999",
         image: "/images/courses/a2.jpg",
-        link: "/courses/beginner-a2"
+        link: "/combo-course"
       },
       {
-        title: "German Combo Course A2 + B1 Course for Intermediate Learners",
-        description: "Take the first step to consistent learning with daily classes and confidence-building practice.",
-        level: "A2 + B1 Combo",
-        price: "₹16,999",
+        title: "German A2+B1 Combo Course for Elementary Learners",
+        description: "Here comes the description.",
+        level: "A2+B1",
+        price: "₹31,999",
         image: "/images/courses/a2.jpg",
-        link: "/courses/beginner-a2"
+        link: "/combo-course"
+      }
+    ],
+    whatYouCanDo: {
+      title: "What You Can Achieve After This Course",
+      description: "After completing this A2 level course, you'll be able to:",
+      abilities: [
+        "Handle simple, routine tasks (e.g., at the bank, post office)",
+        "Write simple messages and emails",
+        "Describe your background and immediate needs",
+        "Watch simple children’s shows or YouTube videos with subtitles",
+        "Read signs, ads, menus, and simple brochures"
+      ]
+    },
+    faqs: [
+      {
+        question: "Who is this course for?",
+        answer: "This course is designed for complete beginners. No prior knowledge of German is required — just bring a good mood and the motivation to learn!"
+      },
+      {
+        question: "How long does the course take to complete?",
+        answer: "The course includes 70 hours of live instruction. The duration depends on how many hours you attend per week. Most students complete the A1 level in 7 to 9 weeks, but this can vary based on your schedule."
+      },
+      {
+        question: "Can I access course materials and recordings at any time?",
+        answer: "Yes! All course materials are included, and you'll have full access to class recordings, so you can review lessons anytime at your own pace."
+      },
+      {
+        question: "How much does the course cost?",
+        answer: "A1 level only: ₹16,999\n\nA1 to B1 bundle: ₹47,999 (Save ₹6,000 – regular price ₹54,000)"
+      },
+      {
+        question: "Are there any prerequisites for this course?",
+        answer: "No prerequisites! You only need enthusiasm and consistency. The course is built for beginners with zero background in German."
+      },
+      {
+        question: "Is exam preparation included in the A1 course?",
+        answer: "Yes! We include 1 week of free dedicated exam training at the end of the course:\n\n• Covers all sections of the A1 Goethe/ÖSD-style exam: speaking, listening, reading, and writing\n\n• Includes mock tests, tips, and feedback to help you feel confident and ready"
+      },
+      {
+        question: "Will I be fluent after this course?",
+        answer: "A1 is the introductory level of German. After completing it, you'll be able to handle basic conversations and everyday situations. Fluency requires time and progression up to C1 level."
+      },
+      {
+        question: "How are the classes conducted?",
+        answer: "Classes are conducted live over Zoom. They are interactive, with lots of speaking practice, real-time feedback, and personalized support from the instructor."
+      },
+      {
+        question: "What if I miss a class?",
+        answer: "No problem! Every session is recorded. You'll get lifetime access to the recordings so you can catch up or revise whenever needed."
+      },
+      {
+        question: "How can I contact you if I have more questions?",
+        answer: "Feel free to email us at director@germanwithamit.com – we're happy to help!"
       }
     ]
   },
@@ -968,12 +1060,78 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
   ],
   relatedCourses: [
     {
-      title: "German B2 Course for Upper-Intermediate Learners",
-      description: "Advance your German to higher fluency with detailed grammar and complex topics.",
-      level: "B2 Upper-Intermediate",
-      price: "₹19,999",
-      image: "/images/courses/b2.jpg",
-      link: "/courses/intermediate-b2"
+      title: "German A1+A2+B1 Combo Course for Elementary Learners",
+      description: "Here comes the description.",
+      level: "A1+A2+B1",
+      price: "₹47,999",
+      image: "/images/courses/a2.jpg",
+      link: "/combo-course"
+    },
+    {
+      title: "German A2+B1 Combo Course for Elementary Learners",
+      description: "Here comes the description.",
+      level: "A2+B1",
+      price: "₹31,999",
+      image: "/images/courses/a2.jpg",
+      link: "/combo-course"
+    }
+  ],
+  whatYouCanDo: {
+    title: "What You Can Achieve After This Course",
+    description: "After completing this B1 level course, you'll be able to:",
+    abilities: [
+      "Work in a German-speaking office with some assistance",
+      "Have basic social and professional conversations",
+      "Travel confidently and handle hotel/reservation issues",
+      "Watch TV series with subtitles",
+      "Write job application letters or basic CVs",
+      "Volunteer or do internships where German is used"
+    ]
+  },
+  faqs: [
+    {
+      question: "Who is this course for?",
+      answer: "This course is designed for learners who have completed both A1 and A2 levels and want to advance their German to the intermediate stage (B1). You should be comfortable with basic grammar, vocabulary, and everyday conversations in German."
+    },
+    {
+      question: "How long does the course take to complete?",
+      answer: "The B1 course includes 90 hours of live instruction. The duration depends on how many hours you attend per week, but most students complete it in about 9 to 12 weeks."
+    },
+    {
+      question: "Can I access course materials and recordings at any time?",
+      answer: "Yes, all students receive comprehensive course materials and lifetime access to class recordings to revise and review at their own pace."
+    },
+    {
+      question: "How much does the course cost?",
+      answer: "B1 level only: ₹18,999"
+    },
+    {
+      question: "Are there any prerequisites for this course?",
+      answer: "Yes – you must have completed A1 and A2 levels or have equivalent knowledge in German grammar, reading, speaking, and listening."
+    },
+    {
+      question: "Is exam preparation included in the course?",
+      answer: "Absolutely! We offer free dedicated exam training as part of your B1 course:\n\n• 2 weeks of focused exam preparation at the end of the B1 course\n\n• Covers all four skills: speaking, listening, reading, and writing\n\n• Includes mock exams, exam strategies, and personalized feedback"
+    },
+    {
+      question: "Will I be fluent after this course?",
+      answer: "At B1 level, you'll be able to hold detailed conversations, express opinions, describe experiences, and understand longer texts. While you may not be fully fluent yet, you'll be ready for most everyday and workplace situations in German-speaking countries."
+    },
+    {
+      question: "How are the classes conducted?",
+      answer: "All classes are conducted live over Zoom, in a highly interactive format. You'll practice speaking daily, ask questions in real-time, and get regular feedback from your instructor."
+    },
+    {
+      question: "What if I miss a class?",
+      answer: "No need to worry! All sessions are recorded, and you'll have unlimited access to them for future review."
+    },
+    {
+      question: "Is this course aligned with Goethe/ÖSD exam standards?",
+      answer: "Yes. Our curriculum is fully aligned with international standards like Goethe, ÖSD, and TELC. We prepare you to succeed in official German language certification exams."
+    },
+    {
+      question: "How can I contact you if I have more questions?",
+      answer: "You can reach out to us at director@germanwithamit.com – we're happy to guide you!"
     }
   ]
 },
@@ -1222,12 +1380,74 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
   ],
   relatedCourses: [
     {
-      title: "German C1 Course for Advanced Learners",
-      description: "Achieve advanced fluency and tackle complex language tasks with expert guidance.",
-      level: "C1 Advanced",
-      price: "₹21,999",
-      image: "/images/courses/c1.jpg",
-      link: "/courses/advanced-c1"
+      title: "Exam Preparation Course",
+      description: "Build strong foundations in advanced grammar and vocabulary to excel in B2 exams.",
+      level: "B2",
+      price: "₹5,999",
+      image: "/images/courses/B2.jpg",
+      link: "/course/exam"
+    },
+    {
+      title: "B2.1 + B2.2 Combo Course",
+      description: "Take your German from intermediate to advanced with our B2 course, designed to sharpen your skills for real-life, academic, and professional use. You’ll improve your fluency, accuracy, and comprehension across speaking, listening, reading, and writing — all aligned with the Goethe-Zertifikat B2.",
+      level: "B2.2+B2.2",
+      price: "₹16,999",
+      image: "/images/courses/B2.jpg",
+      link: "/combo-course"
+    }
+  ],
+  whatYouCanDo: {
+    title: "What You Can Achieve After This Course",
+    description: "After completing this B2.1 level course, you'll be able to:",
+    abilities: [
+      "Study at a German university (in certain programs)",
+      "Work in customer service or office jobs without translation help",
+      "Understand main points of complex texts",
+      "Follow German podcasts, news, or movies with little help",
+      "Express opinions clearly in discussions",
+      "Pass Goethe/Telc B2 for visa/university/work purposes"
+    ]
+  },
+  faqs: [
+    {
+      question: "Who is this course for?",
+      answer: "This course is designed for learners who have completed B1 and want to reach the upper-intermediate level (B2.1). You should be comfortable with intermediate German grammar and able to discuss familiar topics in detail."
+    },
+    {
+      question: "How long does the course take to complete?",
+      answer: "The B2.1 course includes 60 hours of live instruction. Most students complete this level in 6-8 weeks with regular attendance."
+    },
+    {
+      question: "Can I access course materials and recordings at any time?",
+      answer: "Yes! You'll get all study materials and lifetime access to class recordings for flexible learning."
+    },
+    {
+      question: "How much does the course cost?",
+      answer: "B2.1 level only: ₹19,999\n\nB2 Complete (B2.1 + B2.2 combo): ₹37,999 (Save ₹4,000)"
+    },
+    {
+      question: "Are there any prerequisites for this course?",
+      answer: "Yes – you should have completed B1 level or demonstrate equivalent knowledge through our placement test."
+    },
+    {
+      question: "Is exam preparation included?",
+      answer: "Yes! The course includes:\n\n• 1 week of focused exam training\n\n• Practice tests for all exam sections\n\n• Specialized strategies for Goethe/ÖSD B2 exams"
+    },
+    {
+      question: "What will I be able to do after completing B2.1?",
+      answer: "You'll understand complex texts, discuss abstract topics, and communicate fluently in most situations. B2.1 builds toward full B2 competency."
+    },
+    {
+      question: "How are classes conducted?",
+      answer: "Live Zoom sessions with emphasis on academic/professional German, advanced grammar, and nuanced expression."
+    },
+    {
+      question: "What if I miss a class?",
+      answer: "All sessions are recorded and available indefinitely for review."
+    },
+    {
+      question: "How can I contact you?",
+      answer: "Email director@germanwithamit.com for any queries."
     }
   ]
 },
@@ -1478,12 +1698,62 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
   ],
   relatedCourses: [
     {
-      title: "German C1 Course for Advanced Learners",
-      description: "Achieve advanced fluency and tackle complex language tasks with expert guidance.",
-      level: "C1 Advanced",
-      price: "₹21,999",
-      image: "/images/courses/c1.jpg",
-      link: "/courses/advanced-c1"
+      title: "Exam Preparation Course",
+      description: "Build strong foundations in advanced grammar and vocabulary to excel in B2 exams.",
+      level: "B2",
+      price: "₹5,999",
+      image: "/images/courses/B2.jpg",
+      link: "/course/exam"
+    },
+    {
+      title: "B2.1 + B2.2 Combo Course",
+      description: "Take your German from intermediate to advanced with our B2 course, designed to sharpen your skills for real-life, academic, and professional use. You’ll improve your fluency, accuracy, and comprehension across speaking, listening, reading, and writing — all aligned with the Goethe-Zertifikat B2.",
+      level: "B2.2+B2.2",
+      price: "₹16,999",
+      image: "/images/courses/B2.jpg",
+      link: "/combo-course"
+    }
+  ],
+  whatYouCanDo: {
+    title: "What You Can Achieve After This Course",
+    description: "After completing this B2.2 level course, you'll be able to:",
+    abilities: [
+      "Study at a German university (in certain programs)",
+      "Work in customer service or office jobs without translation help",
+      "Understand main points of complex texts",
+      "Follow German podcasts, news, or movies with little help",
+      "Express opinions clearly in discussions",
+      "Pass Goethe/Telc B2 for visa/university/work purposes"
+    ]
+  },
+  faqs: [
+    {
+      question: "Who is this course for?",
+      answer: "For students who've completed B2.1 and want to master full B2-level German for academic or professional use."
+    },
+    {
+      question: "How long does the course take?",
+      answer: "B2.2 includes 70 hours of instruction, typically completed in 7-9 weeks."
+    },
+    {
+      question: "What's included in the course fee?",
+      answer: "B2.2 level only: ₹21,999\n\nIncludes:\n\n• All study materials\n\n• 2 weeks exam prep\n\n• Lifetime recording access"
+    },
+    {
+      question: "How does this differ from B2.1?",
+      answer: "B2.2 focuses on:\n\n• Technical/specialized vocabulary\n\n• Formal writing skills\n\n• Nuanced cultural understanding\n\n• Advanced argumentation"
+    },
+    {
+      question: "Is this sufficient for university admission?",
+      answer: "Yes! Completing B2.2 meets language requirements for many German universities."
+    },
+    {
+      question: "What exam prep is included?",
+      answer: "Intensive 2-week training with:\n\n• Full mock exams\n\n• Writing correction service\n\n• Speaking test simulations"
+    },
+    {
+      question: "Can I skip to C1 after this?",
+      answer: "Absolutely! B2.2 provides the perfect foundation for advanced C1 studies."
     }
   ]
 },
@@ -1672,12 +1942,54 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
   ],
   relatedCourses: [
     {
-      title: "German C2 Course for Proficiency Learners",
-      description: "Reach native-like fluency and master complex communication for academic and professional contexts.",
-      level: "C2 Proficiency",
-      price: "₹23,999",
+      title: "Exam Preparation Course",
+      description: "Build strong foundations in advanced grammar and vocabulary to excel in C1 exams.",
+      level: "C1",
+      price: "₹5,999",
       image: "/images/courses/c2.jpg",
-      link: "/courses/advanced-c2"
+      link: "/course/exam"
+    }
+  ],
+  whatYouCanDo: {
+    title: "What You Can Achieve After This Course",
+    description: "After completing this C1 level course, you'll be able to:",
+    abilities: [
+      "Study academic programs taught fully in German",
+      "Work professionally in Germany, Austria, or Switzerland",
+      "Write reports, essays, and give formal presentations",
+      "Debate and argue fluently and spontaneously",
+      "Understand nuanced humor and idioms",
+      "Pass TestDaF or Goethe/Telc C1 for higher education or citizenship"
+    ]
+  },
+  faqs: [
+    {
+      question: "Who is this course for?",
+      answer: "For advanced learners aiming for near-native fluency, typically needed for university studies or professional work in German-speaking countries."
+    },
+    {
+      question: "Course duration?",
+      answer: "100 hours of instruction (10-12 weeks) plus 20 hours of specialized academic/professional training."
+    },
+    {
+      question: "Pricing?",
+      answer: "C1 Complete: ₹29,999\n\nIncludes:\n\n• 3-week exam bootcamp\n\n• Thesis-writing guidance\n\n• Business German module"
+    },
+    {
+      question: "Prerequisites?",
+      answer: "B2 certification or equivalent proficiency (placement test available)."
+    },
+    {
+      question: "What skills will I gain?",
+      answer: "You'll:\n\n• Understand implicit meanings\n\n• Produce complex texts\n\n• Debate specialized topics\n\n• Use language flexibly for social/academic/professional purposes"
+    },
+    {
+      question: "Exam preparation?",
+      answer: "3-week intensive prep including:\n\n• Academic writing workshops\n\n• Live exam simulations\n\n• Individual feedback sessions"
+    },
+    {
+      question: "Is this sufficient for jobs in Germany?",
+      answer: "Yes! C1 is the standard requirement for most skilled professions."
     }
   ]
 },
@@ -1865,12 +2177,54 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
   ],
   relatedCourses: [
     {
-      title: "German B2 Course for Upper-Intermediate Learners",
-      description: "Build strong foundations in advanced grammar and vocabulary to excel in B2 exams.",
-      level: "B2 Upper-Intermediate",
-      price: "₹19,499",
-      image: "/images/courses/b2.jpg",
-      link: "/courses/upper-intermediate-b2"
+      title: "Exam Preparation Course",
+      description: "Build strong foundations in advanced grammar and vocabulary to excel in C2 exams.",
+      level: "C2",
+      price: "₹5,999",
+      image: "/images/courses/c2.jpg",
+      link: "/course/exam"
+    }
+  ],
+  whatYouCanDo: {
+    title: "What You Can Achieve After This Course",
+    description: "After completing this C2 level course, you'll be able to:",
+    abilities: [
+      "Speak like a near-native",
+      "Work in high-level professions (law, academia, journalism)",
+      "Translate, interpret, or teach German",
+      "Read literature, research papers, and legal documents with ease",
+      "Watch theater, news, and advanced media without subtitles",
+      "Apply for jobs requiring native-level fluency"
+    ]
+  },
+  faqs: [
+    {
+      question: "Who should take this course?",
+      answer: "For learners seeking mastery equivalent to educated native speakers, typically for academic research, high-level professions, or personal achievement."
+    },
+    {
+      question: "Course structure?",
+      answer: "120 hours over 12-15 weeks, plus:\n\n• 30 hours specialized modules\n\n• Thesis/project component"
+    },
+    {
+      question: "Investment?",
+      answer: "C2 Mastery Program: ₹39,999\n\nIncludes:\n\n• Personalized coaching\n\n• Cultural immersion projects\n\n• Professional portfolio review"
+    },
+    {
+      question: "Prerequisites?",
+      answer: "C1 certification or demonstrable C1-level proficiency."
+    },
+    {
+      question: "What makes C2 different?",
+      answer: "At this level you'll:\n\n• Understand virtually everything heard/read\n\n• Summarize complex information\n\n• Express yourself spontaneously with precision\n\n• Distinguish subtle shades of meaning"
+    },
+    {
+      question: "Exam support?",
+      answer: "Comprehensive support including:\n\n• Weekly mock exams\n\n• Individual error analysis\n\n• Native-speaker conversation partners"
+    },
+    {
+      question: "Is C2 necessary for immigration?",
+      answer: "While rarely required officially, C2 demonstrates exceptional integration capability and is valued by employers/universities."
     }
   ]
 }
