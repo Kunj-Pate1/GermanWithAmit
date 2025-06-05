@@ -163,6 +163,10 @@ const movingCategories = [
   {
     name:"Ausbildung In Germany",
     path:"/Ausbildung-in-Germany"
+  },
+  {
+    name:"Studienkolleg In Germany",
+    path:"/Studienkolleg-in-Germany"
   }
 ]
 
