@@ -526,8 +526,8 @@ const ExamPreparationPage = () => {
 
         {/* New Content - Integrated Training */}
         <div className="mb-6 p-4 bg-white/10 rounded-lg backdrop-blur-sm border border-white/20">
-          <p className="font-medium mb-2">🎯 All courses include integrated exam training for Goethe-Zertifikat (A1-C2)</p>
-          <p className="text-sm mb-3">Already completed a level? We offer dedicated exam prep:</p>
+          <p className="font-medium mb-2">🎯 Already completed a level? We offer dedicated exam prep for Goethe-Zertifikat (A1-C2)</p>
+          {/* <p className="text-sm mb-3">Already completed a level? We offer dedicated exam prep:</p> */}
           <ul className="space-y-2 text-sm">
             <li className="flex items-start">
               <Check className="w-4 h-4 mt-0.5 mr-2 flex-shrink-0" />
@@ -561,7 +561,11 @@ const ExamPreparationPage = () => {
           </Button>
           <Button 
             className="bg-white text-german hover:bg-blue-50"
-            onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}
+            onClick={() => {
+              const formSection = document.getElementById('form-section');
+              if (formSection) {
+                formSection.scrollIntoView({ behavior: 'smooth' });
+              }}}
           >
             Enroll Now
           </Button>
@@ -593,10 +597,6 @@ const ExamPreparationPage = () => {
               <div className="text-lg text-gray-500 line-through">₹8,999</div>
             </div>
             <div className="mb-4 space-y-3">
-              <div className="flex items-center text-green-600 font-medium">
-                <ShieldCheck className="w-5 h-5 mr-2" />
-                <span>FREE Exam Prep</span>
-              </div>
               <div className="flex items-center text-blue-600 font-medium">
                 <BookOpen className="w-5 h-5 mr-2" />
                 <span>A1-C2 Exam Coverage</span>
@@ -808,7 +808,7 @@ const ExamPreparationPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Reading */}
                 <div className="bg-white rounded-xl shadow-md overflow-hidden border-l-4 border-blue-500">
-                  <div className="p-6">
+                  <div className="p-6 text-left">
                     <div className="flex items-center mb-4">
                       <div className="bg-blue-50 p-3 rounded-lg mr-4">
                         <BookOpen className="w-6 h-6 text-german-dark" />
@@ -830,7 +830,7 @@ const ExamPreparationPage = () => {
 
                 {/* Listening */}
                 <div className="bg-white rounded-xl shadow-md overflow-hidden border-l-4 border-emerald-500">
-                  <div className="p-6">
+                  <div className="p-6 text-left">
                     <div className="flex items-center mb-4">
                       <div className="bg-emerald-50 p-3 rounded-lg mr-4">
                         <Headphones className="w-6 h-6 text-emerald-600" />
@@ -852,7 +852,7 @@ const ExamPreparationPage = () => {
 
                 {/* Writing */}
                 <div className="bg-white rounded-xl shadow-md overflow-hidden border-l-4 border-amber-500">
-                  <div className="p-6">
+                  <div className="p-6 text-left">
                     <div className="flex items-center mb-4">
                       <div className="bg-amber-50 p-3 rounded-lg mr-4">
                         <Pen className="w-6 h-6 text-amber-600" />
@@ -874,7 +874,7 @@ const ExamPreparationPage = () => {
 
                 {/* Speaking */}
                 <div className="bg-white rounded-xl shadow-md overflow-hidden border-l-4 border-purple-500">
-                  <div className="p-6">
+                  <div className="p-6 text-left">
                     <div className="flex items-center mb-4">
                       <div className="bg-purple-50 p-3 rounded-lg mr-4">
                         <Mic className="w-6 h-6 text-purple-600" />
@@ -901,7 +901,7 @@ const ExamPreparationPage = () => {
       <div className="bg-german backdrop-blur-sm rounded-lg p-8">
 
         {/* Form  */}
-      <div className="bg-gradient-to-r from-german-dark/90 to-german/90 py-12 px-4 sm:px-6 rounded-xl">
+      <div id="form-section" className="bg-gradient-to-r from-german-dark/90 to-german/90 py-12 px-4 sm:px-6 rounded-xl">
   {/* Header Section */}
   <div className="text-center mb-8">
     <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 flex items-center justify-center">
@@ -914,7 +914,7 @@ const ExamPreparationPage = () => {
   </div>
 
   {/* Form Container */}
-  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+  <div id="" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
     <form 
     // onSubmit={handleSubmit} 
     className="space-y-6">

@@ -1,23 +1,128 @@
-import { Building, GraduationCap, Briefcase, Globe, Clock, Calendar, Mail, MapPin, Check, Euro, Flag, Scroll, User, Home, Phone, BookOpen } from 'lucide-react';
+import { Building, GraduationCap, Briefcase, Globe, Clock, Calendar, Mail, MapPin, Check, Euro, Flag, Scroll, User, Home, Phone, BookOpen, Star, Award, Play, MessageSquare, Send, ChevronDown, HelpCircle, MessageCircleQuestion } from 'lucide-react';
 import Navbar from '@/components/Navbar';
+import { AspectRatio } from '@radix-ui/react-aspect-ratio';
+import { Button } from '@/components/ui/button';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const AusbildungPage = () => {
+
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      question: "Is Ausbildung free for Indian students?",
+      answer: "Yes, Ausbildung has no tuition fees. In fact, you get paid while you train with a monthly stipend of €1,000–€1,200."
+    },
+    {
+      question: "Do I need to know German?",
+      answer: "Absolutely. B1 or B2 German proficiency is mandatory for most programs. We provide language training to help you reach the required level."
+    },
+    {
+      question: "Will I get a job after Ausbildung?",
+      answer: "Yes, job placement is guaranteed upon successful completion of your program. Many students continue working with the same company where they trained."
+    },
+    {
+      question: "How long does Ausbildung last?",
+      answer: "Most programs are between 2 to 3.5 years, depending on the course. Nursing typically takes 3 years, while technical fields may be shorter."
+    },
+    {
+      question: "Can I apply for PR after Ausbildung?",
+      answer: "Yes, after working in Germany for 2 years post-Ausbildung, you can apply for Permanent Residency. The Ausbildung visa counts toward your PR timeline."
+    },
+    {
+      question: "What's the minimum qualification required?",
+      answer: "You need at least 10+2 education (55% marks) or a 10+Diploma. Some technical fields may require specific subject knowledge."
+    },
+    {
+      question: "Is there an age limit for Ausbildung?",
+      answer: "While there's no strict limit, most successful applicants are between 18-25 years old. Some fields may accept applicants up to 30 years."
+    },
+    {
+      question: "How does German With Amit help with Ausbildung?",
+      answer: "We provide complete guidance from language training to visa processing, including company matching, interview preparation, and relocation support."
+    }
+  ];
+
+  const toggleFaq = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+
   return (
     <>
       <Navbar />
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white mt-16">
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-german-dark to-german text-white py-16 px-4 md:px-6">
-          <div className="container mx-auto text-center">
-            <div className="flex justify-center mb-4">
-              <Building className="w-12 h-12" />
+        <div className="bg-gradient-to-r from-german-dark to-german py-24 px-4 md:px-6">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="text-white">
+              <div className="mb-4 flex items-center">
+                <span className="px-3 py-1 rounded-full bg-german-light/30 text-white text-sm font-medium">
+                  Professional Training
+                </span>
+                <div className="ml-4 flex items-center">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star 
+                      key={star} 
+                      className="w-4 h-4 text-yellow-300 fill-yellow-300" 
+                    />
+                  ))}
+                  <span className="ml-2 text-sm">4.8 star rating</span>
+                </div>
+              </div>
+              
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                Ausbildung in Germany
+              </h1>
+              
+              <p className="text-lg md:text-xl mb-6 text-blue-50 max-w-2xl">
+                Learn & Earn with German With Amit – Your Pathway to a Successful Career in Germany
+              </p>
+              
+              <div className="flex flex-wrap gap-4 mb-8">
+                <div className="flex items-center">
+                  <Clock className="w-5 h-5 mr-2" />
+                  <span>2-3 Year Program</span>
+                </div>
+                <div className="flex items-center">
+                  <Award className="w-5 h-5 mr-2" />
+                  <span>Earn While You Learn</span>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button className="bg-white text-german hover:bg-german-light">
+                  Watch Demo
+                </Button>
+                <Button className="bg-white text-german hover:bg-blue-50">
+                  Enroll Now
+                </Button>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Ausbildung in Germany</h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Learn & Earn with German With Amit – Your Pathway to a Successful Career in Germany
-            </p>
+            
+            <div className="hidden lg:block">
+              <div className="rounded-xl overflow-hidden shadow-xl">
+                <div className="relative">
+                  <AspectRatio ratio={16/9}>
+                    <img 
+                      src="/images/course/ausbildung/hero.jpg" // Replace with your image path
+                      alt="Ausbildung in Germany" 
+                      className="w-full h-full object-cover"
+                    />
+                  </AspectRatio>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <button className="bg-white/90 hover:bg-white rounded-full p-4 shadow-lg transition-transform transform hover:scale-110">
+                      <Play className="w-10 h-10 text-german fill-german" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+</div>
 
         {/* Main Content */}
         <div className="container mx-auto px-4 md:px-6 py-12 max-w-6xl">
@@ -92,164 +197,277 @@ const AusbildungPage = () => {
             
             <div className="grid md:grid-cols-2 gap-8">
               {/* Nursing */}
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <GraduationCap className="w-6 h-6 text-german-dark" />
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow overflow-hidden">
+                <div className="relative h-40 mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="/images/course/ausbildung/nursing.jpg" 
+                    alt="Nursing Ausbildung" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4">
+                    <h3 className="text-xl font-bold text-white">Nursing</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800">🏥 Nursing</h3>
                 </div>
-                <p className="text-gray-600">
-                  Start a rewarding career in healthcare. High demand across Germany.
+                <p className="text-gray-600 mb-4">
+                  Start a rewarding career in healthcare. High demand across Germany with excellent career progression.
                 </p>
-                <div className="mt-4">
-                  <div className="bg-blue-50 text-blue-800 text-sm px-3 py-1 rounded-full inline-block">
+                <div className="flex flex-wrap gap-2">
+                  <div className="bg-blue-50 text-blue-800 text-sm px-3 py-1 rounded-full">
                     High Demand
+                  </div>
+                  <div className="bg-green-50 text-green-800 text-sm px-3 py-1 rounded-full">
+                    €1,100-1,300/month
                   </div>
                 </div>
               </div>
 
               {/* Hotel Management */}
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <Briefcase className="w-6 h-6 text-german-dark" />
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow overflow-hidden">
+                <div className="relative h-40 mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="/images/course/ausbildung/hotel.jpg" 
+                    alt="Hotel Management Ausbildung" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4">
+                    <h3 className="text-xl font-bold text-white">Hotel Management</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800">🏨 Hotel Management & Hospitality</h3>
                 </div>
-                <p className="text-gray-600">
-                  Perfect for 12th pass students looking for global careers in hospitality.
+                <p className="text-gray-600 mb-4">
+                  Perfect for 12th pass students looking for global careers in luxury hospitality and tourism.
                 </p>
-                <div className="mt-4">
-                  <div className="bg-blue-50 text-blue-800 text-sm px-3 py-1 rounded-full inline-block">
+                <div className="flex flex-wrap gap-2">
+                  <div className="bg-blue-50 text-blue-800 text-sm px-3 py-1 rounded-full">
                     International Options
+                  </div>
+                  <div className="bg-purple-50 text-purple-800 text-sm px-3 py-1 rounded-full">
+                    Travel Opportunities
                   </div>
                 </div>
               </div>
 
               {/* Mechatronics */}
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <Building className="w-6 h-6 text-german-dark" />
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow overflow-hidden">
+                <div className="relative h-40 mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="/images/course/ausbildung/mechatronics.jpg" 
+                    alt="Mechatronics Ausbildung" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4">
+                    <h3 className="text-xl font-bold text-white">Mechatronics</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800">🛠️ Mechatronics</h3>
                 </div>
-                <p className="text-gray-600">
-                  Train in a high-tech blend of mechanics, electronics, and IT.
+                <p className="text-gray-600 mb-4">
+                  Train in a high-tech blend of mechanics, electronics, and IT with German engineering excellence.
                 </p>
-                <div className="mt-4">
-                  <div className="bg-blue-50 text-blue-800 text-sm px-3 py-1 rounded-full inline-block">
+                <div className="flex flex-wrap gap-2">
+                  <div className="bg-blue-50 text-blue-800 text-sm px-3 py-1 rounded-full">
                     Future-Proof
+                  </div>
+                  <div className="bg-orange-50 text-orange-800 text-sm px-3 py-1 rounded-full">
+                    €1,200-1,500/month
                   </div>
                 </div>
               </div>
 
               {/* IT */}
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <BookOpen className="w-6 h-6 text-german-dark" />
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow overflow-hidden">
+                <div className="relative h-40 mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="/images/course/ausbildung/It.jpg" 
+                    alt="IT Ausbildung" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4">
+                    <h3 className="text-xl font-bold text-white">Information Technology</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800">🖥️ Information Technology (IT)</h3>
                 </div>
-                <p className="text-gray-600">
-                  Ideal for those with a tech mindset. Software, systems & networks.
+                <p className="text-gray-600 mb-4">
+                  Ideal for tech enthusiasts with training in software development, systems administration and networks.
                 </p>
-                <div className="mt-4">
-                  <div className="bg-blue-50 text-blue-800 text-sm px-3 py-1 rounded-full inline-block">
+                <div className="flex flex-wrap gap-2">
+                  <div className="bg-blue-50 text-blue-800 text-sm px-3 py-1 rounded-full">
                     Excellent Pay
+                  </div>
+                  <div className="bg-indigo-50 text-indigo-800 text-sm px-3 py-1 rounded-full">
+                    €1,300-1,600/month
                   </div>
                 </div>
               </div>
+            </div>
 
+            {/* Additional Courses - Initially Hidden */}
+            <div className="grid md:grid-cols-2 gap-8 mt-8 hidden" id="more-courses">
               {/* Retail Sales */}
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <User className="w-6 h-6 text-german-dark" />
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow overflow-hidden">
+                <div className="relative h-40 mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="/images/course/ausbildung/retails.jpg" 
+                    alt="Retail Sales Ausbildung" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4">
+                    <h3 className="text-xl font-bold text-white">Retail Sales</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800">🛍️ Retail Sales</h3>
                 </div>
-                <p className="text-gray-600">
-                  Learn sales, merchandising & customer service in top German brands.
+                <p className="text-gray-600 mb-4">
+                  Learn sales, merchandising & customer service in top German brands like Aldi, Lidl, and BMW.
                 </p>
+                <div className="flex flex-wrap gap-2">
+                  <div className="bg-blue-50 text-blue-800 text-sm px-3 py-1 rounded-full">
+                    Customer Focused
+                  </div>
+                </div>
               </div>
 
               {/* Business Admin */}
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <Home className="w-6 h-6 text-german-dark" />
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow overflow-hidden">
+                <div className="relative h-40 mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="/images/course/ausbildung/business.jpg" 
+                    alt="Business Administration Ausbildung" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4">
+                    <h3 className="text-xl font-bold text-white">Business Administration</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800">💼 Office & Business Administration</h3>
                 </div>
-                <p className="text-gray-600">
-                  Start a stable career in HR, finance, and office management.
+                <p className="text-gray-600 mb-4">
+                  Start a stable career in HR, finance, and office management with multinational companies.
                 </p>
-                <div className="mt-4">
-                  <div className="bg-blue-50 text-blue-800 text-sm px-3 py-1 rounded-full inline-block">
+                <div className="flex flex-wrap gap-2">
+                  <div className="bg-blue-50 text-blue-800 text-sm px-3 py-1 rounded-full">
                     Stable Career
                   </div>
                 </div>
               </div>
 
               {/* Logistics */}
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <Globe className="w-6 h-6 text-german-dark" />
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow overflow-hidden">
+                <div className="relative h-40 mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="/images/course/ausbildung/logistics.jpg" 
+                    alt="Logistics Ausbildung" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4">
+                    <h3 className="text-xl font-bold text-white">Logistics & Supply Chain</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800">🚚 Logistics & Supply Chain</h3>
                 </div>
-                <p className="text-gray-600">
-                  Master warehouse operations and international logistics.
+                <p className="text-gray-600 mb-4">
+                  Master warehouse operations and international logistics with Germany's leading shipping companies.
                 </p>
+                <div className="flex flex-wrap gap-2">
+                  <div className="bg-blue-50 text-blue-800 text-sm px-3 py-1 rounded-full">
+                    Global Opportunities
+                  </div>
+                </div>
               </div>
 
               {/* Construction */}
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <Scroll className="w-6 h-6 text-german-dark" />
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow overflow-hidden">
+                <div className="relative h-40 mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="/images/course/ausbildung/construction.jpg" 
+                    alt="Construction Ausbildung" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4">
+                    <h3 className="text-xl font-bold text-white">Construction</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800">👷‍♂️ Construction</h3>
                 </div>
-                <p className="text-gray-600">
-                  Work in infrastructure, architecture, and site management.
+                <p className="text-gray-600 mb-4">
+                  Work in infrastructure, architecture, and site management with Germany's booming construction sector.
                 </p>
-                <div className="mt-4">
-                  <div className="bg-blue-50 text-blue-800 text-sm px-3 py-1 rounded-full inline-block">
+                <div className="flex flex-wrap gap-2">
+                  <div className="bg-blue-50 text-blue-800 text-sm px-3 py-1 rounded-full">
                     High Demand
+                  </div>
+                  <div className="bg-amber-50 text-amber-800 text-sm px-3 py-1 rounded-full">
+                    €1,100-1,400/month
                   </div>
                 </div>
               </div>
 
               {/* Cosmetology */}
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <User className="w-6 h-6 text-german-dark" />
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow overflow-hidden">
+                <div className="relative h-40 mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="/images/course/ausbildung/cosmetology.jpg" 
+                    alt="Cosmetology Ausbildung" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4">
+                    <h3 className="text-xl font-bold text-white">Cosmetology</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800">💇 Cosmetology & Hairdressing</h3>
                 </div>
-                <p className="text-gray-600">
-                  Hands-on training in salons and beauty services.
+                <p className="text-gray-600 mb-4">
+                  Hands-on training in salons and beauty services with Germany's premium beauty brands.
                 </p>
+                <div className="flex flex-wrap gap-2">
+                  <div className="bg-blue-50 text-blue-800 text-sm px-3 py-1 rounded-full">
+                    Creative Field
+                  </div>
+                </div>
               </div>
 
               {/* Banking */}
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <Euro className="w-6 h-6 text-german-dark" />
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-50 hover:shadow-md transition-shadow overflow-hidden">
+                <div className="relative h-40 mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="/images/course/ausbildung/banking.jpg" 
+                    alt="Banking Ausbildung" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4">
+                    <h3 className="text-xl font-bold text-white">Banking & Finance</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800">🧾 Banking & Finance</h3>
                 </div>
-                <p className="text-gray-600">
-                  Open a career in banking, loans, and financial services.
+                <p className="text-gray-600 mb-4">
+                  Open a career in banking, loans, and financial services with Germany's leading banks.
                 </p>
+                <div className="flex flex-wrap gap-2">
+                  <div className="bg-blue-50 text-blue-800 text-sm px-3 py-1 rounded-full">
+                    Prestigious
+                  </div>
+                  <div className="bg-teal-50 text-teal-800 text-sm px-3 py-1 rounded-full">
+                    €1,200-1,500/month
+                  </div>
+                </div>
               </div>
+            </div>
+
+            {/* Show More Button */}
+            <div className="text-center mt-8">
+              <button 
+                onClick={() => {
+                  const moreCourses = document.getElementById('more-courses');
+                  const showMoreBtn = document.getElementById('show-more-btn');
+                  if (moreCourses.classList.contains('hidden')) {
+                    moreCourses.classList.remove('hidden');
+                    showMoreBtn.textContent = 'Show Less Courses';
+                  } else {
+                    moreCourses.classList.add('hidden');
+                    showMoreBtn.textContent = 'Show More Courses';
+                  }
+                }}
+                id="show-more-btn"
+                className="bg-german-dark hover:bg-german text-white px-6 py-3 rounded-lg font-medium transition-all inline-flex items-center"
+              >
+                Show More Courses
+                <ChevronDown className="ml-2 w-4 h-4" />
+              </button>
             </div>
           </section>
 
@@ -371,8 +589,8 @@ const AusbildungPage = () => {
             </div>
           </section>
 
-          {/* Eligibility Criteria */}
-          <section className="mb-16 bg-white rounded-xl shadow-sm p-8 border border-blue-50">
+          {/* Eligibility Criteria Section */}
+          <section className="mb-12 bg-white rounded-xl shadow-sm p-8 border border-blue-50">
             <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Ausbildung Eligibility Criteria</h2>
             <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
               To qualify for Ausbildung in Germany, you need:
@@ -426,6 +644,221 @@ const AusbildungPage = () => {
               </button>
             </div>
           </section>
+
+        {/* Application Form Section */}
+        <section className="bg-gradient-to-r from-german-dark/90 to-german/90 py-12 px-6 rounded-xl mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 flex items-center justify-center">
+              <BookOpen className="w-6 h-6 mr-2" /> 
+              Ready to get started?
+            </h2>
+            <p className="text-blue-100/90 text-lg">
+              Fill out the form below to begin your Ausbildung journey
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 max-w-3xl mx-auto">
+            <form className="space-y-6">
+              {/* Personal Information */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-white/80 text-sm font-medium mb-1">Full Name*</label>
+                  <div className="relative">
+                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/50" />
+                    <input
+                      type="text"
+                      name="fullName"
+                      placeholder="Your Full Name"
+                      className="w-full pl-10 px-4 py-2 bg-white/5 border border-white/20 text-white placeholder:text-white/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      required
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label className="block text-white/80 text-sm font-medium mb-1">Email Address*</label>
+                  <div className="relative">
+                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/50" />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="you@example.com"
+                      className="w-full pl-10 px-4 py-2 bg-white/5 border border-white/20 text-white placeholder:text-white/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Contact Details */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-white/80 text-sm font-medium mb-1">Mobile Number*</label>
+                  <div className="relative">
+                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/50" />
+                    <input
+                      type="tel"
+                      name="mobile"
+                      placeholder="+91XXXXXXXXXX"
+                      className="w-full pl-10 px-4 py-2 bg-white/5 border border-white/20 text-white placeholder:text-white/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      required
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label className="block text-white/80 text-sm font-medium mb-1">Highest Qualification*</label>
+                  <div className="relative">
+                    <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/50" />
+                    <select
+                      name="qualification"
+                      className="w-full pl-10 px-4 py-2 bg-white/5 border border-white/20 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      required
+                    >
+                      <option value="">Select qualification</option>
+                      <option value="12th Pass">12th Pass</option>
+                      <option value="Diploma (10 + 3)">Diploma (10 + 3)</option>
+                      <option value="Graduate">Graduate</option>
+                      <option value="Postgraduate">Postgraduate</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              {/* Ausbildung Details */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-white/80 text-sm font-medium mb-1">Ausbildung Field*</label>
+                  <div className="relative">
+                    <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/50" />
+                    <select
+                      name="ausbildungField"
+                      className="w-full pl-10 px-4 py-2 bg-white/5 border border-white/20 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      required
+                    >
+                      <option value="">Select a field</option>
+                      <option value="Nursing">Nursing</option>
+                      <option value="Hotel Management">Hotel Management</option>
+                      <option value="Mechatronics">Mechatronics</option>
+                      <option value="Information Technology">IT</option>
+                      <option value="Retail Sales">Retail Sales</option>
+                      <option value="Business Administration">Business Admin</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div>
+                  <label className="block text-white/80 text-sm font-medium mb-1">German Level*</label>
+                  <div className="relative">
+                    <Award className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/50" />
+                    <select
+                      name="germanProficiency"
+                      className="w-full pl-10 px-4 py-2 bg-white/5 border border-white/20 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      required
+                    >
+                      <option value="">Select your level</option>
+                      <option value="No Experience">No Experience</option>
+                      <option value="A1">A1</option>
+                      <option value="A2">A2</option>
+                      <option value="B1">B1</option>
+                      <option value="B2 or Above">B2 or Above</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              {/* Location & Passport */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-white/80 text-sm font-medium mb-1">City / State*</label>
+                  <div className="relative">
+                    <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/50" />
+                    <input
+                      type="text"
+                      name="cityState"
+                      placeholder="Your City and State"
+                      className="w-full pl-10 px-4 py-2 bg-white/5 border border-white/20 text-white placeholder:text-white/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      required
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label className="block text-white/80 text-sm font-medium mb-1">Passport Status*</label>
+                  <div className="flex space-x-4">
+                    <label className="inline-flex items-center">
+                      <input type="radio" name="passport" value="Yes" className="text-german" required />
+                      <span className="ml-2 text-white/80">Yes</span>
+                    </label>
+                    <label className="inline-flex items-center">
+                      <input type="radio" name="passport" value="No" className="text-german" />
+                      <span className="ml-2 text-white/80">No</span>
+                    </label>
+                    <label className="inline-flex items-center">
+                      <input type="radio" name="passport" value="Applying soon" className="text-german" />
+                      <span className="ml-2 text-white/80">Applying soon</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              {/* Additional Fields */}
+              <div>
+                <label className="block text-white/80 text-sm font-medium mb-1">How did you hear about us?</label>
+                <div className="relative">
+                  <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-white/50" />
+                  <input
+                    type="text"
+                    name="hearAbout"
+                    placeholder="Social media, friend, etc."
+                    className="w-full pl-10 px-4 py-2 bg-white/5 border border-white/20 text-white placeholder:text-white/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-white/80 text-sm font-medium mb-1">Additional Questions</label>
+                <div className="relative">
+                  <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-white/50" />
+                  <textarea
+                    name="comments"
+                    rows={3}
+                    className="w-full pl-10 px-4 py-2 bg-white/5 border border-white/20 text-white placeholder:text-white/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Any specific questions or requirements..."
+                  ></textarea>
+                </div>
+              </div>
+
+              {/* Consent Checkbox */}
+              <div className="flex items-start">
+                <div className="flex items-center h-5">
+                  <input
+                    id="consent"
+                    name="consent"
+                    type="checkbox"
+                    required
+                    className="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
+                  />
+                </div>
+                <label htmlFor="consent" className="ml-2 block text-white/80 text-sm">
+                  I authorize German With Amit to contact me via Email, SMS, WhatsApp, and Call.
+                </label>
+              </div>
+
+              {/* Submit Button */}
+              <Button 
+                type="submit"
+                className="w-full bg-white text-german hover:bg-german-light hover:text-white transition-colors mt-6 py-3 font-medium"
+              >
+                <span className="flex items-center justify-center">
+                  <Send className="mr-2 h-4 w-4" />
+                  Submit Application
+                </span>
+              </Button>
+            </form>
+          </div>
+        </section>
 
           {/* Why Choose Us */}
           <section className="mb-16">
@@ -548,258 +981,59 @@ const AusbildungPage = () => {
 
           {/* FAQs */}
           <section className="mb-16 bg-white rounded-xl shadow-sm p-8 border border-blue-50">
-            <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">FAQs – Ausbildung in Germany</h2>
-            
-            <div className="space-y-6">
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Is Ausbildung free for Indian students?</h3>
-                <p className="text-gray-600">
-                  Yes, Ausbildung has no tuition fees. In fact, you get paid while you train.
-                </p>
-              </div>
-              
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Do I need to know German?</h3>
-                <p className="text-gray-600">
-                  Absolutely. B1 or B2 German proficiency is mandatory for most programs.
-                </p>
-              </div>
-              
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Will I get a job after Ausbildung?</h3>
-                <p className="text-gray-600">
-                  Yes, job placement is guaranteed upon successful completion of your program.
-                </p>
-              </div>
-              
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">How long does Ausbildung last?</h3>
-                <p className="text-gray-600">
-                  Most programs are between 2 to 3.5 years, depending on the course.
-                </p>
-              </div>
-              
-              <div className="pb-4">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Can I apply for PR after Ausbildung?</h3>
-                <p className="text-gray-600">
-                  Yes, after working in Germany for a few years post-Ausbildung, you can apply for Permanent Residency.
-                </p>
+      <div className="flex items-center justify-center gap-3 mb-6">
+        <MessageCircleQuestion className="text-german-dark" size={24} />
+        <h2 className="text-3xl font-bold text-center text-gray-800">FAQs – Ausbildung in Germany</h2>
+      </div>
+      
+      <p className="text-gray-600 text-center mb-8 max-w-3xl mx-auto">
+        Find answers to common questions about vocational training in Germany
+      </p>
+
+      <div className="max-w-3xl mx-auto space-y-4">
+        {faqs.map((faq, index) => (
+          <motion.div 
+            key={index}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
+            <div 
+              className={`border border-blue-50 rounded-xl transition-all duration-300 ${openIndex === index ? 'bg-blue-50 shadow-sm' : 'bg-white hover:bg-blue-50/50'}`}
+            >
+              <button
+                className="flex justify-between items-center w-full p-6 text-left"
+                onClick={() => toggleFaq(index)}
+              >
+                <span className="font-medium text-lg text-gray-800">{faq.question}</span>
+                <span className={`ml-4 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="m6 9 6 6 6-6"/>
+                  </svg>
+                </span>
+              </button>
+              <div 
+                className={`overflow-hidden transition-all duration-300 ${openIndex === index ? 'max-h-96' : 'max-h-0'}`}
+              >
+                <div className="px-6 pb-6 pt-0">
+                  <p className="text-gray-600">{faq.answer}</p>
+                </div>
               </div>
             </div>
-          </section>
-
-          {/* Application Form */}
-          <section className="mb-16 bg-white rounded-xl shadow-sm p-8 border border-blue-50">
-            <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Apply for Ausbildung in Germany</h2>
-            
-            <form className="max-w-2xl mx-auto">
-              {/* Full Name */}
-              <div className="mb-6">
-                <label htmlFor="fullName" className="block text-gray-700 font-medium mb-2">
-                  Full Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="fullName"
-                  name="fullName"
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-
-              {/* Email */}
-              <div className="mb-6">
-                <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
-                  Email Address <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-                <p className="mt-1 text-sm text-gray-500">Please enter a valid email address</p>
-              </div>
-
-              {/* Mobile */}
-              <div className="mb-6">
-                <label htmlFor="mobile" className="block text-gray-700 font-medium mb-2">
-                  Mobile Number <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="tel"
-                  id="mobile"
-                  name="mobile"
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-                <p className="mt-1 text-sm text-gray-500">10-15 digits required</p>
-              </div>
-
-              {/* Highest Qualification */}
-              <div className="mb-6">
-                <label htmlFor="qualification" className="block text-gray-700 font-medium mb-2">
-                  Highest Qualification <span className="text-red-500">*</span>
-                </label>
-                <select
-                  id="qualification"
-                  name="qualification"
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                >
-                  <option value="">Select your qualification</option>
-                  <option value="12th Pass">12th Pass</option>
-                  <option value="Diploma (10 + 3)">Diploma (10 + 3)</option>
-                  <option value="Graduate">Graduate</option>
-                  <option value="Postgraduate">Postgraduate</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-
-              {/* Ausbildung Field */}
-              <div className="mb-6">
-                <label htmlFor="ausbildungField" className="block text-gray-700 font-medium mb-2">
-                  Select Ausbildung Field <span className="text-red-500">*</span>
-                </label>
-                <select
-                  id="ausbildungField"
-                  name="ausbildungField"
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                >
-                  <option value="">Select a field</option>
-                  <option value="Nursing">Nursing</option>
-                  <option value="Hotel Management & Hospitality">Hotel Management & Hospitality</option>
-                  <option value="Mechatronics">Mechatronics</option>
-                  <option value="Information Technology">Information Technology</option>
-                  <option value="Retail Sales">Retail Sales</option>
-                  <option value="Business Administration">Business Administration</option>
-                  <option value="Logistics & Supply Chain">Logistics & Supply Chain</option>
-                  <option value="Construction">Construction</option>
-                  <option value="Cosmetology & Hairdressing">Cosmetology & Hairdressing</option>
-                  <option value="Banking & Finance">Banking & Finance</option>
-                </select>
-              </div>
-
-              {/* German Proficiency */}
-              <div className="mb-6">
-                <label className="block text-gray-700 font-medium mb-2">
-                  German Language Proficiency <span className="text-red-500">*</span>
-                </label>
-                <div className="space-y-2">
-                  {['No Experience', 'A1', 'A2', 'B1', 'B2 or Above'].map((level) => (
-                    <div key={level} className="flex items-center">
-                      <input
-                        type="radio"
-                        id={`proficiency-${level.replace(/\s+/g, '-')}`}
-                        name="germanProficiency"
-                        value={level}
-                        required
-                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
-                      />
-                      <label htmlFor={`proficiency-${level.replace(/\s+/g, '-')}`} className="ml-2 block text-gray-700">
-                        {level}
-                      </label>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* City/State */}
-              <div className="mb-6">
-                <label htmlFor="cityState" className="block text-gray-700 font-medium mb-2">
-                  City / State <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="cityState"
-                  name="cityState"
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-
-              {/* Passport */}
-              <div className="mb-6">
-                <label className="block text-gray-700 font-medium mb-2">
-                  Do you have a valid passport? <span className="text-red-500">*</span>
-                </label>
-                <div className="space-y-2">
-                  {['Yes', 'No', 'Applying soon'].map((option) => (
-                    <div key={option} className="flex items-center">
-                      <input
-                        type="radio"
-                        id={`passport-${option.replace(/\s+/g, '-')}`}
-                        name="passport"
-                        value={option}
-                        required
-                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
-                      />
-                      <label htmlFor={`passport-${option.replace(/\s+/g, '-')}`} className="ml-2 block text-gray-700">
-                        {option}
-                      </label>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* How did you hear */}
-              <div className="mb-6">
-                <label htmlFor="hearAbout" className="block text-gray-700 font-medium mb-2">
-                  How did you hear about German With Amit?
-                </label>
-                <input
-                  type="text"
-                  id="hearAbout"
-                  name="hearAbout"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-
-              {/* Consent */}
-              <div className="mb-6">
-                <div className="flex items-start">
-                  <div className="flex items-center h-5">
-                    <input
-                      id="consent"
-                      name="consent"
-                      type="checkbox"
-                      required
-                      className="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
-                    />
-                  </div>
-                  <label htmlFor="consent" className="ml-2 block text-gray-700">
-                    I authorize German With Amit and its representatives to contact me via Email, SMS, WhatsApp, and Call. I understand this overrides any registration under DND/NDNC. <span className="text-red-500">*</span>
-                  </label>
-                </div>
-              </div>
-
-              {/* Additional Questions */}
-              <div className="mb-6">
-                <label htmlFor="comments" className="block text-gray-700 font-medium mb-2">
-                  Additional Questions or Comments
-                </label>
-                <textarea
-                  id="comments"
-                  name="comments"
-                  rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                ></textarea>
-              </div>
-
-              {/* Submit Button */}
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="bg-german-dark hover:bg-german text-white px-8 py-3 rounded-lg font-medium transition-all"
-                >
-                  Submit Application
-                </button>
-              </div>
-            </form>
-          </section>
+          </motion.div>
+        ))}
+      </div>
+      
+      <div className="mt-8 text-center">
+        <p className="text-gray-600">
+          Still have questions?{' '}
+          <a href="#contact" className="text-german-dark hover:text-german font-medium">
+            Contact us directly
+          </a>{' '}
+          for personalized answers about your situation.
+        </p>
+      </div>
+    </section>
 
           {/* Contact CTA */}
           <div className="bg-gradient-to-r from-german-dark to-german rounded-xl p-8 text-center text-white">

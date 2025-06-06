@@ -2,44 +2,12 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Check, Star, Clock, Users, Award, ArrowRight, Play, Info, AlertCircle, BookOpen, CalendarDays, CheckCircle, ClipboardList, Mail, MessageSquare, Phone, Send, User } from 'lucide-react';
+import { Check, Star, Clock, Users, Award, ArrowRight, Play, Info, AlertCircle, BookOpen, CalendarDays, CheckCircle, ClipboardList, Mail, MessageSquare, Phone, Send, User, CircleCheckBig } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const comboCourses = [
-  {
-    id: 'a1-a2',
-    title: 'A1 + A2 Combo',
-    subtitle: 'Ideal for new learners who want to make fast, structured progress.',
-    description: 'Go from zero to confident German speaker with this all-in-one A1–A2 program. Learn to speak, listen, read, and write through interactive lessons designed to build real-life language skills step by step.',
-    duration: '4 Months',
-    lessons: '140+ Hours of Live Lessons',
-    level: 'Beginner',
-    price: '₹31,999',
-    originalPrice: '₹36,000',
-    discount: '15% OFF',
-    features: [
-      'A1 & A2 full curriculum',
-      '4 mock exams included',
-      'Personalized feedback',
-    ],
-    videoUrl: 'https://www.youtube.com/embed/tnZ3OeJQ2FY',
-    curriculum: [
-      {
-        module: 'A1 Level',
-        courses: [
-          { name: 'A1 Beginner German', link: '/courses/beginner/a1' },
-        ]
-      },
-      {
-        module: 'A2 Level',
-        courses: [
-          { name: 'A2 Pre-Intermediate', link: '/courses/beginner/a2' },
-        ]
-      }
-    ]
-  },
   {
     id: 'a1-a2-b1',
     title: 'A1 + A2 + B1 Combo',
@@ -74,6 +42,38 @@ const comboCourses = [
         module: 'B1 Level',
         courses: [
           { name: 'B1 Intermediate', link: '/courses/intermediate/b1' },
+        ]
+      }
+    ]
+  },
+  {
+    id: 'a1-a2',
+    title: 'A1 + A2 Combo',
+    subtitle: 'Ideal for new learners who want to make fast, structured progress.',
+    description: 'Go from zero to confident German speaker with this all-in-one A1–A2 program. Learn to speak, listen, read, and write through interactive lessons designed to build real-life language skills step by step.',
+    duration: '4 Months',
+    lessons: '140+ Hours of Live Lessons',
+    level: 'Beginner',
+    price: '₹31,999',
+    originalPrice: '₹36,000',
+    discount: '15% OFF',
+    features: [
+      'A1 & A2 full curriculum',
+      '4 mock exams included',
+      'Personalized feedback',
+    ],
+    videoUrl: 'https://www.youtube.com/embed/tnZ3OeJQ2FY',
+    curriculum: [
+      {
+        module: 'A1 Level',
+        courses: [
+          { name: 'A1 Beginner German', link: '/courses/beginner/a1' },
+        ]
+      },
+      {
+        module: 'A2 Level',
+        courses: [
+          { name: 'A2 Pre-Intermediate', link: '/courses/beginner/a2' },
         ]
       }
     ]
@@ -172,7 +172,7 @@ const ComboCoursesPage = () => {
       
       {/* Hero Section with Video */}
       <div className="bg-gradient-to-r from-german-dark to-german py-16 text-white">
-        <div className="container mx-auto px-4 md:px-6 py-16">
+        <div className="container mx-auto px-4 md:px-6 py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="order-2 lg:order-1">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
@@ -181,13 +181,14 @@ const ComboCoursesPage = () => {
               <p className="text-xl mb-6 my-6">
                 Bundle multiple levels together and save up to ₹6,000 — that's 11% of your total course fee.
               </p>
-              <p><i>Perfect for learners aiming for A1 to B2 or beyond...</i></p>
-              <br />
-              <p><b>Enroll Now and fast-track your German fluency — for less.</b></p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   className="bg-white text-german hover:bg-blue-50"
-                  onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}
+                  onClick={() => {
+                    const formSection = document.getElementById('form-section');
+                    if (formSection) {
+                      formSection.scrollIntoView({ behavior: 'smooth' });
+                    }}}
                 >
                   Enroll Now
                 </Button>
@@ -289,11 +290,12 @@ const ComboCoursesPage = () => {
                     {/* Course Details */}
                     <div>
                       <h2 className="text-2xl font-bold mb-4">{course.title}</h2>
-                      <div className="mb-6 flex items-center">
-                      <Info className="w-5 h-5 mr-2 text-german"/>
-                      <span className='text-german'>{course.subtitle}</span>
-                      </div>
-                      <p className="text-gray-700 mb-6">{course.description}</p>
+                      <div className="mb-6 pl-4 border-l-4 border-german space-x-3">
+                      <span className="text-german font-semibold">
+                        {course.subtitle}
+                      </span>
+                    </div>
+                      <p className="text-gray-700 text-justify mb-6">{course.description}</p>
                       
                       <div className="flex items-center gap-6 mb-6">
                         <div className="flex items-center">
@@ -405,7 +407,7 @@ const ComboCoursesPage = () => {
       </div>
 
       {/* Final CTA */}
-      <div className="bg-gradient-to-r from-german-dark/95 to-german/95 py-12 px-4 sm:px-6 rounded-xl shadow-xl">
+      <div id="form-section" className="bg-gradient-to-r from-german-dark/95 to-german/95 py-12 px-4 sm:px-6 rounded-xl shadow-xl">
   {/* Header Section */}
   <div className="text-center mb-8">
     <div className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm p-3 rounded-full mb-4">

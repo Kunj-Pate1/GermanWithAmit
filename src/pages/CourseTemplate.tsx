@@ -12,6 +12,7 @@ import Navbar from '@/components/Navbar';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { StudentResultsSection } from './StudentResultsSection';
 import { log } from 'console';
+import ReviewSection from '@/components/ReviewSection';
 
 
 const CourseTemplate = () => {
@@ -360,6 +361,81 @@ const CourseTemplate = () => {
                   
                 </div>
               </div>
+
+              {/* What You Can Do Section */}
+              {/* <div className=" py-12 md:py-16"> */}
+              <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-german to-german-light p-8 text-white shadow-2xl">
+                <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10"></div>
+                <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-white/10"></div>
+                <div className="absolute right-10 top-10 h-16 w-16 rounded-full bg-yellow-400/30 blur-xl"></div>
+                
+                
+                <div className="container mx-auto px-4 md:px-6">
+                  <div className="max-w-4xl mx-auto">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+                      {courseInfo.whatYouCanDo.title}
+                    </h2>
+                    <p className="text-lg text-center mb-8 md:mb-12 text-white">
+                      {courseInfo.whatYouCanDo.description}
+                    </p>
+
+                    {/* Radial Layout (Desktop) */}
+                    <div className="hidden md:block relative min-h-[450px]">
+                      {/* Center dot */}
+                      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-green-50 border-2 border-dashed border-green-200 flex items-center justify-center">
+                        <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                      </div>
+
+                      {/* Cards */}
+                      {courseInfo.whatYouCanDo.abilities.map((ability, index) => {
+                        const angle = (index * 72) - 90; // 72° between each of 5 items
+                        const radius = 200; // Slightly larger radius for expansion space
+                        const x = radius * Math.cos(angle * Math.PI / 180);
+                        const y = radius * Math.sin(angle * Math.PI / 180);
+                        
+                        return (
+                          <div
+                            key={index}
+                            className="absolute left-1/2 top-1/2 w-[180px] min-h-[100px] bg-white p-4 rounded-xl shadow-md border border-gray-100 flex flex-col items-center justify-center text-center transition-all duration-300 hover:z-20 hover:scale-110 hover:min-w-[220px] hover:min-h-[120px] hover:shadow-lg"
+                            style={{
+                              transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)`,
+                              zIndex: index === 0 ? 10 : 1,
+                            }}
+                          >
+                            <div className={`w-8 h-8 rounded-full flex items-center justify-center mb-3
+                              ${index % 3 === 0 ? 'bg-blue-100 text-blue-600' : 
+                                index % 3 === 1 ? 'bg-purple-100 text-purple-600' : 
+                                'bg-amber-100 text-amber-600'}`}>
+                              <Check className="w-4 h-4" />
+                            </div>
+                            <p className="text-gray-700 text-sm px-2 transition-[line-clamp] duration-300 line-clamp-2 hover:line-clamp-none">
+                              {ability}
+                            </p>
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    {/* Mobile Stacked Layout */}
+                    <div className="md:hidden space-y-4 max-w-md mx-auto">
+                      {courseInfo.whatYouCanDo.abilities.map((ability, index) => (
+                        <div
+                          key={index}
+                          className="bg-white p-5 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center"
+                        >
+                          <div className={`w-8 h-8 rounded-full flex items-center justify-center mb-3
+                            ${index % 3 === 0 ? 'bg-blue-100 text-blue-600' : 
+                              index % 3 === 1 ? 'bg-purple-100 text-purple-600' : 
+                              'bg-amber-100 text-amber-600'}`}>
+                            <Check className="w-4 h-4" />
+                          </div>
+                          <p className="text-gray-700 text-sm">{ability}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
               
             </TabsContent>
 
@@ -512,60 +588,11 @@ const CourseTemplate = () => {
       <div className='bg-white'>
       <StudentResultsSection />
       </div>
+      {/* <div>
+        <ReviewSection />
+        <StudentResultsSection />
+      </div> */}
 
-      {/* What You Can Do Section */}
-      <div className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
-              {courseInfo.whatYouCanDo.title}
-            </h2>
-            <p className="text-lg text-center mb-8 text-gray-600">
-              {courseInfo.whatYouCanDo.description}
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {courseInfo.whatYouCanDo.abilities.map((ability, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                  <div className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">{ability}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* FAQ Section */}
-      <div className="bg-white py-16">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-              Frequently Asked Questions
-            </h2>
-            <div className="space-y-4">
-              {courseInfo.faqs.map((faq, index) => (
-                <div key={index} className="border-b border-gray-200 pb-4">
-                  <details className="group">
-                    <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-                      <span className="text-lg text-gray-800 group-hover:text-german-dark transition-colors">
-                        {faq.question}
-                      </span>
-                      <span className="transition-transform group-open:rotate-180">
-                        <ChevronDown className="w-5 h-5 text-gray-500" />
-                      </span>
-                    </summary>
-                    <p className="mt-3 text-gray-600">
-                      {faq.answer}
-                    </p>
-                  </details>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Related Courses */}
       <div className="bg-gray-50 py-16">
@@ -607,6 +634,36 @@ const CourseTemplate = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="bg-white py-16">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-4">
+              {courseInfo.faqs.map((faq, index) => (
+                <div key={index} className="border-b border-gray-200 pb-4">
+                  <details className="group">
+                    <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
+                      <span className="text-lg text-gray-800 group-hover:text-german-dark transition-colors">
+                        {faq.question}
+                      </span>
+                      <span className="transition-transform group-open:rotate-180">
+                        <ChevronDown className="w-5 h-5 text-gray-500" />
+                      </span>
+                    </summary>
+                    <p className="mt-3 text-gray-600">
+                      {faq.answer}
+                    </p>
+                  </details>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

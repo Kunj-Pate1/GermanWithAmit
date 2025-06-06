@@ -257,14 +257,14 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       }
     ],
     whatYouCanDo: {
-      title: "What You Can Achieve After This Course",
+      title: "Benefits of Completing This Course",
       description: "After completing this A1 level course, you'll be able to:",
       abilities: [
-        "Introduce yourself and others",
-        "Ask and answer simple questions about personal details",
-        "Interact in a simple way if the other person talks slowly and clearly",
-        "Understand and use familiar everyday expressions",
-        "Write simple notes and messages"
+        "Fill out basic city registration forms (Anmeldung)",
+        "Ask for help at train stations, shops, or tourist spots",
+        "Read apartment listings with key terms (e.g., Zimmer, Warmmiete)",
+        "Introduce yourself at job centers or integration offices",
+        "Understand basic German signs and public instructions"
       ]
     },
     faqs: [
@@ -660,14 +660,14 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       }
     ],
     whatYouCanDo: {
-      title: "What You Can Achieve After This Course",
+      title: "Benefits of Completing This Course",
       description: "After completing this A2 level course, you'll be able to:",
       abilities: [
-        "Handle simple, routine tasks (e.g., at the bank, post office)",
-        "Write simple messages and emails",
-        "Describe your background and immediate needs",
-        "Watch simple children’s shows or YouTube videos with subtitles",
-        "Read signs, ads, menus, and simple brochures"
+        "Apply for a residence permit with A2-level proof (e.g., spouse visa)",
+        "Understand simple rental agreements or bank forms",
+        "Send basic emails to landlords, schools, or doctors",
+        "Enroll in a driving school (Theorieunterricht in simple German)",
+        "Make basic calls to public offices or customer support"
       ]
     },
     faqs: [
@@ -1077,15 +1077,14 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     }
   ],
   whatYouCanDo: {
-    title: "What You Can Achieve After This Course",
+    title: "Benefits of Completing This Course",
     description: "After completing this B1 level course, you'll be able to:",
     abilities: [
-      "Work in a German-speaking office with some assistance",
-      "Have basic social and professional conversations",
-      "Travel confidently and handle hotel/reservation issues",
-      "Watch TV series with subtitles",
-      "Write job application letters or basic CVs",
-      "Volunteer or do internships where German is used"
+     "Apply for German permanent residence (Niederlassungserlaubnis)",
+    "Pass the language part of the German citizenship test (Einbürgerungstest)",
+    "Write job applications and motivation letters for apprenticeships",
+    "Explain your situation at offices like Ausländerbehörde or Agentur für Arbeit",
+    "Read and understand simplified contracts and health insurance letters"
     ]
   },
   faqs: [
@@ -1397,15 +1396,14 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     }
   ],
   whatYouCanDo: {
-    title: "What You Can Achieve After This Course",
+    title: "Benefits of Completing This Course",
     description: "After completing this B2.1 level course, you'll be able to:",
     abilities: [
-      "Study at a German university (in certain programs)",
-      "Work in customer service or office jobs without translation help",
-      "Understand main points of complex texts",
-      "Follow German podcasts, news, or movies with little help",
-      "Express opinions clearly in discussions",
-      "Pass Goethe/Telc B2 for visa/university/work purposes"
+      "Meet language requirements for most university and work visas",
+    "Attend lectures and write exams in German universities",
+    "Understand tax forms and letters from Finanzamt",
+    "Communicate fully in professional emails and meetings",
+    "Join a professional training program (Weiterbildung) or industry job"
     ]
   },
   faqs: [
@@ -1715,15 +1713,14 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     }
   ],
   whatYouCanDo: {
-    title: "What You Can Achieve After This Course",
+    title: "Benefits of Completing This Course",
     description: "After completing this B2.2 level course, you'll be able to:",
     abilities: [
-      "Study at a German university (in certain programs)",
-      "Work in customer service or office jobs without translation help",
-      "Understand main points of complex texts",
-      "Follow German podcasts, news, or movies with little help",
-      "Express opinions clearly in discussions",
-      "Pass Goethe/Telc B2 for visa/university/work purposes"
+    "Meet language requirements for most university and work visas",
+    "Attend lectures and write exams in German universities",
+    "Understand tax forms and letters from Finanzamt",
+    "Communicate fully in professional emails and meetings",
+    "Join a professional training program (Weiterbildung) or industry job"
     ]
   },
   faqs: [
@@ -1951,15 +1948,14 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     }
   ],
   whatYouCanDo: {
-    title: "What You Can Achieve After This Course",
+    title: "Benefits of Completing This Course",
     description: "After completing this C1 level course, you'll be able to:",
     abilities: [
-      "Study academic programs taught fully in German",
-      "Work professionally in Germany, Austria, or Switzerland",
-      "Write reports, essays, and give formal presentations",
-      "Debate and argue fluently and spontaneously",
-      "Understand nuanced humor and idioms",
-      "Pass TestDaF or Goethe/Telc C1 for higher education or citizenship"
+      "Work in regulated professions (e.g., nursing, teaching, IT roles)",
+      "Understand complex legal documents and employment contracts",
+      "Pass TestDaF or Telc C1 Hochschule for academic admission",
+      "Deliver presentations or lead workshops in German",
+      "Write formal appeals or letters to authorities (e.g., immigration, university)"
     ]
   },
   faqs: [
@@ -2186,15 +2182,14 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     }
   ],
   whatYouCanDo: {
-    title: "What You Can Achieve After This Course",
+    title: "Benefits of Completing This Course",
     description: "After completing this C2 level course, you'll be able to:",
     abilities: [
-      "Speak like a near-native",
-      "Work in high-level professions (law, academia, journalism)",
-      "Translate, interpret, or teach German",
-      "Read literature, research papers, and legal documents with ease",
-      "Watch theater, news, and advanced media without subtitles",
-      "Apply for jobs requiring native-level fluency"
+      "Translate or draft official documents (e.g., legal or academic texts)",
+      "Teach German as a foreign language in institutions",
+      "Apply for jobs requiring native-like fluency (editor, researcher)",
+      "Engage with German media, literature, and politics at a deep level",
+      "Fulfill all language proof requirements for Austrian/German citizenship"
     ]
   },
   faqs: [

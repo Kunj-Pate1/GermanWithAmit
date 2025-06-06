@@ -10,7 +10,8 @@ import {
   Book, 
   Film, 
   Headphones,
-  Star
+  Star,
+  History
 } from 'lucide-react';
 
 const StudySection = () => {
@@ -50,15 +51,15 @@ const StudySection = () => {
   ];
 
   const comparisonData = [
-    { icon: Calendar, feature: "Class Frequency", gwa: "Daily live sessions (Mon–Fri) – 1.5 to 2 hours", others: "Only 2–3 sessions per week" },
-    { icon: GraduationCap, feature: "Teaching Quality", gwa: "Daily interaction & feedback", others: "Quality drops with fewer sessions" },
-    { icon: Users, feature: "Instructor Quality", gwa: "C1-C2 Certified with German Degree", others: "Often part-time freelancers" },
-    { icon: MessageSquare, feature: "Speaking Practice", gwa: "More speaking time (small groups)", others: "Less opportunity to speak" },
-    { icon: Target, feature: "Exam Preparation", gwa: "Free Goethe/ÖSD prep included", others: "Often extra or rushed" },
-    // { icon: IndianRupee, feature: "Pricing", gwa: "₹Reasonable and all included", others: "Expensive yet limited extras" },
-    { icon: Book, feature: "Study Materials", gwa: "Quality TextBooks + custom content", others: "Basic textbook materials" },
-    { icon: Film, feature: "Recorded Lessons", gwa: "All recordings included", others: "Extra fee or not provided" },
-    { icon: Headphones, feature: "Support", gwa: "24/7 WhatsApp + community", others: "Minimal outside class" }
+    { icon: Calendar, feature: "Class Frequency", gwa: "Live classes 5 days a week (Mon–Fri), each session lasting 1.5 to 2 hours", others: "Only 2–3 sessions per week, often just 1 hour" },
+    { icon: GraduationCap, feature: "Teaching Quality", gwa: "Daily interaction and feedback, ensuring steady progress", others: "Limited feedback due to fewer classes" },
+    { icon: Users, feature: "Instructor Expertise", gwa: "Classes led by a C1–C2 certified teacher with a German university degree", others: "Often taught by part-time freelancers or underqualified instructors" },
+    { icon: MessageSquare, feature: "Speaking Practice", gwa: "Small group sessions that allow every student to speak and participate", others: "Less speaking time due to larger groups or passive formats" },
+    { icon: Target, feature: "Exam Preparation (Goethe/ÖSD)", gwa: "Included at no extra cost, with structured guidance aligned to the exam format", others: "Often rushed, optional, or comes with an extra fee" },
+    { icon: Book, feature: "Study Materials", gwa: "High-quality textbooks + custom-created content tailored to student needs", others: "Generic textbook-only approach" },
+    { icon: Film, feature: "Recorded Lessons", gwa: "All classes are recorded and shared, so you can revise anytime", others: "Often not available, or charged as an add-on" },
+    { icon: Headphones, feature: "Student Support", gwa: "24/7 WhatsApp support + active student community", others: "Little to no support beyond class hours" },
+    { icon: History, feature: "Course Duration Transparency", gwa: "We share live teaching hours. For example, A1 takes 2 months with 5 classes/week = full CEFR learning hours", others: "Most say 2-month course but only offer 2–3 classes per week – far fewer hours" }
   ];
 
   return (
