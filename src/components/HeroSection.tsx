@@ -116,7 +116,7 @@ useEffect(() => {
   };
 
   return (
-    <section id="hero" className="relative bg-custom-gradient min-h-screen flex items-center">
+    <section id="hero" className="relative bg-custom-gradient min-h-screen flex ">
       {/* Background video/image layer */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-black/20 mix-blend-overlay z-10"></div>
@@ -125,18 +125,15 @@ useEffect(() => {
           className="absolute w-full h-full object-cover"
           loop
           muted
-          poster="images/munich1.png"
-          // poster="images/Amit/Amit_b2.jpg"
-          // poster="images/Amit/Amit_bg3.jpg"
+          // poster="images/munich1.png"
+          poster="images/hero.jpeg"
           // src='https://youtu.be/HMeIgYt9K_s?si=fPJpHoKcCh6KYoDV'
         >
-          {/* <source src="https://youtu.be/FyB2bPPtpkU" type="video/mp4" /> */}
-          
         </video>
       </div>
 
       <div className="container mx-auto px-4 md:px-6 py-20 md:py-32 relative z-10">
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col py-10 items-center text-center">
           <motion.div 
             variants={containerVariants}
             initial="hidden"
@@ -160,13 +157,6 @@ useEffect(() => {
               </span>
             </motion.h1>
             
-            {/* <motion.p 
-              variants={itemVariants}
-              className="text-lg md:text-xl mb-8 mx-auto max-w-lg"
-            >
-              Let's learn German together – the smart, fun, and simple way!
-            </motion.p> */}
-            
             <motion.div 
               variants={containerVariants}
               className="mt-8 grid grid-cols-3 gap-4 max-w-md mx-auto"
@@ -181,10 +171,10 @@ useEffect(() => {
                   className="text-center"
                   variants={itemVariants}
                 >
-                  <motion.h3 className="text-xl font-bold text-white">
+                  <motion.h3 className="text-2xl font-bold text-white">
                     {stat.value}
                   </motion.h3>
-                  <p className="text-xs mt-1 opacity-80">{stat.label}</p>
+                  <p className="text-md mt-1 opacity-80">{stat.label}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -195,8 +185,12 @@ useEffect(() => {
             >
               <Button className="bg-gradient-to-r from-[#56e0fe] to-[#076bfd] hover:opacity-90 text-white px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}>
-                Sign Up Now
+                Explore Courses
               </Button>
+              {/* <Button className="bg-gradient-to-r from-[#56e0fe] to-[#076bfd] hover:opacity-90 text-white px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}>
+                Sign Up Now
+              </Button> */}
             </motion.div>
           </motion.div>
         </div>
@@ -219,8 +213,8 @@ useEffect(() => {
 
 
   {/* Video – smaller and elevated */}
-  <div className="absolute left-1/2 bottom-[-60px] transform -translate-x-1/2 z-20 w-[70vw] max-w-md aspect-video rounded-2xl border-2 border-german-dark shadow-xl overflow-hidden">
-    <iframe
+  <div className="absolute left-1/2 bottom-[-60px] transform -translate-x-1/2 z-20 w-[80vw] max-w-3xl aspect-video rounded-2xl border-2 border-german-dark shadow-xl overflow-hidden">
+    {/* <iframe
       src="https://www.youtube.com/embed/FyB2bPPtpkU?si=Q7Zj6VD1M1-mLvNw"
       title="YouTube video player"
       className="w-full h-full"
@@ -228,7 +222,8 @@ useEffect(() => {
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerPolicy="strict-origin-when-cross-origin"
       allowFullScreen
-    ></iframe>
+    ></iframe> */}
+    <img src="/images/Amit/12.png" className='w-full h-full' alt="German With Amit" />
   </div>
     </section>
   );

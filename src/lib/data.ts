@@ -65,7 +65,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     maxStudents: 15,
     price: "₹16,999",
     discount: "None",
-    image: "/images/munich.jpg",
+    image: "/images/Amit/25.png",
     overview: [
       "Live daily Zoom sessions (Mon–Fri)",
       "Full exam preparation for Goethe A1",

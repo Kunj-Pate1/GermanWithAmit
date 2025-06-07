@@ -501,119 +501,96 @@ const ExamPreparationPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white mt-16">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-german-dark to-german py-16">
-  <div className="container mx-auto px-4 md:px-6 p-20">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-      <div className="text-white order-2 lg:order-1">
-        <div className="mb-4 flex items-center">
-          <span className="px-3 py-1 rounded-full bg-german-light/30 text-white text-sm font-medium">
-            {activeLevel} Level
-          </span>
-          <div className="ml-4 flex items-center">
-            {[1, 2, 3, 4, 5].map((star) => (
-              <Star key={star} className="w-4 h-4 text-yellow-300 fill-yellow-300" />
-            ))}
-            <span className="ml-2 text-sm">4.8 star rating</span>
-          </div>
-        </div>
-        
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-          German {activeLevel} Exam Preparation
-        </h1>
-        
-        <p className="text-lg md:text-xl mb-6 text-blue-50">
-          Comprehensive resources and expert guidance to help you ace your German {activeLevel} exam
-        </p>
+        <div className="container mx-auto px-4 md:px-6 p-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="text-white order-2 lg:order-1">
+              <div className="mb-4 flex items-center">
+                <span className="px-3 py-1 rounded-full bg-german-light/30 text-white text-sm font-medium">
+                  A1-C1 Level
+                </span>
+                <div className="ml-4 flex items-center">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-yellow-300 fill-yellow-300" />
+                  ))}
+                  <span className="ml-2 text-sm">4.8 star rating</span>
+                </div>
+              </div>
+              
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                German Exam Preparation Course
+              </h1>
+              
+              <p className="text-lg md:text-xl mb-6 text-blue-50 ">
+              Most German universities and employers require proof of language proficiency. Our German with Amit exam preparation courses (A1 to C1) are designed to help you succeed in internationally recognized exams like Goethe-Institut, telc, and ÖSD. With expert instructors, focused practice, and proven strategies, you’ll be fully prepared to earn your certificate and boost your success in Germany.
+              </p>
 
-        {/* New Content - Integrated Training */}
-        <div className="mb-6 p-4 bg-white/10 rounded-lg backdrop-blur-sm border border-white/20">
-          <p className="font-medium mb-2">🎯 Already completed a level? We offer dedicated exam prep for Goethe-Zertifikat (A1-C2)</p>
-          {/* <p className="text-sm mb-3">Already completed a level? We offer dedicated exam prep:</p> */}
-          <ul className="space-y-2 text-sm">
-            <li className="flex items-start">
-              <Check className="w-4 h-4 mt-0.5 mr-2 flex-shrink-0" />
-              <span>Group sessions (subject to availability)</span>
-            </li>
-            <li className="flex items-start">
-              <Check className="w-4 h-4 mt-0.5 mr-2 flex-shrink-0" />
-              <span>One-on-one training (always available)</span>
-            </li>
-          </ul>
-        </div>
+              {/* New Content - Integrated Training */}
 
-        {/* Features */}
-        <div className="flex flex-wrap gap-4 mb-8">
-          <div className="flex items-center">
-            <Target className="w-5 h-5 mr-2" />
-            <span>Targeted speaking/writing/reading/listening</span>
-          </div>
-          {/* <div className="flex items-center">
-            <Award className="w-5 h-5 mr-2" />
-            <span>Free Exam Training Included</span>
-          </div> */}
-        </div>
-        
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Button 
-            className="bg-white text-german hover:bg-german-light"
-            onClick={() => setShowDemoForm(true)}
-          >
-            Watch Demo
-          </Button>
-          <Button 
-            className="bg-white text-german hover:bg-blue-50"
-            onClick={() => {
-              const formSection = document.getElementById('form-section');
-              if (formSection) {
-                formSection.scrollIntoView({ behavior: 'smooth' });
-              }}}
-          >
-            Enroll Now
-          </Button>
-        </div>
-      </div>
-      
-      <div className="order-1 lg:order-2">
-        <div className="rounded-xl overflow-hidden shadow-xl">
-          <div className="relative">
-            <AspectRatio ratio={16/9}>
-              <img 
-                src="/images/exam-prep-hero.jpg" 
-                alt="German Exam Preparation" 
-                className="w-full h-full object-cover"
-              />
-            </AspectRatio>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <button 
-                className="bg-white/90 hover:bg-white rounded-full p-4 shadow-lg transition-transform transform hover:scale-110"
-                onClick={() => setShowDemoForm(true)}
-              >
-                <Play className="w-10 h-10 text-german fill-german" />
-              </button>
-            </div>
-          </div>
-          <div className="bg-white p-6">
-            <div className="flex justify-between items-center mb-4">
-              <div className="text-3xl font-bold text-gray-900">₹5,999</div>
-              <div className="text-lg text-gray-500 line-through">₹8,999</div>
-            </div>
-            <div className="mb-4 space-y-3">
-              <div className="flex items-center text-blue-600 font-medium">
-                <BookOpen className="w-5 h-5 mr-2" />
-                <span>A1-C2 Exam Coverage</span>
+
+              
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  className="bg-white text-german hover:bg-german-light"
+                  onClick={() => setShowDemoForm(true)}
+                >
+                  Watch Demo
+                </Button>
+                <Button 
+                  className="bg-white text-german hover:bg-blue-50"
+                  onClick={() => {
+                    const formSection = document.getElementById('form-section');
+                    if (formSection) {
+                      formSection.scrollIntoView({ behavior: 'smooth' });
+                    }}}
+                >
+                  Enroll Now
+                </Button>
               </div>
             </div>
-            <Button 
-              className="w-full bg-german hover:bg-german-dark"
-              onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}
-            >
-              Enroll Now
-            </Button>
+            
+            <div className="order-1 lg:order-2">
+              <div className="rounded-xl overflow-hidden shadow-xl">
+                <div className="relative">
+                  <AspectRatio ratio={16/9}>
+                    <img 
+                      src="/images/exam-prep-hero.jpg" 
+                      alt="German Exam Preparation" 
+                      className="w-full h-full object-cover"
+                    />
+                  </AspectRatio>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <button 
+                      className="bg-white/90 hover:bg-white rounded-full p-4 shadow-lg transition-transform transform hover:scale-110"
+                      onClick={() => setShowDemoForm(true)}
+                    >
+                      <Play className="w-10 h-10 text-german fill-german" />
+                    </button>
+                  </div>
+                </div>
+                <div className="bg-white p-6">
+                  {/* <div className="flex justify-between items-center mb-4">
+                    <div className="text-3xl font-bold text-gray-900">₹5,999</div>
+                    <div className="text-lg text-gray-500 line-through">₹8,999</div>
+                  </div> */}
+                  <div className="mb-4 space-y-3">
+                    <div className="flex items-center text-blue-600 font-medium">
+                      <BookOpen className="w-5 h-5 mr-2" />
+                      <span>A1-C1 Exam Preparation Courses (Geothe/Telc/ÖSD)</span>
+                    </div>
+                  </div>
+                  <Button 
+                    className="w-full bg-german hover:bg-german-dark"
+                    onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}
+                  >
+                    Enroll Now
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
       {showDemoForm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
@@ -649,6 +626,168 @@ const ExamPreparationPage = () => {
           </motion.div>
         </div>
       )}
+
+      {/* Sessions Section */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              Already completed a level but just need help with the exam?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We offer dedicated exam prep classes tailored to your needs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Group Sessions Card */}
+            <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden border border-blue-100">
+              <div className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="bg-blue-100 p-3 rounded-lg mr-4">
+                    <Users className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800">Group Sessions</h3>
+                  <span className="ml-auto px-3 py-1 rounded-full bg-blue-100 text-blue-600 text-sm font-medium">
+                    Subject to availability
+                  </span>
+                </div>
+                
+                <div className="space-y-4 text-gray-700">
+                  <p className="font-medium">
+                    Our Exam preparation in a group course provides you with intensive and effective preparation for the German exam you wish to take.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Train in active small groups (max 16 participants)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Become familiar with all exam content and task types</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Improve language competence across all skills</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Develop exam strategies with your teacher</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Experience simulated exam conditions</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* One-on-One Training Card */}
+            <div className="bg-purple-50 rounded-xl shadow-md overflow-hidden border border-purple-100">
+              <div className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="bg-purple-100 p-3 rounded-lg mr-4">
+                    <User className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800">One-on-One Training</h3>
+                  <span className="ml-auto px-3 py-1 rounded-full bg-purple-100 text-purple-600 text-sm font-medium">
+                    Always available
+                  </span>
+                </div>
+                
+                <div className="space-y-4 text-gray-700">
+                  <p className="font-medium">
+                    Personalized online preparation with individual feedback and tailored exercises.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Initial assessment with personalized feedback</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Targeted practice for all exam sections</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Full mock exams under timed conditions</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Downloadable resources and strategy guides</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Direct access to your teacher for questions</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              Why Choose Our Exam Preparation?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Four key benefits that set our program apart
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Benefit 1 */}
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                <Target className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-center mb-3">Targeted Preparation</h3>
+              <p className="text-gray-600 text-center">
+                Focused training on exactly what you need to pass your specific exam, with practice tests mirroring the real format.
+              </p>
+            </div>
+
+            {/* Benefit 2 */}
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="bg-purple-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                <ClipboardList className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-center mb-3">Expert Strategies</h3>
+              <p className="text-gray-600 text-center">
+                Learn time-saving techniques and proven approaches for each section of the exam from experienced instructors.
+              </p>
+            </div>
+
+            {/* Benefit 3 */}
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="bg-green-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                <Award className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-center mb-3">Proven Results</h3>
+              <p className="text-gray-600 text-center">
+                99% of our students pass their exam on the first attempt, with scores averaging 15% above the passing mark.
+              </p>
+            </div>
+
+            {/* Benefit 4 */}
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="bg-amber-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                <ShieldCheck className="w-8 h-8 text-amber-600" />
+              </div>
+              <h3 className="text-xl font-bold text-center mb-3">Comprehensive Support</h3>
+              <p className="text-gray-600 text-center">
+                Get access to all materials, mock exams, and personal feedback to ensure you're fully prepared.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 md:px-6 py-12">
@@ -708,7 +847,7 @@ const ExamPreparationPage = () => {
                           <span className="w-2 h-2 rounded-full bg-german-dark mr-2"></span>
                           Exam Structure
                         </h4>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2 text-center">
                           {exam.parts.map((part, i) => (
                             <span key={i} className="bg-blue-50 text-german-dark px-3 py-1 rounded-full text-sm">
                               {part}

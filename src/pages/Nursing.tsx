@@ -23,7 +23,7 @@ const NursingGermanyProgram = () => {
     duration: "6-12 months process",
     price: "₹1,50,000",
     discount: "₹2,00,000",
-    image: "/images/course/nurse.jpg",
+    image: "/images/course/ausbildung/nursing.png",
     
     highlights: [
       "Starting salary up to ₹3.5 Lakhs/month",
@@ -182,10 +182,10 @@ const NursingGermanyProgram = () => {
                   </div>
                 </div>
                 <div className="bg-white p-6">
-                  <div className="flex justify-between items-center mb-4">
+                  {/* <div className="flex justify-between items-center mb-4">
                     <div className="text-3xl font-bold text-gray-900">{programData.price}</div>
                     <div className="text-lg text-gray-500 line-through">{programData.discount}</div>
-                  </div>
+                  </div> */}
                   <Button className="w-full bg-blue-700 hover:bg-blue-800 font-bold">
                     Start Your Application
                   </Button>
@@ -463,7 +463,7 @@ const NursingGermanyProgram = () => {
       </div>
 
       {/* Instructor Section */}
-      <div className="bg-white py-16">
+      {/* <div className="bg-white py-16">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Your Placement Advisor</h2>
@@ -489,10 +489,10 @@ const NursingGermanyProgram = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Application Form Section */}
-      <div className="bg-blue-500 py-16 text-white">
+      <div className="bg-dark py-16 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">Ready for Your German Nursing Career?</h2>

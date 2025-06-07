@@ -107,15 +107,15 @@ const AusbildungPage = () => {
                 <div className="relative">
                   <AspectRatio ratio={16/9}>
                     <img 
-                      src="/images/course/ausbildung/hero.jpg" // Replace with your image path
+                      src="/images/course/ausbildung/hero.jpeg" // Replace with your image path
                       alt="Ausbildung in Germany" 
                       className="w-full h-full object-cover"
                     />
                   </AspectRatio>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <button className="bg-white/90 hover:bg-white rounded-full p-4 shadow-lg transition-transform transform hover:scale-110">
+                    {/* <button className="bg-white/90 hover:bg-white rounded-full p-4 shadow-lg transition-transform transform hover:scale-110">
                       <Play className="w-10 h-10 text-german fill-german" />
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>

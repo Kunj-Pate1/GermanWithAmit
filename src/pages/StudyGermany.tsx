@@ -133,7 +133,7 @@ const StudyInGermany = () => {
       <Navbar />
       <div className="bg-gray-50">
         {/* Hero Section with Video */}
-        <div className="relative bg-gradient-to-b from-german-dark to-german text-white overflow-hidden py-10">
+        <div className="relative bg-gradient-to-b from-german-dark to-german text-white overflow-hidden py-20">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-[url('/world-map.svg')] bg-center bg-no-repeat"></div>
           </div>
@@ -170,16 +170,17 @@ const StudyInGermany = () => {
               
               <div className="lg:w-1/2 mt-8 lg:mt-0">
                 <div className="relative aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-2xl border-4 border-white/20">
-                  <iframe 
+                  {/* <iframe 
                     className="w-full h-64 md:h-96"
-                    src="https://www.youtube.com/embed/YOUR_MAIN_VIDEO_ID" 
+                    src= "/images/course/studyingermany.png"
                     title="Why Study in Germany?" 
                     frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowFullScreen>
-                  </iframe>
+                  </iframe> */}
+                  <img src=" /images/course/studyingermany.jpg" className="w-full h-64 md:h-96" alt="Study In Germany Image" />
                   <div className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/10 transition-all">
-                    <Play className="w-12 h-12 text-white" />
+                    {/* <Play className="w-12 h-12 text-white" /> */}
                   </div>
                 </div>
               </div>
@@ -475,6 +476,7 @@ const StudyInGermany = () => {
                       </div>
                     </div>
                     
+                    <div className="flex direction-row gap-6">
                     <button className="bg-white text-german hover:bg-german-light px-6 py-3 rounded-lg font-bold transition-all">
                       Start Your Blocked Account
                     </button>
@@ -482,6 +484,9 @@ const StudyInGermany = () => {
                       Join Finitiba's Live Webinars with Experts
                       {/* link to https://fintiba.com/get-ready-for-germany/ */}
                     </button>
+
+                    </div>
+                    
                   </div>
                 </div>
               </div>

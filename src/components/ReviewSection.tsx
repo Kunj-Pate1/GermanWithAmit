@@ -1,7 +1,7 @@
 import { Star, Video, ArrowLeft, ArrowRight, X } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import {
   Carousel,
   CarouselContent,
@@ -181,6 +181,7 @@ const videoReviews = [
   }
 ];
 
+
 const StudentMetrics = ({ metrics }: { metrics: ReviewProps['metrics'] }) => {
   return (
     <div className="grid grid-cols-3 gap-2 mt-4 pt-4 border-t">
@@ -254,31 +255,82 @@ const ReviewCard = ({ review }: { review: CombinedReviewProps }) => {
 };
 
 const VideoReviewCircle = ({ review }: { review: typeof videoReviews[0] }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const hoverTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseEnter = () => {
+    // Clear any existing timer
+    if (hoverTimerRef.current) {
+      clearTimeout(hoverTimerRef.current);
+    }
+    
+    // Set new timer with 1 second delay
+    hoverTimerRef.current = setTimeout(() => {
+      setIsOpen(true);
+    }, 100);
+  };
+
+  const handleMouseLeave = () => {
+    // Clear timer if mouse leaves before delay completes
+    if (hoverTimerRef.current) {
+      clearTimeout(hoverTimerRef.current);
+      hoverTimerRef.current = null;
+    }
+    
+    // Only close if mouse leaves both trigger and dialog
+    if (isOpen) {
+      const isHoveringDialog = dialogRef.current?.contains(document.activeElement);
+      if (!isHoveringDialog) {
+        setIsOpen(false);
+      }
+    }
+  };
+
+  useEffect(() => {
+    return () => {
+      // Clean up timer on unmount
+      if (hoverTimerRef.current) {
+        clearTimeout(hoverTimerRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <button className="flex flex-col items-center group w-full">
-          <div className="w-20 h-20 rounded-full p-1 bg-gradient-to-br from-german-light via-german to-german-dark group-hover:from-german group-hover:to-german-dark transition-all mx-auto">
-            <div className="w-full h-full rounded-full bg-white p-0.5 overflow-hidden relative">
-              <img 
-                src={review.thumbnail} 
-                alt={review.name} 
-                className="w-full h-full rounded-full object-cover"
-                loading="lazy"
-              />
-              {/* <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                <div className="w-8 h-8 rounded-full bg-white/80 flex items-center justify-center">
-                  <Video className="w-4 h-4 text-german" />
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+      <div 
+        className="relative flex flex-col items-center group w-full"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <DialogTrigger asChild>
+          <button className="flex flex-col items-center w-full">
+            <div className="w-20 h-20 rounded-full p-1 bg-gradient-to-br from-german-light via-german to-german-dark group-hover:from-german group-hover:to-german-dark transition-all mx-auto">
+              <div className="w-full h-full rounded-full bg-white p-0.5 overflow-hidden relative">
+                <img 
+                  src={review.thumbnail} 
+                  alt={review.name} 
+                  className="w-full h-full rounded-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <Video className="w-6 h-6 text-german-dark" />
                 </div>
-              </div> */}
+              </div>
             </div>
-          </div>
-          <p className="text-xs mt-2 text-gray-600 text-center">{review.name}</p>
-          <p className="text-xs text-gray-400 text-center">{review.level}</p>
-        </button>
-      </DialogTrigger>
+            <p className="text-xs mt-2 text-gray-600 text-center">{review.name}</p>
+            <p className="text-xs text-gray-400 text-center">{review.level}</p>
+          </button>
+        </DialogTrigger>
+      </div>
       
-      <DialogContent className="p-0 bg-transparent border-none shadow-none max-w-[360px] w-full mx-2">
+      <DialogContent 
+        ref={dialogRef}
+        className="p-0 bg-transparent border-none shadow-none max-w-[360px] w-full mx-2"
+        onInteractOutside={(e) => e.preventDefault()}
+        onMouseEnter={() => setIsOpen(true)}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="relative rounded-xl overflow-hidden shadow-2xl">
           <div className="relative" style={{ width: '100%', paddingBottom: '177.78%' }}>
             <iframe
@@ -300,7 +352,13 @@ const VideoReviewCircle = ({ review }: { review: typeof videoReviews[0] }) => {
             </div>
           </div>
           
-          <DialogClose className="absolute top-3 right-3 bg-black/50 rounded-full p-1.5 hover:bg-black/70 transition-all">
+          <DialogClose 
+            className="absolute top-3 right-3 bg-black/50 rounded-full p-1.5 hover:bg-black/70 transition-all"
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsOpen(false);
+            }}
+          >
             <X className="w-4 h-4 text-white" />
           </DialogClose>
           

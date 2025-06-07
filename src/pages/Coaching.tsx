@@ -133,20 +133,14 @@ const CoachingPage = () => {
                   </ul>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-4">
+                {/* <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
                     className="bg-white text-german hover:bg-german-light"
                     onClick={() => setShowDemoForm(true)}
                   >
                     Book Free Consultation
                   </Button>
-                  <Button 
-                    className="bg-white text-german hover:bg-blue-50"
-                    onClick={() => window.scrollTo({top: document.getElementById('pricing')?.offsetTop, behavior: 'smooth'})}
-                  >
-                    See Pricing
-                  </Button>
-                </div>
+                </div> */}
               </div>
               
               <div className="order-1 lg:order-2">
