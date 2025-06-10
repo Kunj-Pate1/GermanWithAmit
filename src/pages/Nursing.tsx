@@ -78,20 +78,20 @@ const NursingGermanyProgram = () => {
     
     relatedPrograms: [
       {
-        title: "German Language for Nurses",
-        description: "Specialized medical German course with healthcare vocabulary",
-        level: "A1 to B2",
-        price: "₹35,000",
+        title: "A1+A2+B1 German Combo Course",
+        description: "German Language is a crucial part for Working as a Nurse In Germany",
+        level: "A1 to B1",
+        price: "₹47,999",
         image: "/german-for-nurses.jpg",
-        link: "/programs/language-nursing"
+        link: "/combo-course"
       },
       {
-        title: "Nursing Specialization Program",
-        description: "Advanced training in geriatric or ICU nursing for Germany",
-        level: "Advanced",
-        price: "₹75,000",
+        title: "Self Paced German Learning Course",
+        description: "Perfect for Students who love to learn at their own pace.",
+        level: "Begineer",
+        price: "Variable Price",
         image: "/nursing-specialization.jpg",
-        link: "/programs/specialization"
+        link: "/courses/selfpaced"
       }
     ]
   };
@@ -105,7 +105,7 @@ const NursingGermanyProgram = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="text-white order-2 lg:order-1">
               <div className="mb-4 flex items-center">
-                <span className="px-3 py-1 rounded-full bg-blue-600/30 text-white text-sm font-medium flex items-center">
+                <span className="px-3 py-1 rounded-full bg-german text-white text-sm font-medium flex items-center">
                   <Plane className="w-4 h-4 mr-1" /> {programData.level}
                 </span>
                 <div className="ml-4 flex items-center">
@@ -128,7 +128,7 @@ const NursingGermanyProgram = () => {
                 {programData.title}
               </motion.h1>
               
-              <p className="text-xl font-medium mb-2 text-blue-100 flex items-center">
+              <p className="text-xl font-medium mb-2 text-german-light flex items-center">
                 <Briefcase className="w-5 h-5 mr-2" /> {programData.tagline}
               </p>
               
@@ -137,18 +137,18 @@ const NursingGermanyProgram = () => {
               </p>
               
               <div className="flex flex-wrap gap-4 mb-8">
-                <div className="flex items-center bg-blue-800/30 px-3 py-1 rounded-full">
+                <div className="flex items-center bg-german px-3 py-1 rounded-full">
                   <Clock className="w-5 h-5 mr-2" />
                   <span>{programData.duration}</span>
                 </div>
-                <div className="flex items-center bg-blue-800/30 px-3 py-1 rounded-full">
+                <div className="flex items-center bg-german px-3 py-1 rounded-full">
                   <HeartPulse className="w-5 h-5 mr-2" />
                   <span>Guaranteed Job Placement</span>
                 </div>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-white text-blue-800 hover:bg-blue-50 font-bold">
+                <Button className="bg-white text-german hover:bg-blue-50 font-bold">
                   Apply Now
                 </Button>
                 <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
@@ -186,7 +186,7 @@ const NursingGermanyProgram = () => {
                     <div className="text-3xl font-bold text-gray-900">{programData.price}</div>
                     <div className="text-lg text-gray-500 line-through">{programData.discount}</div>
                   </div> */}
-                  <Button className="w-full bg-blue-700 hover:bg-blue-800 font-bold">
+                  <Button className="w-full bg-german-dark hover:bg-german font-bold">
                     Start Your Application
                   </Button>
                 </div>
@@ -202,7 +202,7 @@ const NursingGermanyProgram = () => {
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center mb-8">
               <div className="bg-blue-100 p-2 rounded-full mr-4">
-                <HeartPulse className="w-6 h-6 text-blue-700" />
+                <HeartPulse className="w-6 h-6 text-german-dark" />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold">Why Choose Nursing in Germany?</h2>
             </div>
@@ -220,7 +220,7 @@ const NursingGermanyProgram = () => {
             
             <div className="bg-blue-50 rounded-xl p-6 mb-12">
               <h3 className="font-bold text-lg mb-4 flex items-center">
-                <ShieldCheck className="w-5 h-5 mr-2 text-blue-700" /> 
+                <ShieldCheck className="w-5 h-5 mr-2 text-german-dark" /> 
                 Germany's Nursing Shortage
               </h3>
               <p className="text-gray-700 mb-4">
@@ -229,19 +229,19 @@ const NursingGermanyProgram = () => {
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="bg-white p-4 rounded-lg text-center shadow">
-                  <div className="text-blue-700 font-bold text-2xl mb-1">50,000+</div>
+                  <div className="text-german-dark font-bold text-2xl mb-1">50,000+</div>
                   <div className="text-sm">Job Openings</div>
                 </div>
                 <div className="bg-white p-4 rounded-lg text-center shadow">
-                  <div className="text-blue-700 font-bold text-2xl mb-1">3-6</div>
+                  <div className="text-german-dark font-bold text-2xl mb-1">3-6</div>
                   <div className="text-sm">Months Processing</div>
                 </div>
                 <div className="bg-white p-4 rounded-lg text-center shadow">
-                  <div className="text-blue-700 font-bold text-2xl mb-1">100%</div>
+                  <div className="text-german-dark font-bold text-2xl mb-1">100%</div>
                   <div className="text-sm">Placement Rate</div>
                 </div>
                 <div className="bg-white p-4 rounded-lg text-center shadow">
-                  <div className="text-blue-700 font-bold text-2xl mb-1">PR</div>
+                  <div className="text-german-dark font-bold text-2xl mb-1">PR</div>
                   <div className="text-sm">In 2-3 Years</div>
                 </div>
               </div>
@@ -492,10 +492,10 @@ const NursingGermanyProgram = () => {
       </div> */}
 
       {/* Application Form Section */}
-      <div className="bg-dark py-16 text-white">
+      <div className="bg-german py-16 ">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">Ready for Your German Nursing Career?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center text-white">Ready for Your German Nursing Career?</h2>
             <p className="text-xl text-center mb-8 text-blue-100">Fill the form to get your personalized pathway</p>
             
             <div className="bg-white rounded-xl p-6 shadow-lg">
@@ -563,7 +563,7 @@ const NursingGermanyProgram = () => {
       {/* Related Programs */}
       <div className="bg-gray-50 py-16">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Complementary Programs</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Recommended Programs</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {programData.relatedPrograms.map((program, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow border-0">

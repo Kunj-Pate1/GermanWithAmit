@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import HeroSection from '@/components/HeroSection';
 import Navbar from '@/components/Navbar';
 import CourseSection from '@/components/CourseSection';
+import UpcomingBatches from '@/components/UpcomingBatches';
 import StudySection from '@/components/StudySection';
 import ReviewSection from '@/components/ReviewSection';
 import AboutSection from '@/components/AboutSection';
@@ -97,6 +98,9 @@ const Index = () => {
       </div>
       <div className="scroll-animate opacity-0">
         <CourseSection />
+      </div>
+      <div className="scroll-animate opacity-0">
+        <UpcomingBatches />
       </div>
       <div className="scroll-animate opacity-0">
         <StudySection />

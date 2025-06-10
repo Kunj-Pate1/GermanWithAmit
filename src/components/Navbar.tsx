@@ -53,8 +53,9 @@ const movingCategories: NavItem[] = [
 const SocialTopBar = () => {
   return (
     <div className="fixed top-0 left-0 right-0 z-[60] bg-gradient-to-r from-german-dark to-gray-800 text-white py-0.5 px-4 border-b border-gray-700 shadow-lg">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="flex space-x-4 mb-1 md:mb-0">
+      <div className="container mx-auto flex flex-row justify-between items-center">
+        {/* Social icons - stays on the left */}
+        <div className="flex space-x-4">
           <a 
             href="https://www.instagram.com/german_with_amit/" 
             target="_blank"
@@ -84,6 +85,7 @@ const SocialTopBar = () => {
           </a>
         </div>
         
+        {/* Blogs link - moves to the right */}
         <div className="flex space-x-3 md:space-x-6">
           <Link 
             to="/blogs" 

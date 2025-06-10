@@ -268,7 +268,7 @@ const VideoReviewCircle = ({ review }: { review: typeof videoReviews[0] }) => {
     // Set new timer with 1 second delay
     hoverTimerRef.current = setTimeout(() => {
       setIsOpen(true);
-    }, 100);
+    }, 300);
   };
 
   const handleMouseLeave = () => {
@@ -335,7 +335,7 @@ const VideoReviewCircle = ({ review }: { review: typeof videoReviews[0] }) => {
           <div className="relative" style={{ width: '100%', paddingBottom: '177.78%' }}>
             <iframe
               className="absolute top-0 left-0 w-full h-full"
-              src={`https://www.youtube.com/embed/${review.youtubeId}?autoplay=1`}
+              src={`https://www.youtube.com/embed/${review.youtubeId}?autoplay=0`}
               title={`Testimonial from ${review.name}`}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
