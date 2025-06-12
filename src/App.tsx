@@ -19,6 +19,9 @@ import BlogsPage from "./pages/Blog";
 import CoachingPage from "./pages/Coaching";
 import AusbildungPage from "./pages/AusbildungPage";
 import StudienkollegPage from "./pages/StudienkollegPage";
+import ConversationPage from "./pages/ConversationPage";
+import KidsGermanPage from "./pages/KidsGermanPage";
+import TeachersPage from "./pages/TeachersPage";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +48,9 @@ const App = () => (
           <Route path="/courses/coaching" element={<CoachingPage />} />
           <Route path="/Ausbildung-in-Germany" element={<AusbildungPage />} />
           <Route path="/Studienkolleg-in-Germany" element={<StudienkollegPage />} />
+          <Route path="/courses/conversation" element={<ConversationPage />} />
+          <Route path="/courses/german-for-kids" element={<KidsGermanPage />} />
+          <Route path="/our-team" element={<TeachersPage />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

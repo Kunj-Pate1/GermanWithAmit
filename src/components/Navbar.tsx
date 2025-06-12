@@ -38,6 +38,14 @@ const courseCategories: NavItem[] = [
     path: "/courses/selfpaced"
   },
   {
+    name: "Conversation Course",
+    path: "/courses/conversation"
+  },
+  {
+    name: "German for Kids",
+    path: "/courses/german-for-kids"
+  },
+  {
     name: "1:1 German Coaching",
     path: "/courses/coaching"
   }
@@ -116,6 +124,7 @@ const DesktopNavLinks = ({ activeSection, handleNavigation }: NavLinksProps) => 
     { name: 'Courses', href: '#courses', dropdown: true, id: "course" },
     { name: 'Moving To Germany', href: '#study', dropdown: true, id: "moving" },
     { name: 'About Us', href: '#about' },
+    { name: 'Our Team', href: '/our-team' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -258,6 +267,7 @@ const MobileNavLinks = ({ className = "", activeSection, handleNavigation, setIs
     { name: 'Courses', href: '#courses', dropdown: true, id: "courses" },
     { name: 'Moving to Germany', href: '#', dropdown: true, id: "moving" },
     { name: 'About Us', href: '#about' },
+    { name: 'Our Team', href: '/our-team' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
   ];

@@ -149,7 +149,6 @@ useEffect(() => {
             <span className="relative text-white text-4xl md:text-5xl lg:text-6xl font-bold pb-2">
               {displayedText}
               <span className="animate-pulse">|</span>
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-white"></span>
             </span>{" "}
             <span className="text-white">German</span>?
             <br />
@@ -201,16 +200,16 @@ I can help.
     </div>
 
 {/* Video*/}
-<div className="absolute left-1/2 bottom-[-60px] transform -translate-x-1/2 z-20 w-[90vw] sm:w-[80vw] max-w-3xl min-w-[300px] aspect-video rounded-2xl border-2 border-german-dark shadow-xl overflow-hidden">
-<iframe
-  src="https://www.youtube.com/embed/3XNpV_xRWeM?si=_YZJu_xVye54WHlO"
-  title="YouTube video player"
-  className="w-full h-full"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  referrerPolicy="strict-origin-when-cross-origin"
-  allowFullScreen
-></iframe>
+<div className="absolute left-1/2 bottom-[-60px] transform -translate-x-1/2 z-20 w-[90vw] sm:w-[80vw] max-w-3xl md:max-w-xl min-w-[300px] aspect-video rounded-2xl border-2 border-german-dark shadow-xl overflow-hidden">
+  <iframe
+    src="https://www.youtube.com/embed/3XNpV_xRWeM?si=_YZJu_xVye54WHlO"
+    title="YouTube video player"
+    className="w-full h-full"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  ></iframe>
 </div>
   </section>
   );

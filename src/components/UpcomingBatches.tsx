@@ -11,6 +11,12 @@ import {
   
   const UpcomingBatches = () => {
     // Batch timing data
+
+    //Add multiple timings for a batch morning/eveing
+    //Duration 
+    //Timing in both IST and CEST
+    //Multiple cards Carousal / View more
+
     const batchTimings = [
       {
         id: 1,
