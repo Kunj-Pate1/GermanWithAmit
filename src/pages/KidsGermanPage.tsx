@@ -1,9 +1,10 @@
-import { GraduationCap, BookOpen, Globe, Clock, Calendar, Mail, MapPin, Check, User, Home, Phone, Star, Award, Play, MessageSquare, Send, ChevronDown, HelpCircle, MessageCircleQuestion, School, Languages, BookMarked, Trophy, Smile, Video } from 'lucide-react';
+import { GraduationCap, BookOpen, Globe, Clock, Calendar, Mail, MapPin, Check, User, Home, Phone, Star, Award, Play, MessageSquare, Send, ChevronDown, HelpCircle, MessageCircleQuestion, School, Languages, BookMarked, Trophy, Smile, Video, Users, PlayCircle, MessageCircle } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import { AspectRatio } from '@radix-ui/react-aspect-ratio';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 const KidsGermanPage = () => {
 
@@ -48,80 +49,148 @@ const KidsGermanPage = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const images = [
+    "/images/course/thumbnails/k1.JPG",
+    "/images/course/thumbnails/k2.JPG",
+    "/images/course/thumbnails/k3.JPG",
+    "/images/course/thumbnails/k4.JPG",
+  ];
+
   return (
     <>
       <Navbar />
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white mt-16">
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-german-dark to-german py-24 px-4 md:px-6">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="text-white">
-                <div className="mb-4 flex items-center">
-                  <span className="px-3 py-1 rounded-full bg-german-light/30 text-white text-sm font-medium">
-                    Online German Classes
-                  </span>
-                  <div className="ml-4 flex items-center">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star 
-                        key={star} 
-                        className="w-4 h-4 text-yellow-300 fill-yellow-300" 
-                      />
-                    ))}
-                    <span className="ml-2 text-sm">4.9 star rating</span>
-                  </div>
-                </div>
-                
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                  German Classes for Indian Kids
-                </h1>
-                
-                <p className="text-lg md:text-xl mb-6 text-blue-50 max-w-2xl">
-                  Personalized online German tutoring for school students in India & abroad
-                </p>
-                
-                <div className="flex flex-wrap gap-4 mb-8">
-                  <div className="flex items-center">
-                    <School className="w-5 h-5 mr-2" />
-                    <span>CBSE/ICSE/IB/IGCSE</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Globe className="w-5 h-5 mr-2" />
-                    <span>For Kids in India & Germany</span>
-                  </div>
-                </div>
-                
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-german hover:bg-german-light">
-                    Book Demo Class
-                  </Button>
-                  <Button className="bg-white text-german hover:bg-blue-50">
-                    Enroll Now
-                  </Button>
+        <div className="bg-gradient-to-r from-german-dark to-german py-16 sm:py-24 px-4 md:px-6">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="text-white space-y-6">
+              {/* Badge and Rating */}
+              <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                <span className="inline-flex px-3 py-1 rounded-full bg-german-light/30 text-white text-sm font-medium backdrop-blur-sm animate-fade-in">
+                  Online German Classes
+                </span>
+                <div className="flex items-center animate-fade-in [animation-delay:100ms]">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star 
+                      key={star} 
+                      className="w-4 h-4 text-yellow-300 fill-yellow-300" 
+                    />
+                  ))}
+                  <span className="ml-2 text-sm">4.9 (200+ reviews)</span>
                 </div>
               </div>
               
-              <div className="hidden lg:block">
-                <div className="rounded-xl overflow-hidden shadow-xl">
-                  <div className="relative">
-                    <AspectRatio ratio={16/9}>
-                      <img 
-                        src="/images/course/kids/hero.jpg" 
-                        alt="German classes for kids" 
-                        className="w-full h-full object-cover"
-                      />
-                    </AspectRatio>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <button className="bg-white/90 hover:bg-white rounded-full p-4 shadow-lg transition-transform transform hover:scale-110">
-                        <Play className="w-10 h-10 text-german fill-german" />
-                      </button>
-                    </div>
-                  </div>
+              {/* Headline */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in [animation-delay:200ms]">
+                German Language Classes <span className="text-german-light">for Indian Students</span>
+              </h1>
+              
+              {/* Description */}
+              <p className="text-lg md:text-xl text-blue-50/90 max-w-2xl animate-fade-in [animation-delay:300ms]">
+                Personalized online German tutoring designed specifically for Indian school students, 
+                whether you're in India or abroad.
+              </p>
+              
+              {/* Features */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 animate-fade-in [animation-delay:400ms]">
+                <div className="flex items-center bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+                  <School className="w-5 h-5 mr-2 text-german-light" />
+                  <span>CBSE/ICSE/IB/IGCSE</span>
                 </div>
+                <div className="flex items-center bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+                  <Globe className="w-5 h-5 mr-2 text-german-light" />
+                  <span>For Kids in India & Germany</span>
+                </div>
+                <div className="flex items-center bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+                  <Users className="w-5 h-5 mr-2 text-german-light" />
+                  <span>Native German Teachers</span>
+                </div>
+                <div className="flex items-center bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+                  <Award className="w-5 h-5 mr-2 text-german-light" />
+                  <span>Goethe Exam Preparation</span>
+                </div>
+              </div>
+              
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-2 animate-fade-in [animation-delay:500ms]">
+              <Button 
+                asChild
+                className="bg-[#25D366] hover:bg-[#128C7E] text-white transition-colors duration-300 shadow-md hover:shadow-lg hover:shadow-[#128C7E]/40"
+                size="lg"
+              >
+                <a 
+                  href="https://wa.link/dobu5c" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-6 py-3"
+                >
+                  <MessageCircle className="w-5 h-5 flex-shrink-0 stroke-white fill-white" />
+                  <span className="font-medium">WhatsApp Us</span>
+                </a>
+              </Button>
+                <Button 
+                  variant="outline" 
+                  className="bg-transparent text-white border-white hover:bg-white/10 hover:text-white hover:border-german-light transition-colors"
+                  size="lg"
+                >
+                  View Course Plans
+                </Button>
+              </div>
+            </div>
+            
+            {/* Image Carousel */}
+            <div className="hidden lg:block relative rounded-2xl overflow-hidden shadow-2xl animate-fade-in [animation-delay:300ms]">
+              <div className="relative aspect-video overflow-hidden">
+                <div 
+                  className="flex absolute inset-0"
+                  style={{
+                    animation: 'infinite-scroll 40s linear infinite',
+                    width: '200%'
+                  }}
+                >
+                  {[...images, ...images].map((src, i) => (
+                    <div key={`img-${i}`} className="flex-shrink-0 w-1/4 relative group">
+                      <img 
+                        src={src} 
+                        alt="" 
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Carousel Indicators */}
+              <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+                {images.map((_, i) => (
+                  <div 
+                    key={`indicator-${i}`}
+                    className="w-2 h-2 rounded-full bg-white/50 hover:bg-white cursor-pointer"
+                  />
+                ))}
               </div>
             </div>
           </div>
         </div>
+  
+        <style>{`
+          @keyframes infinite-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          @keyframes fade-in {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          .animate-fade-in {
+            animation: fade-in 0.6s ease-out forwards;
+          }
+        `}</style>
+      </div>
 
         {/* Main Content */}
         <div className="container mx-auto px-4 md:px-6 py-12 max-w-6xl">
@@ -403,118 +472,6 @@ const KidsGermanPage = () => {
                       Regular assessments and parent updates to monitor development
                     </p>
                   </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Pricing */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Flexible Learning Plans</h2>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Beginner Plan */}
-              <div className="bg-white rounded-xl shadow-sm border border-blue-50 overflow-hidden">
-                <div className="bg-blue-50 p-6 text-center">
-                  <h3 className="text-xl font-bold text-gray-800">Beginner</h3>
-                  <p className="text-gray-600">For new learners (A1-A2)</p>
-                </div>
-                <div className="p-6">
-                  <div className="text-center mb-6">
-                    <span className="text-4xl font-bold text-gray-800">₹1,499</span>
-                    <span className="text-gray-600"> / week</span>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    <li className="flex items-start">
-                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                      <span>2 sessions per week</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                      <span>45-minute interactive lessons</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Basic vocabulary & grammar</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Fun learning activities</span>
-                    </li>
-                  </ul>
-                  <Button className="w-full bg-german-dark hover:bg-german text-white">
-                    Start Learning
-                  </Button>
-                </div>
-              </div>
-              
-              {/* Intermediate Plan */}
-              <div className="bg-white rounded-xl shadow-md border-2 border-german overflow-hidden transform hover:scale-[1.02] transition-transform">
-                <div className="bg-german p-6 text-center text-white">
-                  <h3 className="text-xl font-bold">Intermediate</h3>
-                  <p>For school students (A2-B1)</p>
-                </div>
-                <div className="p-6">
-                  <div className="text-center mb-6">
-                    <span className="text-4xl font-bold text-gray-800">₹2,199</span>
-                    <span className="text-gray-600"> / week</span>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    <li className="flex items-start">
-                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                      <span>3 sessions per week</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                      <span>1-hour comprehensive lessons</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                      <span>School curriculum alignment</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Homework help & exam prep</span>
-                    </li>
-                  </ul>
-                  <Button className="w-full bg-german-dark hover:bg-german text-white">
-                    Most Popular
-                  </Button>
-                </div>
-              </div>
-              
-              {/* Advanced Plan */}
-              <div className="bg-white rounded-xl shadow-sm border border-blue-50 overflow-hidden">
-                <div className="bg-blue-50 p-6 text-center">
-                  <h3 className="text-xl font-bold text-gray-800">Advanced</h3>
-                  <p className="text-gray-600">For expat kids (B1-C1)</p>
-                </div>
-                <div className="p-6">
-                  <div className="text-center mb-6">
-                    <span className="text-4xl font-bold text-gray-800">₹2,999</span>
-                    <span className="text-gray-600"> / week</span>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    <li className="flex items-start">
-                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                      <span>4-5 sessions per week</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                      <span>1.5-hour intensive training</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Academic German support</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Cultural adaptation</span>
-                    </li>
-                  </ul>
-                  <Button className="w-full bg-german-dark hover:bg-german text-white">
-                    Accelerate Learning
-                  </Button>
                 </div>
               </div>
             </div>

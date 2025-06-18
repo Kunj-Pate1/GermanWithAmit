@@ -35,7 +35,7 @@ const ConversationPage = () => {
       image: beginnerImg,
       duration: '8 Weeks (16 sessions)',
       price: '19,999 INR',
-      schedule: 'Monday & Wednesday, 19:30 - 21:00',
+      schedule: '2 Days a Week, 19:30 - 21:00',
       overview: 'This course is tailored for individuals who have completed A1 or A2 level German but struggle to speak confidently in daily interactions. Participants will engage in interactive exercises, communicative games, and conversations to enhance vocabulary, improve fluency, and gain confidence in speaking German.',
       objectives: [
         'Hold conversations in German on various everyday topics',
@@ -68,7 +68,7 @@ const ConversationPage = () => {
       image: intermediateImg,
       duration: '8 Weeks (16 sessions)',
       price: '19,999 INR',
-      schedule: 'Tuesday & Thursday, 19:30 - 21:00',
+      schedule: '2 Days a Week, 19:30 - 21:00',
       overview: 'Welcome to our online conversational course designed for participants at the A2.2 - B1 level. This course offers a supportive environment for expanding vocabulary and improving confidence in speaking German. Through group activities and discussions, you\'ll practice expressing opinions, sharing experiences, and communicating effectively in everyday situations.',
       objectives: [
         'Learn more German words and feel better about speaking',
@@ -111,7 +111,7 @@ const ConversationPage = () => {
       image: advancedImg,
       duration: '8 Weeks (16 sessions)',
       price: '19,999 INR',
-      schedule: 'Flexible scheduling available',
+      schedule: '2 Days a Week',
       overview: 'This online conversation course is designed for learners at levels B2 to C1, focusing on developing advanced speaking skills in German. Through structured discussions and interactive exercises, you\'ll learn how to engage in successful conversations and debates on a wide range of topics. The course integrates grammar, vocabulary, and pronunciation enhancement for comprehensive language development.',
       objectives: [
         'Enhance speaking proficiency for fluent and articulate conversations',

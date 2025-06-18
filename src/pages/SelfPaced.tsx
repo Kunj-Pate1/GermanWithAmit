@@ -40,7 +40,7 @@ const SelfPacedCourse = () => {
     duration: "70-90 hours",
     price: "Starting at ₹6,000",
     discount: "₹8,000",
-    image: "/images/course/selfpaced.jpg",
+    image: "/images/course/thumbnails/33.jpg",
     demoVideo: "/demo-video.mp4",
     features: [
       "Learn anytime — access 70–90 hours of recorded live classes",

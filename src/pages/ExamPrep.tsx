@@ -554,7 +554,7 @@ const ExamPreparationPage = () => {
                 <div className="relative">
                   <AspectRatio ratio={16/9}>
                     <img 
-                      src="/images/exam-prep-hero.jpg" 
+                      src="/images/course/thumbnails/31.jpg" 
                       alt="German Exam Preparation" 
                       className="w-full h-full object-cover"
                     />

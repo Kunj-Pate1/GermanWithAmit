@@ -6,14 +6,13 @@ import { ChevronDown, ChevronUp, Clock, BookOpen, Award, Check, X, ArrowRight } 
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-import A1Image from "/images/course/course_a1.png";
-import A2Image from "/images/course/course_a2.png";
-import B1Image from "/images/course/course_b1.png";
-import B2Image from"/images/course/course_b2.png";
-import ComboImage from "/images/course/course_comboa1a2.png";
-import ExamImage from "/images/course/course_exam1.jpg";
-import GrammarImage from "/images/munich.jpg";
-import SelfPacedImage from "/images/course/course_self.png";
+import A1Image from "/images/course/thumbnails/18.jpg";
+import A2Image from "/images/course/thumbnails/19.jpg";
+import B1Image from "/images/course/thumbnails/20.jpg";
+import B2Image from"/images/course/thumbnails/21.jpg";
+import ComboImage from "/images/course/thumbnails/27.jpg";
+import ExamImage from "/images/course/thumbnails/31.jpg";
+import SelfPacedImage from "/images/course/thumbnails/33.jpg";
 
 const courses = [
   {

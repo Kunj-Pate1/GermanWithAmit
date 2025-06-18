@@ -65,7 +65,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     maxStudents: 15,
     price: "₹16,999",
     discount: "None",
-    image: "/images/Amit/25.png",
+    image: "/images/course/thumbnails/18.jpg",
     overview: [
       "Live daily Zoom sessions (Mon–Fri)",
       "Full exam preparation for Goethe A1",
@@ -242,18 +242,18 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       {
         title: "German A1+A2 Combo Course for Elementary Learners",
         description: "Here comes the description.",
-        level: "A2 Elementary",
+        level: "A1+ A2 Elementary",
         price: "₹31,999",
-        image: "/images/courses/a2.jpg",
-        link: "/courses/beginner/a2"
+        image: "/images/course/thumbnails/26.jpg",
+        link: "/combo-course"
       },
       {
         title: "German A1+A2+B1 Combo Course for Elementary Learners",
         description: "Here comes the description.",
-        level: "A2 Elementary",
+        level: "Popular",
         price: "₹47,999",
-        image: "/images/courses/a2.jpg",
-        link: "/courses/beginner/a2"
+        image: "/images/course/thumbnails/25.jpg",
+        link: "/combo-course"
       }
     ],
     whatYouCanDo: {
@@ -320,7 +320,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     maxStudents: 15,
     price: "₹17,499",
     discount: "None",
-    image: "/images/course/course_a2.png",
+    image: "/images/course/thumbnails/19.jpg",
     overview: [
       "Daily live sessions and intensive speaking practice",
       "Goethe A2 exam prep with model papers",
@@ -639,15 +639,15 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
         description: "Here comes the description.",
         level: "A1+A2",
         price: "₹31,999",
-        image: "/images/courses/a2.jpg",
+        image: "/images/course/thumbnails/26.jpg",
         link: "/combo-course"
       },
       {
         title: "German A1+A2+B1 Combo Course for Elementary Learners",
         description: "Here comes the description.",
-        level: "A1+A2+B1",
+        level: "Popular",
         price: "₹47,999",
-        image: "/images/courses/a2.jpg",
+        image: "/images/course/thumbnails/25.jpg",
         link: "/combo-course"
       },
       {
@@ -655,7 +655,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
         description: "Here comes the description.",
         level: "A2+B1",
         price: "₹31,999",
-        image: "/images/courses/a2.jpg",
+        image: "/images/course/thumbnails/24.jpg",
         link: "/combo-course"
       }
     ],
@@ -723,7 +723,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
   maxStudents: 15,
   price: "₹18,999",
   discount: "None",
-  image: "/images/courses/b1.jpg",
+  image: "/images/course/thumbnails/20.jpg",
   overview: [
     "Daily live Zoom classes with interactive exercises",
     "Goethe B1 exam preparation and practice tests",
@@ -1062,9 +1062,9 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
     {
       title: "German A1+A2+B1 Combo Course for Elementary Learners",
       description: "Here comes the description.",
-      level: "A1+A2+B1",
+      level: "Popular",
       price: "₹47,999",
-      image: "/images/courses/a2.jpg",
+      image: "/images/course/thumbnails/25.jpg",
       link: "/combo-course"
     },
     {
@@ -1072,7 +1072,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       description: "Here comes the description.",
       level: "A2+B1",
       price: "₹31,999",
-      image: "/images/courses/a2.jpg",
+      image: "/images/course/thumbnails/24.jpg",
       link: "/combo-course"
     }
   ],
@@ -1144,7 +1144,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
   maxStudents: 15,
   price: "₹19,499",
   discount: "None",
-  image: "/images/courses/b2.jpg",
+  image: "/images/course/thumbnails/21.jpg",
   overview: [
     "Daily live classes with communicative focus",
     "Thorough Goethe B2.1 exam training",
@@ -1383,7 +1383,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       description: "Build strong foundations in advanced grammar and vocabulary to excel in B2 exams.",
       level: "B2",
       price: "₹5,999",
-      image: "/images/courses/B2.jpg",
+      image: "/images/course/thumbnails/31.jpg",
       link: "/course/exam"
     },
     {
@@ -1391,7 +1391,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       description: "Take your German from intermediate to advanced with our B2 course, designed to sharpen your skills for real-life, academic, and professional use. You’ll improve your fluency, accuracy, and comprehension across speaking, listening, reading, and writing — all aligned with the Goethe-Zertifikat B2.",
       level: "B2.2+B2.2",
       price: "₹16,999",
-      image: "/images/courses/B2.jpg",
+      image: "/images/course/thumbnails/27.jpg",
       link: "/combo-course"
     }
   ],
@@ -1459,7 +1459,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
   maxStudents: 15,
   price: "₹19,499",
   discount: "None",
-  image: "/images/courses/b2.jpg",
+  image: "/images/course/thumbnails/22.jpg",
   overview: [
     "Daily live classes with communicative focus",
     "Thorough Goethe B2.2 exam training",
@@ -1700,7 +1700,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       description: "Build strong foundations in advanced grammar and vocabulary to excel in B2 exams.",
       level: "B2",
       price: "₹5,999",
-      image: "/images/courses/B2.jpg",
+      image: "/images/course/thumbnails/31.jpg",
       link: "/course/exam"
     },
     {
@@ -1708,7 +1708,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       description: "Take your German from intermediate to advanced with our B2 course, designed to sharpen your skills for real-life, academic, and professional use. You’ll improve your fluency, accuracy, and comprehension across speaking, listening, reading, and writing — all aligned with the Goethe-Zertifikat B2.",
       level: "B2.2+B2.2",
       price: "₹16,999",
-      image: "/images/courses/B2.jpg",
+      image: "/images/course/thumbnails/27.jpg",
       link: "/combo-course"
     }
   ],
@@ -1765,7 +1765,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
   maxStudents: 15,
   price: "₹21,999",
   discount: "None",
-  image: "/images/courses/c1.jpg",
+  image: "/images/course/thumbnails/23.jpg",
   overview: [
     "In-depth daily live classes with expert guidance",
     "Comprehensive Goethe C1 exam prep",
@@ -1943,7 +1943,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       description: "Build strong foundations in advanced grammar and vocabulary to excel in C1 exams.",
       level: "C1",
       price: "₹5,999",
-      image: "/images/courses/c2.jpg",
+      image: "/images/course/thumbnails/31.jpg",
       link: "/course/exam"
     }
   ],
@@ -1999,7 +1999,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
   maxStudents: 12,
   price: "₹23,999",
   discount: "None",
-  image: "/images/courses/c2.jpg",
+  image: "/images/course/thumbnails/24.jpg",
   overview: [
     "In-depth daily live classes focusing on fluency and precision",
     "Preparation for Goethe C2 and equivalent exams",
@@ -2177,7 +2177,7 @@ const courseVariations: Record<string, Partial<CourseInfo>> = {
       description: "Build strong foundations in advanced grammar and vocabulary to excel in C2 exams.",
       level: "C2",
       price: "₹5,999",
-      image: "/images/courses/c2.jpg",
+      image: "/images/course/thumbnails/31.jpg",
       link: "/course/exam"
     }
   ],

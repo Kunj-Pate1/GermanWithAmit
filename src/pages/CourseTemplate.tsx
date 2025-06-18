@@ -147,6 +147,10 @@ const CourseTemplate = () => {
                 onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}>
                   Enroll Now
                 </Button>
+                <Button className="bg-white text-german hover:bg-blue-50"
+                onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}>
+                  WhatsApp Us
+                </Button>
               </div>
             </div>
             
@@ -270,7 +274,6 @@ const CourseTemplate = () => {
               <TabsTrigger value="overview">Overview</TabsTrigger>
               <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
               <TabsTrigger value="instructor">Instructor</TabsTrigger>
-              {/* <TabsTrigger value="reviews">Reviews</TabsTrigger> */}
             </TabsList>
             
             <TabsContent value="overview" className="space-y-8">
@@ -588,11 +591,6 @@ const CourseTemplate = () => {
       <div className='bg-white'>
       <StudentResultsSection />
       </div>
-      {/* <div>
-        <ReviewSection />
-        <StudentResultsSection />
-      </div> */}
-
 
       {/* Related Courses */}
       <div className="bg-gray-50 py-16">
