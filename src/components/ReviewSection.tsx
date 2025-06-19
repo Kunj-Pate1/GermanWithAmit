@@ -1,4 +1,4 @@
-import { Star, Video, ArrowLeft, ArrowRight, X } from 'lucide-react';
+import { Star, Video, ArrowLeft, ArrowRight, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { useState, useEffect, useRef } from 'react';
@@ -13,6 +13,53 @@ import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/
 import { LoadScript } from '@react-google-maps/api';
 import { useInView } from 'react-intersection-observer';
 import AppreciationsCarousel from './AppreciationCarousel';
+import { GoogleWidget } from './GoogleReviewWidget';
+
+const reviews = [
+  {
+    name: 'John Doe',
+    date: 'May 15, 2023',
+    content: 'Great service! The team was very professional and delivered exactly what they promised.',
+    rating: 5
+  },
+  {
+    name: 'John Doe',
+    date: 'May 15, 2023',
+    content: 'Great service! The team was very professional and delivered exactly what they promised.',
+    rating: 5
+  },
+  {
+    name: 'John Doe',
+    date: 'May 15, 2023',
+    content: 'Great service! The team was very professional and delivered exactly what they promised.',
+    rating: 5
+  },
+  {
+    name: 'John Doe',
+    date: 'May 15, 2023',
+    content: 'Great service! The team was very professional and delivered exactly what they promised.',
+    rating: 5
+  },
+  {
+    name: 'John Doe',
+    date: 'May 15, 2023',
+    content: 'Great service! The team was very professional and delivered exactly what they promised.',
+    rating: 5
+  },
+  {
+    name: 'John Doe',
+    date: 'May 15, 2023',
+    content: 'Great service! The team was very professional and delivered exactly what they promised.',
+    rating: 5
+  },
+  {
+    name: 'John Doe',
+    date: 'May 15, 2023',
+    content: 'Great service! The team was very professional and delivered exactly what they promised.',
+    rating: 5
+  },
+];
+
 
 interface ReviewProps {
   name: string;
@@ -265,7 +312,7 @@ const VideoReviewCircle = ({ review }: { review: typeof videoReviews[0] }) => {
       clearTimeout(hoverTimerRef.current);
     }
     
-    // Set new timer with 1 second delay
+    // 3 second delay
     hoverTimerRef.current = setTimeout(() => {
       setIsOpen(true);
     }, 300);
@@ -514,11 +561,23 @@ const ReviewSection = () => {
           )}
         </LoadScript>
         
+        {/* Text Review Cards  */}
+         <section>
+          <GoogleWidget 
+            reviews={reviews}
+            title="Excellent"
+            rating={4.7}
+            reviewCount={116}
+            logoUrl="https://www.gstatic.com/images/branding/product/1x/googleg_64dp.png"
+          />
+        </section>
+
         <div className="mt-12 text-center">
           <p className="text-lg font-medium text-german">
             Join over 5,000+ students who have successfully learned German with us!
           </p>
         </div>
+
       </div>
     </section>
   );
