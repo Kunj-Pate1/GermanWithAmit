@@ -166,7 +166,7 @@ const CourseSection = () => {
                     className="w-full h-48 object-cover"
                   />
                   {course.featured && (
-                    <div className="absolute top-4 right-4">
+                    <div className="absolute top-2 left-2">
                       <Badge className="bg-amber-500 hover:bg-amber-600 text-white shadow-sm">
                         Featured
                       </Badge>

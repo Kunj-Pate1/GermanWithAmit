@@ -127,7 +127,7 @@ const Index = () => {
       
       {/* Scroll to top button */}
       <motion.button
-        className="fixed bottom-8 right-8 bg-blue-500 text-white p-3 rounded-full shadow-lg z-40"
+        className="fixed bottom-8 right-8 bg-german-dark text-white p-3 rounded-full shadow-lg z-40"
         onClick={scrollToTop}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ 

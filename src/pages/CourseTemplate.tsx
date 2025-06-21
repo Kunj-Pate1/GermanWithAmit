@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Check, Star, Clock, Users, BookOpen, ArrowRight, Play, Award, ShieldCheck } from 'lucide-react';
+import { Check, Star, Clock, Users, BookOpen, ArrowRight, Play, Award, ShieldCheck, MessageCircle } from 'lucide-react';
 import { getCourseInfo } from '@/lib/data';
 import Navbar from '@/components/Navbar';
 import { ChevronDown, ChevronUp } from 'lucide-react';
@@ -147,10 +147,21 @@ const CourseTemplate = () => {
                 onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}>
                   Enroll Now
                 </Button>
-                <Button className="bg-white text-german hover:bg-blue-50"
-                onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}>
-                  WhatsApp Us
-                </Button>
+                <Button 
+                asChild
+                className="bg-[#25D366] hover:bg-[#128C7E] text-white transition-colors duration-300 shadow-md hover:shadow-lg hover:shadow-[#128C7E]/40"
+                size="lg"
+              >
+                <a 
+                  href="https://wa.link/dobu5c" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-6 py-3"
+                >
+                  <MessageCircle className="w-5 h-5 flex-shrink-0 stroke-white fill-white" />
+                  <span className="font-medium">WhatsApp Us</span>
+                </a>
+              </Button>
               </div>
             </div>
             

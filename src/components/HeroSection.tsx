@@ -174,7 +174,7 @@ I can help.
                 className="text-center"
                 variants={itemVariants}
               >
-                <motion.h3 className="text-2xl font-bold text-white">
+                <motion.h3 className="text-xl font-bold text-white">
                   {stat.value}
                 </motion.h3>
                 <p className="text-md mt-1 opacity-80">{stat.label}</p>
@@ -186,21 +186,17 @@ I can help.
             variants={itemVariants}
             className="flex justify-center gap-4 mt-12"
           >
-            <Button className="bg-gradient-to-r from-[#56e0fe] to-[#076bfd] hover:opacity-90 text-white px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            <Button className="bg-gradient-to-r from-german to-german-dark hover:opacity-90 text-white px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}>
               Explore
             </Button>
-            {/* <Button className="bg-gradient-to-r from-[#56e0fe] to-[#076bfd] hover:opacity-90 text-white px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            onClick={() => window.open("https://germanwithamit.exlyapp.com/?init_contact=true", "_blank")}>
-              Sign Up Now
-            </Button> */}
           </motion.div>
         </motion.div>
       </div>
     </div>
 
 {/* Video*/}
-<div className="absolute left-1/2 bottom-[-60px] transform -translate-x-1/2 z-20 w-[90vw] sm:w-[80vw] max-w-3xl md:max-w-xl min-w-[300px] aspect-video rounded-2xl border-2 border-german-dark shadow-xl overflow-hidden">
+<div className="absolute left-1/2 bottom-[-60px] transform -translate-x-1/2 z-20 w-[90vw] sm:w-[80vw] max-w-3xl md:max-w-2xl min-w-[300px] aspect-video rounded-2xl border-2 border-german-dark shadow-xl overflow-hidden">
   <iframe
     src="https://www.youtube.com/embed/3XNpV_xRWeM?si=_YZJu_xVye54WHlO"
     title="YouTube video player"
